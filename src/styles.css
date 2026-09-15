@@ -197,33 +197,64 @@
   &::before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
-    background-image: radial-gradient(circle, var(--magenta) 0 1.5px, transparent 1.7px);
-    background-size: 13px 13px;
-    opacity: 0.74;
-    mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%);
+    background-image:
+      radial-gradient(circle, var(--magenta) 0 1.5px, transparent 1.8px),
+      radial-gradient(circle, var(--magenta) 0 1px, transparent 1.3px),
+      radial-gradient(circle, var(--magenta) 0 1.8px, transparent 2.1px);
+    background-size: 13px 13px, 9px 9px, 19px 19px;
+    background-position: 0 0, 4px 7px, 11px 3px;
+    opacity: 0.72;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 68%);
   }
 }
 
 @utility dot-field-hero {
   &::before {
-    width: min(40vw, 430px);
+    width: min(44vw, 480px);
     aspect-ratio: 1;
-    top: -48%;
-    right: -5%;
+    top: -52%;
+    right: -8%;
     transform: rotate(18deg);
   }
 }
 
 @utility dot-field-technology {
   &::before {
-    width: min(32vw, 340px);
+    width: min(36vw, 400px);
     aspect-ratio: 1;
-    left: -12%;
-    bottom: -62%;
+    left: -14%;
+    bottom: -68%;
     transform: rotate(-16deg);
-    opacity: 0.42;
+    opacity: 0.46;
+  }
+}
+
+/* Scattered magenta-dot texture for large black surfaces */
+@utility dot-scatter {
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle, var(--magenta) 0 1.3px, transparent 1.6px),
+      radial-gradient(circle, var(--magenta) 0 0.9px, transparent 1.2px),
+      radial-gradient(circle, var(--magenta) 0 1.6px, transparent 2px),
+      radial-gradient(circle, var(--magenta) 0 1.1px, transparent 1.4px);
+    background-size: 29px 29px, 17px 17px, 37px 37px, 23px 23px;
+    background-position: 0 0, 5px 9px, 13px 2px, 21px 15px;
+    opacity: 0.18;
+    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -233,10 +264,13 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background-image: radial-gradient(circle, var(--magenta) 0 1.35px, transparent 1.55px);
-    background-size: 12px 12px;
+    background-image:
+      radial-gradient(circle, var(--magenta) 0 1.4px, transparent 1.65px),
+      radial-gradient(circle, var(--magenta) 0 1px, transparent 1.25px);
+    background-size: 12px 12px, 8px 8px;
+    background-position: 0 0, 3px 5px;
     mask-image: radial-gradient(ellipse at 92% 100%, black 0%, transparent 54%);
-    opacity: 0.52;
+    opacity: 0.58;
   }
 
   & > * {
@@ -245,16 +279,33 @@
   }
 }
 
+/* Very subtle page-wide dot grain so no black area is completely flat */
+@utility dot-grain {
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background-image:
+      radial-gradient(circle, var(--magenta) 0 0.7px, transparent 1px),
+      radial-gradient(circle, var(--magenta) 0 0.5px, transparent 0.8px);
+    background-size: 42px 42px, 26px 26px;
+    background-position: 0 0, 11px 19px;
+    opacity: 0.06;
+  }
+}
+
 @media (max-width: 767px) {
   .dot-field-hero::before {
-    width: 260px;
-    top: -24%;
-    right: -34%;
+    width: 300px;
+    top: -28%;
+    right: -38%;
   }
 
   .dot-field-technology::before {
-    width: 220px;
-    left: -32%;
-    bottom: -16%;
+    width: 260px;
+    left: -40%;
+    bottom: -20%;
   }
 }
