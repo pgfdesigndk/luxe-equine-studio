@@ -92,7 +92,7 @@ function Index() {
           </a>
         </section>
 
-        <section id="collection" className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
+        <section id="collection" className="relative bg-ink px-5 py-24 md:px-12 md:py-40 dot-scatter">
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
             <figure className="relative overflow-hidden">
               <img
@@ -132,7 +132,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="technology" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-40">
+        <section id="technology" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="technology-dots absolute inset-y-0 right-0 w-1/2" />
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
@@ -154,7 +154,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="bg-ink px-5 py-24 md:px-12 md:py-40">
+        <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40 dot-constellation">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
               src={testimonialImg}
@@ -194,7 +194,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="border-t border-cream/10 bg-ink px-5 py-10 md:px-12">
+      <footer className="relative border-t border-cream/10 bg-ink px-5 py-10 md:px-12 dot-constellation">
         <div className="mx-auto flex max-w-[1480px] items-end justify-between gap-8">
           <Link to="/" aria-label="XALI home">
             <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />

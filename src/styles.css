@@ -192,6 +192,7 @@
 }
 
 @utility dot-field {
+  --dot-field-opacity: 0.72;
   isolation: isolate;
 
   &::before {
@@ -205,12 +206,15 @@
       radial-gradient(circle, var(--magenta) 0 1.8px, transparent 2.1px);
     background-size: 13px 13px, 9px 9px, 19px 19px;
     background-position: 0 0, 4px 7px, 11px 3px;
-    opacity: 0.72;
+    opacity: var(--dot-field-opacity);
     mask-image: radial-gradient(ellipse at center, black 0%, transparent 68%);
+    animation: dot-field-breathe 16s ease-in-out infinite;
   }
 }
 
 @utility dot-field-hero {
+  --dot-field-opacity: 0.72;
+
   &::before {
     width: min(44vw, 480px);
     aspect-ratio: 1;
@@ -221,18 +225,20 @@
 }
 
 @utility dot-field-technology {
+  --dot-field-opacity: 0.46;
+
   &::before {
     width: min(36vw, 400px);
     aspect-ratio: 1;
     left: -14%;
     bottom: -68%;
     transform: rotate(-16deg);
-    opacity: 0.46;
   }
 }
 
 /* Scattered magenta-dot texture for large black surfaces */
 @utility dot-scatter {
+  --dot-scatter-opacity: 0.20;
   isolation: isolate;
 
   &::before {
@@ -248,8 +254,9 @@
       radial-gradient(circle, var(--magenta) 0 1.1px, transparent 1.4px);
     background-size: 29px 29px, 17px 17px, 37px 37px, 23px 23px;
     background-position: 0 0, 5px 9px, 13px 2px, 21px 15px;
-    opacity: 0.18;
+    opacity: var(--dot-scatter-opacity);
     mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    animation: dot-scatter-shimmer 24s ease-in-out infinite alternate, dot-scatter-breathe 12s ease-in-out infinite;
   }
 
   & > * {
@@ -259,6 +266,8 @@
 }
 
 @utility dot-panel {
+  --dot-panel-opacity: 0.58;
+
   &::after {
     content: "";
     position: absolute;
@@ -270,7 +279,35 @@
     background-size: 12px 12px, 8px 8px;
     background-position: 0 0, 3px 5px;
     mask-image: radial-gradient(ellipse at 92% 100%, black 0%, transparent 54%);
-    opacity: 0.58;
+    opacity: var(--dot-panel-opacity);
+    animation: dot-panel-breathe 14s ease-in-out infinite;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Sparse constellation-like dots for pure black panels */
+@utility dot-constellation {
+  --dot-constellation-opacity: 0.15;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle, var(--magenta) 0 1.6px, transparent 2px),
+      radial-gradient(circle, var(--magenta) 0 0.85px, transparent 1.15px);
+    background-size: 58px 58px, 38px 38px;
+    background-position: 0 0, 19px 29px;
+    opacity: var(--dot-constellation-opacity);
+    mask-image: radial-gradient(ellipse at 25% 75%, black 0%, transparent 60%);
+    animation: dot-constellation-drift 28s ease-in-out infinite alternate;
   }
 
   & > * {
@@ -308,6 +345,10 @@
     left: -40%;
     bottom: -20%;
   }
+
+  .dot-constellation::before {
+    opacity: calc(var(--dot-constellation-opacity) * 0.7);
+  }
 }
 
 @utility hero-shade {
@@ -317,22 +358,26 @@
 }
 
 @utility dot-veil {
+  --dot-veil-opacity: 0.10;
   pointer-events: none;
   background-image: radial-gradient(circle, var(--magenta) 0 0.75px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.08;
+  opacity: var(--dot-veil-opacity);
   mask-image: radial-gradient(ellipse at 76% 35%, black 0%, transparent 58%);
+  animation: dot-veil-breathe 12s ease-in-out infinite;
 }
 
 @utility technology-dots {
+  --dot-veil-opacity: 0.16;
   pointer-events: none;
   background-image:
     radial-gradient(circle, var(--magenta) 0 1px, transparent 1.3px),
     radial-gradient(circle, var(--magenta) 0 0.6px, transparent 0.9px);
   background-position: 0 0, 9px 11px;
   background-size: 22px 22px, 31px 31px;
-  opacity: 0.16;
+  opacity: var(--dot-veil-opacity);
   mask-image: linear-gradient(to left, black, transparent 80%);
+  animation: dot-veil-breathe 16s ease-in-out infinite;
 }
 
 @utility invitation-panel {
@@ -349,6 +394,44 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes dot-field-breathe {
+  0%, 100% { opacity: calc(var(--dot-field-opacity) * 0.65); }
+  50% { opacity: var(--dot-field-opacity); }
+}
+
+@keyframes dot-veil-breathe {
+  0%, 100% { opacity: calc(var(--dot-veil-opacity) * 0.6); }
+  50% { opacity: var(--dot-veil-opacity); }
+}
+
+@keyframes dot-scatter-breathe {
+  0%, 100% { opacity: calc(var(--dot-scatter-opacity) * 0.65); }
+  50% { opacity: var(--dot-scatter-opacity); }
+}
+
+@keyframes dot-scatter-shimmer {
+  from { background-position: 0 0, 5px 9px, 13px 2px, 21px 15px; }
+  to { background-position: 0 -37px, 5px -28px, 13px -35px, 21px -22px; }
+}
+
+@keyframes dot-panel-breathe {
+  0%, 100% { opacity: calc(var(--dot-panel-opacity) * 0.7); }
+  50% { opacity: var(--dot-panel-opacity); }
+}
+
+@keyframes dot-constellation-drift {
+  from { background-position: 0 0, 19px 29px; }
+  to { background-position: 0 -16px, 19px 13px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .reveal-up { animation: none; }
+  .reveal-up,
+  .dot-veil,
+  .dot-field::before,
+  .dot-scatter::before,
+  .dot-panel::after,
+  .dot-constellation::before,
+  .technology-dots {
+    animation: none !important;
+  }
 }
