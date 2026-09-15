@@ -201,14 +201,10 @@
     position: absolute;
     z-index: 0;
     pointer-events: none;
-    background-image:
-      radial-gradient(circle at center, var(--magenta) 0 2.8px, transparent 3px),
-      radial-gradient(circle at center, var(--magenta) 0 1.8px, transparent 2px),
-      radial-gradient(circle at center, var(--magenta) 0 1px, transparent 1.2px);
-    background-size: 24px 24px, 17px 17px, 12px 12px;
-    background-position: 0 0, 8px 5px, 3px 9px;
+    background-color: var(--magenta);
+    -webkit-mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
+    mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
     opacity: var(--dot-field-opacity);
-    mask-image: radial-gradient(ellipse at var(--dot-origin, center), black 0 15%, transparent 69%);
     animation: dot-field-breathe 16s ease-in-out infinite;
   }
 }
@@ -235,7 +231,7 @@
     height: 86%;
     left: -20%;
     bottom: -18%;
-    transform: rotate(8deg);
+    transform: scaleX(-1) rotate(8deg);
   }
 }
 
@@ -254,15 +250,12 @@
     width: min(52vw, 720px);
     z-index: 0;
     pointer-events: none;
-    background-image:
-      radial-gradient(circle at center, var(--magenta) 0 3.2px, transparent 3.5px),
-      radial-gradient(circle at center, var(--magenta) 0 2px, transparent 2.25px),
-      radial-gradient(circle at center, var(--magenta) 0 1.15px, transparent 1.4px);
-    background-size: 34px 34px, 23px 23px, 15px 15px;
-    background-position: 0 0, 8px 12px, 4px 7px;
+    background-color: var(--magenta);
+    -webkit-mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
+    mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
     opacity: var(--dot-scatter-opacity);
-    mask-image: radial-gradient(ellipse at var(--dot-side), black 0 18%, transparent 68%);
-    animation: dot-scatter-shimmer 24s ease-in-out infinite alternate, dot-scatter-breathe 12s ease-in-out infinite;
+    transform: scaleX(-1);
+    animation: dot-scatter-breathe 12s ease-in-out infinite;
   }
 
   & > * {
@@ -279,12 +272,9 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background-image:
-      radial-gradient(circle at center, var(--magenta) 0 2.6px, transparent 2.9px),
-      radial-gradient(circle at center, var(--magenta) 0 1.25px, transparent 1.5px);
-    background-size: 26px 26px, 15px 15px;
-    background-position: 0 0, 5px 8px;
-    mask-image: radial-gradient(ellipse at 100% 82%, black 0 12%, transparent 58%);
+    background-color: var(--magenta);
+    -webkit-mask: url("./assets/xali-dot-arcs.svg") right bottom / min(72vw, 760px) auto no-repeat;
+    mask: url("./assets/xali-dot-arcs.svg") right bottom / min(72vw, 760px) auto no-repeat;
     opacity: var(--dot-panel-opacity);
     animation: dot-panel-breathe 14s ease-in-out infinite;
   }
@@ -310,14 +300,10 @@
     width: min(48vw, 660px);
     z-index: 0;
     pointer-events: none;
-    background-image:
-      radial-gradient(circle at center, var(--magenta) 0 3px, transparent 3.3px),
-      radial-gradient(circle at center, var(--magenta) 0 1.7px, transparent 2px),
-      radial-gradient(circle at center, var(--magenta) 0 .8px, transparent 1.05px);
-    background-size: 39px 39px, 25px 25px, 14px 14px;
-    background-position: 0 0, 11px 17px, 4px 8px;
+    background-color: var(--magenta);
+    -webkit-mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
+    mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
     opacity: var(--dot-constellation-opacity);
-    mask-image: radial-gradient(ellipse at var(--dot-side), black 0 14%, transparent 66%);
     animation: dot-constellation-drift 28s ease-in-out infinite alternate;
   }
 
@@ -335,12 +321,7 @@
     inset: 0;
     pointer-events: none;
     z-index: 9999;
-    background-image:
-      radial-gradient(circle at center, var(--magenta) 0 0.8px, transparent 1px),
-      radial-gradient(circle at center, var(--magenta) 0 0.45px, transparent 0.7px);
-    background-size: 54px 54px, 33px 33px;
-    background-position: 0 0, 13px 21px;
-    opacity: 0.055;
+    opacity: 0;
   }
 }
 
@@ -380,27 +361,20 @@
 @utility dot-veil {
   --dot-veil-opacity: 0.72;
   pointer-events: none;
-  background-image:
-    radial-gradient(circle at center, var(--magenta) 0 3px, transparent 3.25px),
-    radial-gradient(circle at center, var(--magenta) 0 1.6px, transparent 1.85px),
-    radial-gradient(circle at center, var(--magenta) 0 .8px, transparent 1px);
-  background-size: 34px 34px, 22px 22px, 13px 13px;
-  background-position: 0 0, 9px 13px, 4px 7px;
+  background-color: var(--magenta);
+  -webkit-mask: url("./assets/xali-dot-arcs.svg") right center / min(72vw, 900px) auto no-repeat;
+  mask: url("./assets/xali-dot-arcs.svg") right center / min(72vw, 900px) auto no-repeat;
   opacity: var(--dot-veil-opacity);
-  mask-image: radial-gradient(ellipse at 100% 34%, black 0 12%, transparent 58%);
   animation: dot-veil-breathe 12s ease-in-out infinite;
 }
 
 @utility technology-dots {
   --dot-veil-opacity: 0.62;
   pointer-events: none;
-  background-image:
-      radial-gradient(circle at center, var(--magenta) 0 2.7px, transparent 3px),
-      radial-gradient(circle at center, var(--magenta) 0 1.3px, transparent 1.6px);
-  background-position: 0 0, 8px 12px;
-  background-size: 31px 31px, 18px 18px;
+  background-color: var(--magenta);
+  -webkit-mask: url("./assets/xali-dot-arcs.svg") right center / min(58vw, 700px) auto no-repeat;
+  mask: url("./assets/xali-dot-arcs.svg") right center / min(58vw, 700px) auto no-repeat;
   opacity: var(--dot-veil-opacity);
-  mask-image: radial-gradient(ellipse at 100% 38%, black 0 10%, transparent 64%);
   animation: dot-veil-breathe 16s ease-in-out infinite;
 }
 
@@ -433,19 +407,14 @@
   50% { opacity: var(--dot-scatter-opacity); }
 }
 
-@keyframes dot-scatter-shimmer {
-  from { background-position: 0 0, 8px 12px, 4px 7px; }
-  to { background-position: 0 -18px, 8px -6px, 4px -11px; }
-}
-
 @keyframes dot-panel-breathe {
   0%, 100% { opacity: calc(var(--dot-panel-opacity) * 0.7); }
   50% { opacity: var(--dot-panel-opacity); }
 }
 
 @keyframes dot-constellation-drift {
-  from { background-position: 0 0, 11px 17px, 4px 8px; }
-  to { background-position: 0 -14px, 11px 3px, 4px -6px; }
+  from { transform: translateY(0); }
+  to { transform: translateY(-14px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
