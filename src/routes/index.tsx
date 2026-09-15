@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-ink text-cream font-body antialiased">
+    <div className="min-h-screen bg-ink text-cream font-body antialiased dot-grain">
       {/* Nav */}
       <header className="relative z-10 px-5 pt-5 md:px-10 md:pt-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
