@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import heroImg from "../assets/xali-hero.jpg";
 import testimonialImg from "../assets/xali-testimonial.jpg";
+import logoAsset from "../assets/xali-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,10 +33,10 @@ function Index() {
   return (
     <div className="min-h-screen bg-ink text-cream font-body antialiased">
       {/* Nav */}
-      <header className="px-5 pt-5 md:px-10 md:pt-8">
+      <header className="relative z-10 px-5 pt-5 md:px-10 md:pt-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <Link to="/" className="font-display text-lg tracking-[0.25em] text-cream">
-            XALI
+          <Link to="/" aria-label="XALI home" className="block">
+            <img src={logoAsset.url} alt="XALI" className="h-14 w-auto md:h-16" />
           </Link>
           <nav className="hidden items-center gap-8 text-[11px] font-medium uppercase tracking-[0.18em] text-mist md:flex">
             <a href="#collection" className="transition-colors hover:text-cream">
@@ -59,7 +60,7 @@ function Index() {
 
       <main className="mx-auto max-w-6xl">
         {/* Hero */}
-        <section className="px-5 pt-10 pb-8 md:px-10 md:pt-16 md:pb-12">
+        <section className="dot-field dot-field-hero relative overflow-hidden px-5 pt-10 pb-8 md:px-10 md:pt-16 md:pb-12">
           <div className="max-w-2xl">
             <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
               Equine Therapy · ProSeries 3-in-1
@@ -175,7 +176,7 @@ function Index() {
         </section>
 
         {/* Technology */}
-        <section id="technology" className="px-5 pt-14 md:px-10 md:pt-20">
+        <section id="technology" className="dot-field dot-field-technology relative px-5 pt-14 md:px-10 md:pt-20">
           <div className="grid gap-10 md:grid-cols-2 md:items-end md:gap-16">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
@@ -244,7 +245,7 @@ function Index() {
 
         {/* Exclusive CTA */}
         <section id="enquire" className="px-5 pt-14 pb-8 md:px-10 md:pt-20 md:pb-16">
-          <div className="rounded-3xl bg-magenta-deep/30 p-7 ring-1 ring-magenta/25 md:rounded-[32px] md:p-12">
+          <div className="dot-panel relative overflow-hidden rounded-3xl bg-magenta-deep/30 p-7 ring-1 ring-magenta/25 md:rounded-[32px] md:p-12">
             <div className="max-w-2xl">
               <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-orchid">
                 By Invitation
@@ -271,11 +272,8 @@ function Index() {
       <footer className="px-5 pb-10 md:px-10">
         <div className="mx-auto max-w-6xl border-t border-cream/10 pt-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <Link
-              to="/"
-              className="font-display text-lg tracking-[0.25em] text-cream"
-            >
-              XALI
+            <Link to="/" aria-label="XALI home" className="block">
+              <img src={logoAsset.url} alt="XALI" className="h-20 w-auto" loading="lazy" />
             </Link>
             <p className="text-[11px] uppercase tracking-[0.18em] text-mist">
               Danmark · Est. 2021
