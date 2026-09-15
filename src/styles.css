@@ -98,8 +98,9 @@
   /* Rarefied Editorial Black palette */
   --ink: oklch(0.1431 0.0028 145.43);
   --ink-soft: oklch(0.2075 0.0025 145.49);
-  --magenta: oklch(0.5662 0.2288 1.5);
-  --magenta-deep: oklch(0.36 0.16 1.5);
+  /* XALI signature magenta — print reference C:0 M:100 Y:0 K:10 */
+  --magenta: oklch(0.649 0.2983 328.36);
+  --magenta-deep: oklch(0.42 0.19 328.36);
   --orchid: oklch(0.78 0.128 350);
   --cream: oklch(0.9363 0.0097 72.66);
   --mist: oklch(0.69 0.008 72.66);
@@ -192,7 +193,7 @@
 }
 
 @utility dot-field {
-  --dot-field-opacity: 0.72;
+  --dot-field-opacity: 0.9;
   isolation: isolate;
 
   &::before {
@@ -201,9 +202,9 @@
     z-index: 0;
     pointer-events: none;
     background-image:
-      radial-gradient(circle, var(--magenta) 0 1.5px, transparent 1.8px),
-      radial-gradient(circle, var(--magenta) 0 1px, transparent 1.3px),
-      radial-gradient(circle, var(--magenta) 0 1.8px, transparent 2.1px);
+      radial-gradient(circle, var(--magenta) 0 1.9px, transparent 2.2px),
+      radial-gradient(circle, var(--magenta) 0 1.3px, transparent 1.6px),
+      radial-gradient(circle, var(--magenta) 0 2.1px, transparent 2.4px);
     background-size: 13px 13px, 9px 9px, 19px 19px;
     background-position: 0 0, 4px 7px, 11px 3px;
     opacity: var(--dot-field-opacity);
@@ -213,7 +214,7 @@
 }
 
 @utility dot-field-hero {
-  --dot-field-opacity: 0.72;
+  --dot-field-opacity: 0.9;
 
   &::before {
     width: min(44vw, 480px);
@@ -225,7 +226,7 @@
 }
 
 @utility dot-field-technology {
-  --dot-field-opacity: 0.46;
+  --dot-field-opacity: 0.68;
 
   &::before {
     width: min(36vw, 400px);
@@ -238,7 +239,7 @@
 
 /* Scattered magenta-dot texture for large black surfaces */
 @utility dot-scatter {
-  --dot-scatter-opacity: 0.20;
+  --dot-scatter-opacity: 0.42;
   isolation: isolate;
 
   &::before {
@@ -248,10 +249,10 @@
     z-index: 0;
     pointer-events: none;
     background-image:
-      radial-gradient(circle, var(--magenta) 0 1.3px, transparent 1.6px),
-      radial-gradient(circle, var(--magenta) 0 0.9px, transparent 1.2px),
-      radial-gradient(circle, var(--magenta) 0 1.6px, transparent 2px),
-      radial-gradient(circle, var(--magenta) 0 1.1px, transparent 1.4px);
+      radial-gradient(circle, var(--magenta) 0 1.7px, transparent 2px),
+      radial-gradient(circle, var(--magenta) 0 1.2px, transparent 1.5px),
+      radial-gradient(circle, var(--magenta) 0 2px, transparent 2.35px),
+      radial-gradient(circle, var(--magenta) 0 1.45px, transparent 1.75px);
     background-size: 29px 29px, 17px 17px, 37px 37px, 23px 23px;
     background-position: 0 0, 5px 9px, 13px 2px, 21px 15px;
     opacity: var(--dot-scatter-opacity);
@@ -266,7 +267,7 @@
 }
 
 @utility dot-panel {
-  --dot-panel-opacity: 0.58;
+  --dot-panel-opacity: 0.78;
 
   &::after {
     content: "";
@@ -291,7 +292,7 @@
 
 /* Sparse constellation-like dots for pure black panels */
 @utility dot-constellation {
-  --dot-constellation-opacity: 0.15;
+  --dot-constellation-opacity: 0.34;
   isolation: isolate;
 
   &::before {
@@ -301,8 +302,8 @@
     z-index: 0;
     pointer-events: none;
     background-image:
-      radial-gradient(circle, var(--magenta) 0 1.6px, transparent 2px),
-      radial-gradient(circle, var(--magenta) 0 0.85px, transparent 1.15px);
+      radial-gradient(circle, var(--magenta) 0 2px, transparent 2.4px),
+      radial-gradient(circle, var(--magenta) 0 1.15px, transparent 1.5px);
     background-size: 58px 58px, 38px 38px;
     background-position: 0 0, 19px 29px;
     opacity: var(--dot-constellation-opacity);
@@ -329,7 +330,7 @@
       radial-gradient(circle, var(--magenta) 0 0.5px, transparent 0.8px);
     background-size: 42px 42px, 26px 26px;
     background-position: 0 0, 11px 19px;
-    opacity: 0.06;
+    opacity: 0.12;
   }
 }
 
@@ -358,9 +359,9 @@
 }
 
 @utility dot-veil {
-  --dot-veil-opacity: 0.10;
+  --dot-veil-opacity: 0.24;
   pointer-events: none;
-  background-image: radial-gradient(circle, var(--magenta) 0 0.75px, transparent 1px);
+  background-image: radial-gradient(circle, var(--magenta) 0 1.15px, transparent 1.45px);
   background-size: 28px 28px;
   opacity: var(--dot-veil-opacity);
   mask-image: radial-gradient(ellipse at 76% 35%, black 0%, transparent 58%);
@@ -368,11 +369,11 @@
 }
 
 @utility technology-dots {
-  --dot-veil-opacity: 0.16;
+  --dot-veil-opacity: 0.34;
   pointer-events: none;
   background-image:
-    radial-gradient(circle, var(--magenta) 0 1px, transparent 1.3px),
-    radial-gradient(circle, var(--magenta) 0 0.6px, transparent 0.9px);
+    radial-gradient(circle, var(--magenta) 0 1.45px, transparent 1.8px),
+    radial-gradient(circle, var(--magenta) 0 0.9px, transparent 1.2px);
   background-position: 0 0, 9px 11px;
   background-size: 22px 22px, 31px 31px;
   opacity: var(--dot-veil-opacity);
