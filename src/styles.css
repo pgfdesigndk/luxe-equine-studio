@@ -2,6 +2,22 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Wargika";
+  src: url("/__l5e/assets-v1/8e49c4b7-4096-4668-81ba-457655777d83/wargika.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins XALI";
+  src: url("/__l5e/assets-v1/21bddaa8-5a51-4fdb-a22d-e6f5d89c751b/poppins-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -28,8 +44,8 @@
   --radius-4xl: calc(var(--radius) + 16px);
 
   /* Direction typography */
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Wargika", Georgia, serif;
+  --font-body: "Poppins XALI", "Poppins", system-ui, sans-serif;
 
   /* Direction-specific tokens (Rarefied Editorial Black) */
   --color-ink: var(--ink);
@@ -80,13 +96,13 @@
   --radius: 0.625rem;
 
   /* Rarefied Editorial Black palette */
-  --ink: oklch(0.146 0.011 345.61);
-  --ink-soft: oklch(0.190 0.026 340.40);
-  --magenta: oklch(0.414 0.918 352.20);
-  --magenta-deep: oklch(0.311 0.647 352.19);
-  --orchid: oklch(0.746 0.232 341.62);
-  --cream: oklch(0.936 0.069 25.05);
-  --mist: oklch(0.611 0.061 357.28);
+  --ink: oklch(0.1776 0.0077 145.24);
+  --ink-soft: oklch(0.218 0.011 145.24);
+  --magenta: oklch(0.594 0.2392 3.6);
+  --magenta-deep: oklch(0.398 0.181 3.6);
+  --orchid: oklch(0.78 0.128 350);
+  --cream: oklch(0.9345 0.016 73.68);
+  --mist: oklch(0.6474 0.0147 340.74);
 
   /* Semantic mapping */
   --background: var(--ink);
@@ -171,5 +187,74 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 400;
+  }
+}
+
+@utility dot-field {
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(circle, var(--magenta) 0 1.5px, transparent 1.7px);
+    background-size: 13px 13px;
+    opacity: 0.74;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%);
+  }
+}
+
+@utility dot-field-hero {
+  &::before {
+    width: min(40vw, 430px);
+    aspect-ratio: 1;
+    top: -48%;
+    right: -5%;
+    transform: rotate(18deg);
+  }
+}
+
+@utility dot-field-technology {
+  &::before {
+    width: min(32vw, 340px);
+    aspect-ratio: 1;
+    left: -12%;
+    bottom: -62%;
+    transform: rotate(-16deg);
+    opacity: 0.42;
+  }
+}
+
+@utility dot-panel {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, var(--magenta) 0 1.35px, transparent 1.55px);
+    background-size: 12px 12px;
+    mask-image: radial-gradient(ellipse at 92% 100%, black 0%, transparent 54%);
+    opacity: 0.52;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .dot-field-hero::before {
+    width: 260px;
+    top: -24%;
+    right: -34%;
+  }
+
+  .dot-field-technology::before {
+    width: 220px;
+    left: -32%;
+    bottom: -16%;
   }
 }
