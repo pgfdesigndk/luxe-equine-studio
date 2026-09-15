@@ -1,26 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import heroImg from "../assets/xali-hero.jpg";
+import cinematicHero from "../assets/xali-cinematic-hero.jpg";
+import productImg from "../assets/xali-hero.jpg";
 import testimonialImg from "../assets/xali-testimonial.jpg";
 import logoAsset from "../assets/xali-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "XALI · ProSeries 3-in-1 Equine Therapy" },
+      { title: "XALI · ProSeries Equine Therapy" },
       {
         name: "description",
         content:
-          "XALI ProSeries 3-in-1: PEMF, deep-tissue massage and radiant heat in a hand-finished equine therapy blanket. Reserved for a small circle of stables.",
+          "XALI ProSeries unites PEMF, deep-tissue massage and radiant heat in a hand-finished equine therapy blanket.",
       },
-      {
-        property: "og:title",
-        content: "XALI · ProSeries 3-in-1 Equine Therapy",
-      },
+      { property: "og:title", content: "XALI · ProSeries Equine Therapy" },
       {
         property: "og:description",
         content:
-          "A hand-finished blanket that unites PEMF, deep-tissue massage and radiant heat — engineered for the modern performance horse.",
+          "A singular equine therapy experience, hand-finished for the modern performance horse.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,260 +27,179 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const benefits = [
+  {
+    number: "I",
+    title: "Performance",
+    text: "Radiant heat and targeted massage warm the musculature before work, priming stride and suppleness.",
+  },
+  {
+    number: "II",
+    title: "Recovery",
+    text: "Low-frequency PEMF supports cellular repair and eases post-competition stiffness, session after session.",
+  },
+  {
+    number: "III",
+    title: "Wellness",
+    text: "A calm, consistent daily ritual that keeps the horse supple, settled and comfortable through the season.",
+  },
+];
+
 function Index() {
   return (
-    <div className="min-h-screen bg-ink text-cream font-body antialiased dot-grain">
-      {/* Nav */}
-      <header className="relative z-10 px-5 pt-5 md:px-10 md:pt-8">
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <Link to="/" aria-label="XALI home" className="block">
-            <img src={logoAsset.url} alt="XALI" className="h-14 w-auto md:h-16" />
+    <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
+      <header className="absolute inset-x-0 top-0 z-30 px-5 py-6 md:px-12 md:py-9">
+        <div className="mx-auto grid max-w-[1480px] grid-cols-3 items-center">
+          <a href="#collection" className="hidden text-[9px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block">
+            Collection
+          </a>
+          <Link to="/" aria-label="XALI home" className="col-start-1 justify-self-start md:col-start-2 md:justify-self-center">
+            <img src={logoAsset.url} alt="XALI" className="h-16 w-auto md:h-20" />
           </Link>
-          <nav className="hidden items-center gap-8 text-[11px] font-medium uppercase tracking-[0.18em] text-mist md:flex">
-            <a href="#collection" className="transition-colors hover:text-cream">
-              Collection
-            </a>
-            <a href="#technology" className="transition-colors hover:text-cream">
-              Technology
-            </a>
-            <a href="#enquire" className="text-cream transition-colors hover:text-magenta">
-              Enquire
-            </a>
-          </nav>
-          <a
-            href="#enquire"
-            className="md:hidden text-[11px] font-medium uppercase tracking-[0.18em] text-cream"
-          >
-            Enquire
+          <a href="#enquire" className="col-start-3 justify-self-end text-[9px] uppercase tracking-[0.36em] text-cream/70 transition-colors hover:text-magenta">
+            Private enquiry
           </a>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl">
-        {/* Hero */}
-        <section className="dot-field dot-field-hero relative overflow-hidden px-5 pt-10 pb-8 md:px-10 md:pt-16 md:pb-12">
-          <div className="max-w-2xl">
-            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
-              Equine Therapy · ProSeries 3-in-1
+      <main>
+        <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-20 text-center md:min-h-screen md:items-center md:pb-0">
+          <img
+            src={cinematicHero}
+            alt="Black performance horse wearing the XALI ProSeries therapy blanket"
+            width={1920}
+            height={1088}
+            className="absolute inset-0 h-full w-full object-cover object-[44%_center] md:object-center"
+            fetchPriority="high"
+          />
+          <div className="hero-shade absolute inset-0" />
+          <div className="dot-veil absolute inset-0" />
+          <div className="relative z-10 mx-auto max-w-5xl reveal-up">
+            <p className="text-[9px] font-medium uppercase tracking-[0.5em] text-magenta md:text-[10px]">
+              Equine therapy · ProSeries 3-in-1
             </p>
-            <h1 className="mt-5 font-display text-5xl font-light leading-[0.95] text-cream md:text-6xl lg:text-7xl">
-              It's a treat and a treatment.
+            <h1 className="mt-7 font-display text-5xl leading-[0.94] text-cream sm:text-6xl md:text-8xl lg:text-[7rem]">
+              It&apos;s a treat<br />and a treatment.
             </h1>
-            <p className="mt-5 text-base leading-relaxed text-mist md:text-lg md:leading-relaxed max-w-[44ch]">
-              A hand-finished blanket that unites PEMF, deep-tissue massage and
-              radiant heat — engineered for the modern performance horse.
+            <div className="mx-auto mt-8 h-px w-20 bg-magenta" />
+            <p className="mx-auto mt-8 max-w-xl text-xs font-light uppercase leading-7 tracking-[0.16em] text-cream/65 md:text-sm">
+              Three therapies. One hand-finished blanket. Created for the modern performance horse.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <a
-                href="#enquire"
-                className="inline-flex items-center gap-2 rounded-full bg-magenta px-6 py-3.5 text-sm font-medium text-cream ring-1 ring-magenta transition-colors hover:bg-magenta/90"
-              >
-                Request an invitation
-              </a>
-              <a
-                href="#technology"
-                className="inline-flex items-center gap-2 border-b border-cream/30 pb-1 text-sm font-medium text-cream/80 transition-colors hover:text-cream"
-              >
-                Discover the craft
-              </a>
-            </div>
           </div>
+          <a href="#collection" aria-label="Explore the XALI collection" className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2 text-[8px] uppercase tracking-[0.4em] text-cream/45 md:bottom-10">
+            <span className="mx-auto mb-3 block h-10 w-px bg-magenta/70" />
+            Discover
+          </a>
         </section>
 
-        {/* Cinematic product showcase */}
-        <section id="collection" className="px-5 md:px-10">
-          <div className="relative overflow-hidden rounded-3xl md:rounded-[32px]">
-            <img
-              src={heroImg}
-              alt="XALI ProSeries 3-in-1 therapy blanket on a thoroughbred"
-              width={1024}
-              height={1280}
-              className="w-full aspect-[4/5] object-cover md:aspect-[16/9]"
-              fetchPriority="high"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-            <div className="absolute bottom-5 left-5 right-5 md:bottom-8 md:left-8 md:right-8">
-              <div className="flex items-end justify-between">
-                <div>
-                  <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-orchid md:text-xs">
-                    The ProSeries
-                  </p>
-                  <p className="mt-1 font-display text-2xl text-cream md:text-3xl">
-                    Therapy Blanket
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="font-display text-2xl text-magenta md:text-3xl">3-in-1</p>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-mist md:text-xs">
-                    PEMF · Massage · Heat
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefit zones */}
-        <section className="relative dot-scatter px-5 pt-14 md:px-10 md:pt-20">
-          <div className="max-w-3xl">
-            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
-              Three Zones
-            </p>
-            <h2 className="mt-4 font-display text-3xl leading-tight text-cream md:text-4xl lg:text-5xl">
-              Performance, recovery, wellness — one blanket.
-            </h2>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:mt-12 md:grid-cols-3">
-            <div className="rounded-[20px] bg-ink-soft p-5 ring-1 ring-white/[0.05]">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-mist">
-                  01 — Performance
-                </span>
-                <span className="h-1.5 w-1.5 rounded-full bg-magenta" />
-              </div>
-              <p className="mt-3 text-base leading-relaxed text-cream/90">
-                Radiant heat and targeted massage warm the musculature before
-                work, priming stride and suppleness.
-              </p>
-            </div>
-
-            <div className="rounded-[20px] bg-ink-soft p-5 ring-1 ring-white/[0.05]">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-mist">
-                  02 — Recovery
-                </span>
-                <span className="h-1.5 w-1.5 rounded-full bg-orchid" />
-              </div>
-              <p className="mt-3 text-base leading-relaxed text-cream/90">
-                Low-frequency PEMF supports cellular repair and eases
-                post-competition stiffness, session after session.
-              </p>
-            </div>
-
-            <div className="rounded-[20px] bg-magenta/10 p-5 ring-1 ring-magenta/25">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-magenta">
-                  03 — Wellness
-                </span>
-                <span className="h-1.5 w-1.5 rounded-full bg-magenta" />
-              </div>
-              <p className="mt-3 text-base leading-relaxed text-cream/90">
-                A calm, consistent daily ritual that keeps the horse supple,
-                settled and comfortable through the season.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Technology */}
-        <section id="technology" className="dot-field dot-field-technology relative px-5 pt-14 md:px-10 md:pt-20">
-          <div className="grid gap-10 md:grid-cols-2 md:items-end md:gap-16">
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
-                The Technology
-              </p>
-              <h2 className="mt-4 font-display text-3xl leading-tight text-cream md:text-4xl lg:text-5xl">
-                PEMF, quietly at work beneath the weave.
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-mist md:text-lg md:leading-relaxed max-w-[46ch]">
-                Pulsed electromagnetic field therapy is woven through the interior,
-                delivering gentle, calibrated pulses that reach deep tissue
-                without a single strap or electrode.
-              </p>
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              <div className="rounded-[16px] bg-ink-soft p-4 text-center ring-1 ring-white/[0.05]">
-                <p className="font-display text-2xl text-magenta md:text-3xl">15</p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-mist leading-tight">
-                  Therapy modes
-                </p>
-              </div>
-              <div className="rounded-[16px] bg-ink-soft p-4 text-center ring-1 ring-white/[0.05]">
-                <p className="font-display text-2xl text-cream md:text-3xl">12h</p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-mist leading-tight">
-                  Cordless runtime
-                </p>
-              </div>
-              <div className="rounded-[16px] bg-ink-soft p-4 text-center ring-1 ring-white/[0.05]">
-                <p className="font-display text-2xl text-orchid md:text-3xl">42°</p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-mist leading-tight">
-                  Even radiant heat
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Social proof */}
-        <section className="relative dot-scatter px-5 pt-14 md:px-10 md:pt-20">
-          <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
-            In the Stable
-          </p>
-          <figure className="mt-6 max-w-3xl">
-            <blockquote className="font-display text-2xl leading-snug text-cream md:text-3xl lg:text-4xl">
-              "The ProSeries has changed how I manage recovery after a hard
-              weekend. It's the quiet difference in the stable."
-            </blockquote>
-            <figcaption className="mt-5 flex items-center gap-3">
+        <section id="collection" className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
+          <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
+            <figure className="relative overflow-hidden">
               <img
-                src={testimonialImg}
-                alt="Mette Kjær, Head of Racing at Nordstald Equestrian"
-                width={44}
-                height={44}
-                className="h-11 w-11 rounded-full object-cover ring-1 ring-white/10"
+                src={productImg}
+                alt="XALI ProSeries therapy blanket on a horse"
+                width={1024}
+                height={1280}
+                className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
                 loading="lazy"
               />
-              <div>
-                <p className="text-sm font-medium text-cream">Mette Kjær</p>
-                <p className="text-xs text-mist">
-                  Head of Racing, Nordstald Equestrian
-                </p>
+              <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-ink/70 px-5 py-5 backdrop-blur-sm md:px-7">
+                <span className="text-[9px] uppercase tracking-[0.32em] text-cream/60">The ProSeries</span>
+                <span className="font-display text-xl text-magenta">3-in-1</span>
+              </figcaption>
+            </figure>
+
+            <div className="md:px-8">
+              <p className="text-[9px] uppercase tracking-[0.48em] text-magenta">The collection · 01</p>
+              <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
+                Therapy, elevated to a ritual.
+              </h2>
+              <p className="mt-8 max-w-lg text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                Beneath the precise black silhouette, three advanced therapies work in concert. No noise. No compromise. Simply considered care, tailored to the rhythm of the horse.
+              </p>
+              <div className="mt-12 border-t border-cream/10">
+                {benefits.map((benefit) => (
+                  <div key={benefit.number} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-cream/10 py-6">
+                    <span className="font-display text-xl text-magenta">{benefit.number}.</span>
+                    <div>
+                      <h3 className="text-xs font-normal uppercase tracking-[0.28em] text-cream">{benefit.title}</h3>
+                      <p className="mt-3 text-sm font-light leading-6 text-mist">{benefit.text}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </figcaption>
+            </div>
+          </div>
+        </section>
+
+        <section id="technology" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-40">
+          <div className="technology-dots absolute inset-y-0 right-0 w-1/2" />
+          <div className="relative mx-auto max-w-7xl">
+            <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
+              <div>
+                <p className="text-[9px] uppercase tracking-[0.48em] text-magenta">The technology · 02</p>
+                <p className="mt-8 text-xs uppercase leading-7 tracking-[0.22em] text-cream/50">PEMF<br />Deep-tissue massage<br />Radiant heat</p>
+              </div>
+              <div>
+                <h2 className="max-w-4xl font-display text-4xl leading-tight text-cream md:text-6xl lg:text-7xl">
+                  Quietly at work beneath the weave.
+                </h2>
+                <div className="mt-12 grid gap-8 border-t border-cream/10 pt-8 sm:grid-cols-3">
+                  <div><p className="font-display text-4xl text-magenta">15</p><p className="mt-2 text-[9px] uppercase tracking-[0.26em] text-mist">Therapy modes</p></div>
+                  <div><p className="font-display text-4xl text-cream">12h</p><p className="mt-2 text-[9px] uppercase tracking-[0.26em] text-mist">Cordless runtime</p></div>
+                  <div><p className="font-display text-4xl text-cream">42°</p><p className="mt-2 text-[9px] uppercase tracking-[0.26em] text-mist">Even radiant heat</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-ink px-5 py-24 md:px-12 md:py-40">
+          <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
+            <img
+              src={testimonialImg}
+              alt="Mette Kjær, Head of Racing at Nordstald Equestrian"
+              width={512}
+              height={512}
+              className="h-40 w-32 object-cover grayscale md:h-72 md:w-56"
+              loading="lazy"
+            />
+            <div>
+              <p className="text-[9px] uppercase tracking-[0.48em] text-magenta">In the stable · 03</p>
+              <blockquote className="mt-7 max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
+                “The quiet difference in the stable.”
+              </blockquote>
+              <figcaption className="mt-8 border-l border-magenta pl-5 text-[10px] uppercase leading-6 tracking-[0.22em] text-mist">
+                Mette Kjær<br /><span className="text-cream/45">Head of Racing · Nordstald Equestrian</span>
+              </figcaption>
+            </div>
           </figure>
         </section>
 
-        {/* Exclusive CTA */}
-        <section id="enquire" className="px-5 pt-14 pb-8 md:px-10 md:pt-20 md:pb-16">
-          <div className="dot-panel relative overflow-hidden rounded-3xl bg-magenta-deep/30 p-7 ring-1 ring-magenta/25 md:rounded-[32px] md:p-12">
-            <div className="max-w-2xl">
-              <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-orchid">
-                By Invitation
-              </p>
-              <h2 className="mt-4 font-display text-3xl leading-tight text-cream md:text-4xl lg:text-5xl">
-                Reserved for a small circle of stables.
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-cream/70 md:text-lg md:leading-relaxed max-w-[42ch]">
-                Each ProSeries is hand-finished in Denmark and paired with a
-                dedicated treatment concierge. Tell us about your stable.
-              </p>
-              <a
-                href="#enquire"
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-magenta px-6 py-4 text-sm font-medium text-cream ring-1 ring-magenta transition-colors hover:bg-magenta/90 md:w-auto"
-              >
-                Request your invitation
-              </a>
-            </div>
+        <section id="enquire" className="invitation-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
+          <div className="dot-veil absolute inset-0 opacity-60" />
+          <div className="relative z-10 max-w-4xl">
+            <p className="text-[9px] uppercase tracking-[0.52em] text-magenta">By invitation</p>
+            <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
+              Reserved for a small circle of stables.
+            </h2>
+            <p className="mx-auto mt-8 max-w-xl text-sm font-light leading-7 text-mist">
+              Each ProSeries is hand-finished in Denmark and paired with a dedicated treatment concierge.
+            </p>
+            <a href="mailto:hello@xali.dk" className="group mt-12 inline-flex flex-col items-center text-[10px] uppercase tracking-[0.36em] text-cream transition-colors hover:text-magenta">
+              Request an invitation
+              <span className="mt-4 h-px w-full bg-magenta transition-all duration-500 group-hover:w-1/2" />
+            </a>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="px-5 pb-10 md:px-10">
-        <div className="mx-auto max-w-6xl border-t border-cream/10 pt-6">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <Link to="/" aria-label="XALI home" className="block">
-              <img src={logoAsset.url} alt="XALI" className="h-20 w-auto" loading="lazy" />
-            </Link>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-mist">
-              Danmark · Est. 2021
-            </p>
-          </div>
-          <p className="mt-4 max-w-xl text-xs leading-relaxed text-mist/70">
-            XALI is a premium equine therapy house. This page is a brand and
-            lead-generation experience, not a shop.
-          </p>
+      <footer className="border-t border-cream/10 bg-ink px-5 py-10 md:px-12">
+        <div className="mx-auto flex max-w-[1480px] items-end justify-between gap-8">
+          <Link to="/" aria-label="XALI home">
+            <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
+          </Link>
+          <p className="text-right text-[8px] uppercase leading-5 tracking-[0.3em] text-cream/35">Denmark · Est. 2021<br />Equine therapy, refined</p>
         </div>
       </footer>
     </div>
