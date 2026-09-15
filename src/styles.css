@@ -98,9 +98,9 @@
   /* Rarefied Editorial Black palette */
   --ink: oklch(0.1431 0.0028 145.43);
   --ink-soft: oklch(0.2075 0.0025 145.49);
-  /* XALI signature magenta — print reference C:0 M:100 Y:50 K:10 */
-  --magenta: oklch(0.5662 0.2288 1.5);
-  --magenta-deep: oklch(0.40 0.18 1.5);
+  /* XALI signature magenta — print reference C:0 M:100 Y:0 K:10 */
+  --magenta: oklch(0.649 0.2983 328.36);
+  --magenta-deep: oklch(0.42 0.19 328.36);
   --orchid: oklch(0.78 0.128 350);
   --cream: oklch(0.9363 0.0097 72.66);
   --mist: oklch(0.69 0.008 72.66);
