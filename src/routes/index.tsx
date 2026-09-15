@@ -176,7 +176,7 @@ function Index() {
           </figure>
         </section>
 
-        <section id="enquire" className="invitation-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
+        <section id="enquire" className="invitation-panel dot-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
           <div className="dot-veil absolute inset-0 opacity-60" />
           <div className="relative z-10 max-w-4xl">
             <p className="text-[9px] uppercase tracking-[0.52em] text-magenta">By invitation</p>
