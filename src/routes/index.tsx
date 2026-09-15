@@ -123,7 +123,7 @@ function Index() {
         </section>
 
         {/* Benefit zones */}
-        <section className="px-5 pt-14 md:px-10 md:pt-20">
+        <section className="relative dot-scatter px-5 pt-14 md:px-10 md:pt-20">
           <div className="max-w-3xl">
             <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
               Three Zones
@@ -215,7 +215,7 @@ function Index() {
         </section>
 
         {/* Social proof */}
-        <section className="px-5 pt-14 md:px-10 md:pt-20">
+        <section className="relative dot-scatter px-5 pt-14 md:px-10 md:pt-20">
           <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-magenta">
             In the Stable
           </p>
