@@ -99,7 +99,7 @@
   --ink: oklch(0.09 0.004 67.52);
   --ink-soft: oklch(0.16 0.008 67.52);
   --magenta: #d6007f;
-  --magenta-deep: oklch(0.43 0.21 328.36);
+  --magenta-deep: #d6007f;
   --orchid: oklch(0.72 0.23 328.36);
   --cream: oklch(0.8206 0.0214 67.52);
   --mist: oklch(0.7 0.018 67.52);
