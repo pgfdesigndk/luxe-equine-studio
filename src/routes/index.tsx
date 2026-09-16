@@ -76,7 +76,7 @@ function Index() {
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
-            <p className="text-[9px] font-medium uppercase tracking-[0.5em] text-magenta md:text-[10px]">
+            <p className="text-[13px] font-medium uppercase tracking-[0.3em] text-magenta">
               Equine therapy · ProSeries 3-in-1
             </p>
             <h1 className="mt-7 font-display text-5xl leading-[0.94] text-cream sm:text-6xl md:text-8xl lg:text-[7rem]">
@@ -111,7 +111,7 @@ function Index() {
             </figure>
 
             <div className="md:px-8">
-              <p className="text-[9px] uppercase tracking-[0.48em] text-magenta">The collection · 01</p>
+              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">The collection · 01</p>
               <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
                 Therapy, elevated to a ritual.
               </h2>
@@ -137,7 +137,7 @@ function Index() {
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
               <div>
-                <p className="text-[9px] uppercase tracking-[0.48em] text-magenta">The technology · 02</p>
+                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">The technology · 02</p>
                 <p className="mt-8 text-xs uppercase leading-7 tracking-[0.22em] text-cream/50">PEMF<br />Deep-tissue massage<br />Radiant heat</p>
               </div>
               <div>
@@ -165,7 +165,7 @@ function Index() {
               loading="lazy"
             />
             <div>
-              <p className="text-[9px] uppercase tracking-[0.48em] text-magenta">In the stable · 03</p>
+              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">In the stable · 03</p>
               <blockquote className="mt-7 max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
                 “The quiet difference in the stable.”
               </blockquote>
@@ -185,7 +185,7 @@ function Index() {
           />
           <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
           <div className="relative z-10 max-w-4xl">
-            <p className="text-[9px] uppercase tracking-[0.52em] text-magenta">By invitation</p>
+            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">By invitation</p>
             <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
               Reserved for a small circle of stables.
             </h2>
