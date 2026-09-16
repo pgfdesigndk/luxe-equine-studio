@@ -73,6 +73,7 @@ function Index() {
             fetchPriority="high"
           />
           <div className="hero-shade absolute inset-0" />
+          <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
             <p className="text-[9px] font-medium uppercase tracking-[0.5em] text-magenta md:text-[10px]">
               Equine therapy · ProSeries 3-in-1

@@ -241,6 +241,22 @@
   }
 }
 
+@utility dot-hero-right {
+  pointer-events: none;
+  position: absolute;
+  top: 10%;
+  right: -6%;
+  width: min(46vw, 620px);
+  height: 62%;
+  z-index: 5;
+  background-image: url("/__l5e/assets-v1/3095481e-dd53-494a-b124-6985c5c27ec5/Dots_right.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.9;
+  animation: dot-hero-right-breathe 14s ease-in-out infinite;
+}
+
 /* Scattered magenta-dot texture for large black surfaces */
 @utility dot-scatter {
   --dot-scatter-opacity: 0.9;
