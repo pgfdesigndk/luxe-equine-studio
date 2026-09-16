@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import cinematicHero from "../assets/xali-cinematic-hero.jpg";
-import productImg from "../assets/xali-hero.jpg";
-import testimonialImg from "../assets/xali-testimonial.jpg";
 import logoAsset from "../assets/xali-logo.png.asset.json";
+import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
+import productImg from "../assets/xali-customer-product.jpeg.asset.json";
+import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
+import invitationImg from "../assets/xali-customer-invitation.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -65,11 +66,11 @@ function Index() {
       <main>
         <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-20 text-center md:min-h-screen md:items-center md:pb-0">
           <img
-            src={cinematicHero}
+            src={cinematicHero.url}
             alt="Black performance horse wearing the XALI ProSeries therapy blanket"
             width={1920}
             height={1088}
-            className="absolute inset-0 h-full w-full object-cover object-[44%_center] md:object-center"
+            className="absolute inset-0 h-full w-full object-cover object-[42%_center] md:object-[45%_42%]"
             fetchPriority="high"
           />
           <div className="hero-shade absolute inset-0" />
@@ -96,7 +97,7 @@ function Index() {
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
             <figure className="relative overflow-hidden">
               <img
-                src={productImg}
+                src={productImg.url}
                 alt="XALI ProSeries therapy blanket on a horse"
                 width={1024}
                 height={1280}
@@ -156,11 +157,11 @@ function Index() {
         <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
-              src={testimonialImg}
-              alt="Mette Kjær, Head of Racing at Nordstald Equestrian"
-              width={512}
-              height={512}
-              className="h-40 w-32 object-cover grayscale md:h-72 md:w-56"
+                src={testimonialImg.url}
+                alt="Detail of the XALI therapy blanket’s magenta textile and therapy ring"
+                width={1280}
+                height={853}
+                className="h-40 w-32 object-cover object-center md:h-72 md:w-56"
               loading="lazy"
             />
             <div>
@@ -176,6 +177,13 @@ function Index() {
         </section>
 
         <section id="enquire" className="invitation-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
+          <img
+            src={invitationImg.url}
+            alt="Close-up of the XALI therapy blanket with embroidered branding"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_center] opacity-25"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
           <div className="relative z-10 max-w-4xl">
             <p className="text-[9px] uppercase tracking-[0.52em] text-magenta">By invitation</p>
             <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
