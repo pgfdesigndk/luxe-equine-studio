@@ -244,10 +244,10 @@
 @utility dot-hero-right {
   pointer-events: none;
   position: absolute;
-  top: 10%;
-  right: -6%;
-  width: min(46vw, 620px);
-  height: 62%;
+  top: 8%;
+  right: -7%;
+  width: min(54vw, 720px);
+  height: 72%;
   z-index: 5;
   background-image: url("/__l5e/assets-v1/3095481e-dd53-494a-b124-6985c5c27ec5/Dots_right.png");
   background-position: right center;
@@ -370,10 +370,10 @@
   }
 
   .dot-hero-right {
-    width: 300px;
-    height: 48%;
-    right: -28%;
-    top: 14%;
+    width: 340px;
+    height: 56%;
+    right: -30%;
+    top: 12%;
   }
 }
 
