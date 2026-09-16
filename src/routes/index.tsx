@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import logoAsset from "../assets/xali-logo.png.asset.json";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
-import productImg from "../assets/xali-customer-product.jpeg.asset.json";
+import productImg from "../assets/xali-customer-collection.jpeg.asset.json";
 import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
 import invitationImg from "../assets/xali-customer-invitation.jpeg.asset.json";
 
@@ -98,7 +98,7 @@ function Index() {
             <figure className="relative overflow-hidden">
               <img
                 src={productImg.url}
-                alt="XALI ProSeries therapy blanket on a horse"
+                alt="Close-up of the XALI ProSeries blanket textile with embroidered magenta logo"
                 width={1024}
                 height={1280}
                 className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
