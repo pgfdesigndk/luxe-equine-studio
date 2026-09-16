@@ -98,9 +98,9 @@
   /* XALI 2026 agency palette: deep black, magenta and warm sand */
   --ink: oklch(0.09 0.004 67.52);
   --ink-soft: oklch(0.16 0.008 67.52);
-  --magenta: #d6007f;
-  --magenta-deep: #d6007f;
-  --orchid: oklch(0.72 0.23 328.36);
+  --magenta: oklch(0.5722 0.2349 354.93);
+  --magenta-deep: oklch(0.40 0.20 354.93);
+  --orchid: oklch(0.72 0.23 354.93);
   --cream: oklch(0.8206 0.0214 67.52);
   --mist: oklch(0.7 0.018 67.52);
 
