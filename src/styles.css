@@ -226,15 +226,15 @@
   --dot-field-opacity: 0.76;
 
   &::before {
-    width: clamp(240px, 30vw, 430px);
-    height: 116%;
-    top: -8%;
-    right: -11%;
+    width: min(48vw, 620px);
+    height: 86%;
+    right: -20%;
+    bottom: -18%;
     background-color: var(--magenta);
-    -webkit-mask-position: right center;
-    mask-position: right center;
-    -webkit-mask-size: auto 100%;
-    mask-size: auto 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
     transform: rotate(180deg);
   }
 }
@@ -247,15 +247,15 @@
   &::before {
     content: "";
     position: absolute;
-    top: -8%;
-    bottom: -8%;
-    left: -11%;
-    width: clamp(240px, 30vw, 430px);
+    top: 5%;
+    bottom: 5%;
+    left: -28%;
+    width: min(52vw, 720px);
     z-index: 0;
     pointer-events: none;
     background-color: var(--magenta);
-    -webkit-mask: url("/__l5e/assets-v1/69ee14b5-a8e1-45db-99c3-ade99f9a61db/xali-dot-wave-alpha.png") left center / auto 100% no-repeat;
-    mask: url("/__l5e/assets-v1/69ee14b5-a8e1-45db-99c3-ade99f9a61db/xali-dot-wave-alpha.png") left center / auto 100% no-repeat;
+    -webkit-mask: url("/__l5e/assets-v1/69ee14b5-a8e1-45db-99c3-ade99f9a61db/xali-dot-wave-alpha.png") center / contain no-repeat;
+    mask: url("/__l5e/assets-v1/69ee14b5-a8e1-45db-99c3-ade99f9a61db/xali-dot-wave-alpha.png") center / contain no-repeat;
     opacity: var(--dot-scatter-opacity);
     animation: dot-scatter-breathe 12s ease-in-out infinite;
   }
@@ -336,15 +336,15 @@
   }
 
   .dot-field-technology::before {
-    width: 250px;
-    height: 108%;
-    top: -4%;
-    right: -48%;
+    width: 330px;
+    height: 72%;
+    right: -58%;
+    bottom: -8%;
   }
 
   .dot-scatter::before {
-    width: 250px;
-    left: -48%;
+    width: 340px;
+    left: -82%;
   }
 }
 
