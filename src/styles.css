@@ -223,39 +223,45 @@
 }
 
 @utility dot-field-technology {
-  --dot-field-opacity: 0.92;
+  --dot-field-opacity: 0.9;
 
   &::before {
-    width: min(54vw, 700px);
-    height: 96%;
-    right: -9%;
-    bottom: -12%;
-    background-color: var(--magenta);
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    transform: rotate(180deg);
+    width: min(52vw, 690px);
+    height: 100%;
+    right: -8%;
+    bottom: -8%;
+    background-color: transparent;
+    background-image: url("/__l5e/assets-v1/3095481e-dd53-494a-b124-6985c5c27ec5/Dots_right.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-mask: none;
+    mask: none;
+    transform: none;
   }
 }
 
 /* Scattered magenta-dot texture for large black surfaces */
 @utility dot-scatter {
-  --dot-scatter-opacity: 0.92;
+  --dot-scatter-opacity: 0.9;
   isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
-    top: 2%;
-    bottom: 2%;
-    left: -9%;
-    width: min(58vw, 780px);
+    top: 0;
+    bottom: 0;
+    left: -8%;
+    width: min(52vw, 620px);
     z-index: 0;
     pointer-events: none;
-    background-color: var(--magenta);
-    -webkit-mask: url("/__l5e/assets-v1/69ee14b5-a8e1-45db-99c3-ade99f9a61db/xali-dot-wave-alpha.png") center / contain no-repeat;
-    mask: url("/__l5e/assets-v1/69ee14b5-a8e1-45db-99c3-ade99f9a61db/xali-dot-wave-alpha.png") center / contain no-repeat;
+    background-color: transparent;
+    background-image: url("/__l5e/assets-v1/0159617b-bf7a-4130-ba34-99aa023afbd7/Dots_left.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-mask: none;
+    mask: none;
     opacity: var(--dot-scatter-opacity);
     animation: dot-scatter-breathe 12s ease-in-out infinite;
   }
@@ -336,15 +342,15 @@
   }
 
   .dot-field-technology::before {
-    width: 380px;
-    height: 82%;
-    right: -36%;
-    bottom: -5%;
+    width: 340px;
+    height: 92%;
+    right: -35%;
+    bottom: -2%;
   }
 
   .dot-scatter::before {
-    width: 390px;
-    left: -38%;
+    width: 320px;
+    left: -36%;
   }
 }
 
