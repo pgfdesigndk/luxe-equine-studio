@@ -73,7 +73,6 @@ function Index() {
             fetchPriority="high"
           />
           <div className="hero-shade absolute inset-0" />
-          <div className="dot-veil absolute inset-0" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
             <p className="text-[9px] font-medium uppercase tracking-[0.5em] text-magenta md:text-[10px]">
               Equine therapy · ProSeries 3-in-1
@@ -133,7 +132,6 @@ function Index() {
         </section>
 
         <section id="technology" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
-          <div className="technology-dots absolute inset-y-0 right-0 w-1/2" />
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
               <div>
@@ -154,7 +152,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40 dot-constellation">
+        <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
               src={testimonialImg}
@@ -176,8 +174,7 @@ function Index() {
           </figure>
         </section>
 
-        <section id="enquire" className="invitation-panel dot-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
-          <div className="dot-veil absolute inset-0 opacity-60" />
+        <section id="enquire" className="invitation-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
           <div className="relative z-10 max-w-4xl">
             <p className="text-[9px] uppercase tracking-[0.52em] text-magenta">By invitation</p>
             <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
@@ -194,7 +191,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="relative border-t border-cream/10 bg-ink px-5 py-10 md:px-12 dot-constellation">
+      <footer className="relative border-t border-cream/10 bg-ink px-5 py-10 md:px-12">
         <div className="mx-auto flex max-w-[1480px] items-end justify-between gap-8">
           <Link to="/" aria-label="XALI home">
             <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
