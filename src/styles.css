@@ -223,13 +223,13 @@
 }
 
 @utility dot-field-technology {
-  --dot-field-opacity: 0.76;
+  --dot-field-opacity: 0.92;
 
   &::before {
-    width: min(48vw, 620px);
-    height: 86%;
-    right: -20%;
-    bottom: -18%;
+    width: min(54vw, 700px);
+    height: 96%;
+    right: -9%;
+    bottom: -12%;
     background-color: var(--magenta);
     -webkit-mask-position: center;
     mask-position: center;
@@ -241,16 +241,16 @@
 
 /* Scattered magenta-dot texture for large black surfaces */
 @utility dot-scatter {
-  --dot-scatter-opacity: 0.72;
+  --dot-scatter-opacity: 0.92;
   isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
-    top: 5%;
-    bottom: 5%;
-    left: -28%;
-    width: min(52vw, 720px);
+    top: 2%;
+    bottom: 2%;
+    left: -9%;
+    width: min(58vw, 780px);
     z-index: 0;
     pointer-events: none;
     background-color: var(--magenta);
@@ -336,15 +336,15 @@
   }
 
   .dot-field-technology::before {
-    width: 330px;
-    height: 72%;
-    right: -58%;
-    bottom: -8%;
+    width: 380px;
+    height: 82%;
+    right: -36%;
+    bottom: -5%;
   }
 
   .dot-scatter::before {
-    width: 340px;
-    left: -82%;
+    width: 390px;
+    left: -38%;
   }
 }
 
