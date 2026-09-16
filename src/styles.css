@@ -202,8 +202,8 @@
     z-index: 0;
     pointer-events: none;
     background-color: var(--magenta);
-    -webkit-mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
-    mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
+    -webkit-mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") center / contain no-repeat;
+    mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") center / contain no-repeat;
     opacity: var(--dot-field-opacity);
     animation: dot-field-breathe 16s ease-in-out infinite;
   }
@@ -251,8 +251,8 @@
     z-index: 0;
     pointer-events: none;
     background-color: var(--magenta);
-    -webkit-mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
-    mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
+    -webkit-mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") center / contain no-repeat;
+    mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") center / contain no-repeat;
     opacity: var(--dot-scatter-opacity);
     transform: scaleX(-1);
     animation: dot-scatter-breathe 12s ease-in-out infinite;
@@ -273,8 +273,8 @@
     inset: 0;
     pointer-events: none;
     background-color: var(--magenta);
-    -webkit-mask: url("./assets/xali-dot-arcs.svg") right bottom / min(72vw, 760px) auto no-repeat;
-    mask: url("./assets/xali-dot-arcs.svg") right bottom / min(72vw, 760px) auto no-repeat;
+    -webkit-mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") right bottom / min(72vw, 760px) auto no-repeat;
+    mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") right bottom / min(72vw, 760px) auto no-repeat;
     opacity: var(--dot-panel-opacity);
     animation: dot-panel-breathe 14s ease-in-out infinite;
   }
@@ -301,8 +301,8 @@
     z-index: 0;
     pointer-events: none;
     background-color: var(--magenta);
-    -webkit-mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
-    mask: url("./assets/xali-dot-arcs.svg") center / contain no-repeat;
+    -webkit-mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") center / contain no-repeat;
+    mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") center / contain no-repeat;
     opacity: var(--dot-constellation-opacity);
     animation: dot-constellation-drift 28s ease-in-out infinite alternate;
   }
@@ -362,8 +362,8 @@
   --dot-veil-opacity: 0.72;
   pointer-events: none;
   background-color: var(--magenta);
-  -webkit-mask: url("./assets/xali-dot-arcs.svg") right center / min(72vw, 900px) auto no-repeat;
-  mask: url("./assets/xali-dot-arcs.svg") right center / min(72vw, 900px) auto no-repeat;
+  -webkit-mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") right center / min(72vw, 900px) auto no-repeat;
+  mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") right center / min(72vw, 900px) auto no-repeat;
   opacity: var(--dot-veil-opacity);
   animation: dot-veil-breathe 12s ease-in-out infinite;
 }
@@ -372,8 +372,8 @@
   --dot-veil-opacity: 0.62;
   pointer-events: none;
   background-color: var(--magenta);
-  -webkit-mask: url("./assets/xali-dot-arcs.svg") right center / min(58vw, 700px) auto no-repeat;
-  mask: url("./assets/xali-dot-arcs.svg") right center / min(58vw, 700px) auto no-repeat;
+  -webkit-mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") right center / min(58vw, 700px) auto no-repeat;
+  mask: url("/__l5e/assets-v1/28101467-720e-409a-b645-5b73afed0216/xali-dot-wave-mask.png") right center / min(58vw, 700px) auto no-repeat;
   opacity: var(--dot-veil-opacity);
   animation: dot-veil-breathe 16s ease-in-out infinite;
 }
