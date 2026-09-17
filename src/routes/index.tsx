@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 
 import logoAsset from "../assets/xali-logo.png.asset.json";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
-import heroFilm from "../assets/xali-hero-film.mp4.asset.json";
+import heroFilm from "../assets/xali-hero-film-compatible.mp4.asset.json";
 import heroFilmWebm from "../assets/xali-hero-film.webm.asset.json";
 import productImg from "../assets/xali-customer-collection.jpeg.asset.json";
 import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
@@ -54,6 +55,30 @@ const benefits = [
 ];
 
 function Index() {
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const startPlayback = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      void video.play().catch(() => undefined);
+    };
+
+    startPlayback();
+    video.addEventListener("canplay", startPlayback);
+    window.addEventListener("pageshow", startPlayback);
+    document.addEventListener("visibilitychange", startPlayback);
+
+    return () => {
+      video.removeEventListener("canplay", startPlayback);
+      window.removeEventListener("pageshow", startPlayback);
+      document.removeEventListener("visibilitychange", startPlayback);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <header className="absolute inset-x-0 top-0 z-30 px-5 py-6 md:px-12 md:py-9">
@@ -73,6 +98,7 @@ function Index() {
       <main>
         <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-20 text-center md:min-h-screen md:items-center md:pb-0">
           <video
+            ref={heroVideoRef}
             poster={cinematicHero.url}
             width={1920}
             height={1080}
@@ -84,8 +110,8 @@ function Index() {
             preload="metadata"
             aria-hidden="true"
           >
-            <source src={heroFilmWebm.url} type="video/webm" />
             <source src={heroFilm.url} type="video/mp4" />
+            <source src={heroFilmWebm.url} type="video/webm" />
           </video>
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
