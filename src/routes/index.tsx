@@ -119,16 +119,16 @@ function Index() {
             <p className="text-[13px] font-medium uppercase tracking-[0.3em] text-magenta">
               Udviklet i stalden · Skabt til hesten
             </p>
-            <h1 className="mt-7 font-display text-5xl leading-[0.94] text-cream sm:text-6xl md:text-8xl lg:text-[7rem]">
+            <h1 className="mt-7 font-display text-5xl leading-[0.94] text-magenta sm:text-6xl md:text-8xl lg:text-[7rem]">
               Teknologi udviklet<br />med hesten i centrum
             </h1>
             <div className="mx-auto mt-8 h-px w-20 bg-magenta" />
-            <p className="mx-auto mt-8 max-w-xl text-xs font-light uppercase leading-7 tracking-[0.16em] text-cream/65 md:text-sm">
+            <p className="mx-auto mt-8 max-w-xl text-xs font-light uppercase leading-7 tracking-[0.16em] text-cream/95 drop-shadow md:text-sm">
               XALI er et modulopbygget system, der kombinerer PEMF og massage med fokus på fleksibilitet, praktisk anvendelse og hestens komfort.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-x-9 gap-y-5 text-[13px] uppercase tracking-[0.24em]">
-              <a href="#collection" className="border-b border-magenta pb-2 text-cream transition-colors hover:text-magenta">Oplev XALI</a>
-              <a href="#technology" className="border-b border-cream/30 pb-2 text-cream/75 transition-colors hover:border-magenta hover:text-magenta">Se systemet</a>
+              <a href="#collection" className="border-b border-magenta pb-2 text-magenta transition-colors hover:text-cream">Oplev XALI</a>
+              <a href="#technology" className="border-b border-cream/50 pb-2 text-cream/95 transition-colors hover:border-magenta hover:text-magenta">Se systemet</a>
             </div>
           </div>
           <a href="#collection" aria-label="Explore the XALI collection" className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2 text-[8px] uppercase tracking-[0.4em] text-cream/45 md:bottom-10">
