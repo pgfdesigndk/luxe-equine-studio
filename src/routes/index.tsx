@@ -113,6 +113,10 @@ function Index() {
             <source src={heroFilm.url} type="video/mp4" />
             <source src={heroFilmWebm.url} type="video/webm" />
           </video>
+          <div
+            className="absolute inset-0 z-[1] bg-black/10 pointer-events-none"
+            aria-hidden="true"
+          />
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
