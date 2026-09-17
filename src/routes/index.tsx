@@ -123,10 +123,10 @@ function Index() {
             <p className="text-[13px] font-medium uppercase tracking-[0.3em] text-magenta">
               A treatment and a treat
             </p>
-            <h1 className="mt-7 font-display text-5xl leading-[0.94] text-magenta sm:text-6xl md:text-8xl lg:text-[7rem]">
+            <h1 className="mt-7 font-display text-5xl leading-[0.94] text-magenta drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] sm:text-6xl md:text-8xl lg:text-[7rem]">
               The treatment and the treat
             </h1>
-            <p className="mt-5 text-xs font-medium uppercase tracking-[0.35em] text-cream/95 drop-shadow md:mt-6 md:text-sm">
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.35em] text-cream drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] md:mt-6 md:text-sm">
               FOR THE BETTER HORSE
             </p>
           </div>
