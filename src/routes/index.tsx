@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import logoAsset from "../assets/xali-logo.png.asset.json";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
+import heroFilm from "../assets/xali-hero-film.mp4.asset.json";
 import productImg from "../assets/xali-customer-collection.jpeg.asset.json";
 import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
 import invitationImg from "../assets/xali-customer-invitation.jpeg.asset.json";
@@ -70,13 +71,18 @@ function Index() {
 
       <main>
         <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-20 text-center md:min-h-screen md:items-center md:pb-0">
-          <img
-            src={cinematicHero.url}
-            alt="Black performance horse wearing the XALI ProSeries therapy blanket"
+          <video
+            src={heroFilm.url}
+            poster={cinematicHero.url}
             width={1920}
-            height={1088}
-            className="absolute inset-0 h-full w-full object-cover object-[42%_center] md:object-[45%_42%]"
-            fetchPriority="high"
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
           />
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
