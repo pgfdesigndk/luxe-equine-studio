@@ -117,24 +117,26 @@ function Index() {
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
             <p className="text-[13px] font-medium uppercase tracking-[0.3em] text-magenta">
-              Udviklet i stalden · Skabt til hesten
+              A treatment and a treat
             </p>
             <h1 className="mt-7 font-display text-5xl leading-[0.94] text-magenta sm:text-6xl md:text-8xl lg:text-[7rem]">
-              Teknologi udviklet<br />med hesten i centrum
+              The treatment and the treat
             </h1>
-            <div className="mx-auto mt-8 h-px w-20 bg-magenta" />
-            <p className="mx-auto mt-8 max-w-xl text-xs font-light uppercase leading-7 tracking-[0.16em] text-cream/95 drop-shadow md:text-sm">
-              XALI er et modulopbygget system, der kombinerer PEMF og massage med fokus på fleksibilitet, praktisk anvendelse og hestens komfort.
+            <p className="mt-5 text-xs font-medium uppercase tracking-[0.35em] text-cream/95 drop-shadow md:mt-6 md:text-sm">
+              FOR THE BETTER HORSE
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-9 gap-y-5 text-[13px] uppercase tracking-[0.24em]">
-              <a href="#collection" className="border-b border-magenta pb-2 text-magenta transition-colors hover:text-cream">Oplev XALI</a>
-              <a href="#technology" className="border-b border-cream/50 pb-2 text-cream/95 transition-colors hover:border-magenta hover:text-magenta">Se systemet</a>
+          </div>
+
+          <div className="absolute inset-x-0 bottom-0 z-10 bg-black/75 px-5 py-6 backdrop-blur-sm md:py-8">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="font-display text-xl leading-tight text-magenta md:text-3xl">
+                Teknologi udviklet med hesten i centrum
+              </p>
+              <p className="mx-auto mt-3 max-w-2xl text-[10px] font-light uppercase leading-6 tracking-[0.14em] text-cream/80 md:text-xs md:leading-7">
+                XALI er et modulopbygget system, der kombinerer PEMF og massage med fokus på fleksibilitet, praktisk anvendelse og hestens komfort. Not just a treatment – but also a treat.
+              </p>
             </div>
           </div>
-          <a href="#collection" aria-label="Explore the XALI collection" className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2 text-[8px] uppercase tracking-[0.4em] text-cream/45 md:bottom-10">
-            <span className="mx-auto mb-3 block h-10 w-px bg-magenta/70" />
-            Udforsk
-          </a>
         </section>
 
         <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
