@@ -127,13 +127,16 @@ function Index() {
             </p>
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 z-10 bg-black/75 px-5 py-6 backdrop-blur-sm md:py-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <p className="font-display text-xl leading-tight text-magenta md:text-3xl">
+          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink via-ink/55 to-transparent px-5 pb-8 pt-28 md:pb-12 md:pt-40">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="font-body text-[10px] font-light uppercase tracking-[0.3em] text-cream/60 md:text-[11px]">
+                XALI ProSeries 3-in-1
+              </p>
+              <p className="mt-3 font-display text-lg leading-snug text-cream md:text-2xl">
                 Teknologi udviklet med hesten i centrum
               </p>
-              <p className="mx-auto mt-3 max-w-2xl text-[10px] font-light uppercase leading-6 tracking-[0.14em] text-cream/80 md:text-xs md:leading-7">
-                XALI er et modulopbygget system, der kombinerer PEMF og massage med fokus på fleksibilitet, praktisk anvendelse og hestens komfort. Not just a treatment – but also a treat.
+              <p className="mx-auto mt-3 max-w-xl text-[10px] font-light uppercase leading-6 tracking-[0.18em] text-cream/60 md:text-[11px] md:leading-7">
+                PEMF og massage samlet i ét modulopbygget system — skabt med fokus på fleksibilitet, praktisk anvendelse og hestens komfort.
               </p>
             </div>
           </div>
