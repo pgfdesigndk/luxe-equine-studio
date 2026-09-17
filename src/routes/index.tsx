@@ -126,7 +126,7 @@ function Index() {
             <h1 className="text-shadow-white mt-7 font-display text-5xl leading-[0.94] text-magenta sm:text-6xl md:text-8xl lg:text-[7rem]">
               The treatment and the treat
             </h1>
-            <p className="text-shadow-white-strong mt-5 text-base font-display font-extrabold uppercase tracking-[0.35em] text-black md:mt-6 md:text-lg">
+            <p className="text-shadow-white-strong mt-5 text-base font-display font-extrabold uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
             </p>
           </div>
