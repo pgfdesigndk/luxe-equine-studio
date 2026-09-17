@@ -102,6 +102,8 @@ function Index() {
           </a>
         </section>
 
+        <div className="h-3 bg-cream md:h-5" aria-hidden="true" />
+
         <section id="collection" className="relative bg-ink px-5 py-24 md:px-12 md:py-40 dot-scatter">
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
             <figure className="relative overflow-hidden">
@@ -146,6 +148,8 @@ function Index() {
           </div>
         </section>
 
+        <div className="h-3 bg-cream md:h-5" aria-hidden="true" />
+
         <section id="technology" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
@@ -169,6 +173,8 @@ function Index() {
             </div>
           </div>
         </section>
+
+        <div className="h-3 bg-cream md:h-5" aria-hidden="true" />
 
         <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
@@ -194,6 +200,8 @@ function Index() {
             </div>
           </figure>
         </section>
+
+        <div className="h-3 bg-cream md:h-5" aria-hidden="true" />
 
         <section id="enquire" className="invitation-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
           <img
