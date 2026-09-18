@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import logoAsset from "../assets/xali-logo.png.asset.json";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
