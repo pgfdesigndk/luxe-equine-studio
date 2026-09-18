@@ -56,6 +56,8 @@ const benefits = [
 
 function Index() {
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const video = heroVideoRef.current;
