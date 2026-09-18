@@ -174,7 +174,7 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-20 text-center md:min-h-screen md:items-center md:pb-0">
+        <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-32 text-center md:min-h-screen md:items-center md:pb-0">
           <video
             ref={heroVideoRef}
             poster={cinematicHero.url}
