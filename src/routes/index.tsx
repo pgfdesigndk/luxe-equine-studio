@@ -136,30 +136,37 @@ function Index() {
             </button>
 
             {menuOpen && (
-              <div className="absolute right-0 top-full mt-4 w-52 origin-top-right border border-cream/10 bg-ink/95 p-2 shadow-2xl backdrop-blur-md">
-                <nav className="flex flex-col">
+              <div className="absolute right-0 top-full mt-5 w-60 origin-top-right animate-scale-in overflow-hidden rounded-sm border border-cream/10 bg-ink/95 shadow-2xl backdrop-blur-xl">
+                <nav className="flex flex-col py-5">
                   <a
                     href="#enquire"
                     onClick={() => setMenuOpen(false)}
-                    className="px-4 py-3 text-left font-body text-[11px] uppercase tracking-[0.28em] text-cream transition-colors hover:bg-magenta/10 hover:text-magenta"
+                    className="group relative px-8 py-4 text-left font-body text-[13px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
                   >
-                    Kontakt
+                    <span className="relative z-10">Kontakt</span>
+                    <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
                   </a>
                   <a
                     href="#collection"
                     onClick={() => setMenuOpen(false)}
-                    className="px-4 py-3 text-left font-body text-[11px] uppercase tracking-[0.28em] text-cream transition-colors hover:bg-magenta/10 hover:text-magenta"
+                    className="group relative px-8 py-4 text-left font-body text-[13px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
                   >
-                    Om Xali
+                    <span className="relative z-10">Om Xali</span>
+                    <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
                   </a>
                   <a
                     href="#technology"
                     onClick={() => setMenuOpen(false)}
-                    className="px-4 py-3 text-left font-body text-[11px] uppercase tracking-[0.28em] text-cream transition-colors hover:bg-magenta/10 hover:text-magenta"
+                    className="group relative px-8 py-4 text-left font-body text-[13px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
                   >
-                    Brugermanual
+                    <span className="relative z-10">Brugermanual</span>
+                    <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
                   </a>
                 </nav>
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-cream/20 to-transparent" />
               </div>
             )}
           </div>
