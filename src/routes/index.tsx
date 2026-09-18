@@ -12,17 +12,17 @@ import invitationImg from "../assets/xali-customer-invitation.jpeg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "XALI · Teknologi med hesten i centrum" },
+      { title: "XALI · Technology developed with the horse at the centre" },
       {
         name: "description",
         content:
-          "XALI er et fleksibelt, modulopbygget system med PEMF og massage, udviklet med hestens komfort i centrum.",
+          "XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.",
       },
-      { property: "og:title", content: "XALI · Teknologi med hesten i centrum" },
+      { property: "og:title", content: "XALI · Technology developed with the horse at the centre" },
       {
         property: "og:description",
         content:
-          "Et fleksibelt system med PEMF og massage, udviklet i stalden til livet med heste.",
+          "A modular system that combines PEMF and massage, developed in the stable for life with horses.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -34,23 +34,23 @@ export const Route = createFileRoute("/")({
 const benefits = [
   {
     number: "I",
-    title: "Fleksibelt og modulopbygget",
-    text: "Vælg den løsning, der passer til jeres behov – hals, dækken eller det samlede system.",
+    title: "Flexible and modular",
+    text: "Choose the solution that suits your needs – neck, blanket or the complete system.",
   },
   {
     number: "II",
-    title: "PEMF og massage",
-    text: "To teknologier samlet i ét gennemtænkt system til brug som en del af hestens rutine.",
+    title: "PEMF and massage",
+    text: "Two technologies combined in one carefully designed system to become part of the horse's routine.",
   },
   {
     number: "III",
-    title: "Komfort i fokus",
-    text: "Pasform, materialer, bevægelsesfrihed og placeringen af systemets komponenter er udviklet med blik for hesten.",
+    title: "Comfort comes first",
+    text: "The fit, materials, freedom of movement and positioning of the system's components have all been developed with the horse in mind.",
   },
   {
     number: "IV",
-    title: "Praktisk i hverdagen",
-    text: "Systemet er enkelt at håndtere, passer naturligt ind i stalden og kan skilles ad og vaskes.",
+    title: "Practical for everyday use",
+    text: "XALI is designed for people who work with horses every day. That is why the system needs to be easy to handle and fit naturally into stable life. The system can be disassembled and washed.",
   },
 ];
 
@@ -105,8 +105,8 @@ function Index() {
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <header className="absolute inset-x-0 top-0 z-30 px-5 py-6 md:px-12 md:py-9">
         <div className="mx-auto grid max-w-[1480px] grid-cols-3 items-center">
-          <a href="#collection" className="hidden text-[9px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block">
-            Oplev XALI
+          <a href="#collection" className="hidden text-[13px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block">
+            Discover XALI
           </a>
           <Link to="/" aria-label="XALI home" className="col-start-1 justify-self-start md:col-start-2 md:justify-self-center">
             <img src={logoAsset.url} alt="XALI" className="h-16 w-auto md:h-20" />
@@ -141,27 +141,27 @@ function Index() {
                   <a
                     href="#enquire"
                     onClick={() => setMenuOpen(false)}
-                    className="group relative px-8 py-4 text-left font-body text-[13px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
+                    className="group relative px-8 py-4 text-left font-body text-[15px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
                   >
-                    <span className="relative z-10">Kontakt</span>
+                    <span className="relative z-10">Contact</span>
                     <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
                   </a>
                   <a
                     href="#collection"
                     onClick={() => setMenuOpen(false)}
-                    className="group relative px-8 py-4 text-left font-body text-[13px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
+                    className="group relative px-8 py-4 text-left font-body text-[15px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
                   >
-                    <span className="relative z-10">Om Xali</span>
+                    <span className="relative z-10">About XALI</span>
                     <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
                   </a>
                   <a
                     href="#technology"
                     onClick={() => setMenuOpen(false)}
-                    className="group relative px-8 py-4 text-left font-body text-[13px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
+                    className="group relative px-8 py-4 text-left font-body text-[15px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
                   >
-                    <span className="relative z-10">Brugermanual</span>
+                    <span className="relative z-10">Technology</span>
                     <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
                   </a>
@@ -174,7 +174,7 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-20 text-center md:min-h-screen md:items-center md:pb-0">
+        <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-32 text-center md:min-h-screen md:items-center md:pb-0">
           <video
             ref={heroVideoRef}
             poster={cinematicHero.url}
@@ -198,35 +198,52 @@ function Index() {
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
-            <p className="text-[13px] font-medium uppercase tracking-[0.3em] text-magenta">
-              A treatment and a treat
-            </p>
             <h1 className="text-shadow-white mt-7 font-display text-5xl leading-[0.94] text-magenta sm:text-6xl md:text-8xl lg:text-[7rem]">
-              The treatment and the treat
+              Technology developed with the horse at the centre
             </h1>
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
             </p>
+            <p className="mx-auto mt-8 max-w-2xl text-sm font-light leading-7 text-cream/90 md:text-base md:leading-8">
+              XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
+            </p>
+            <p className="mx-auto mt-5 max-w-xl text-xs font-light uppercase tracking-[0.22em] text-cream/70 md:text-[13px]">
+              Not just a treatment – but also a treat.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#collection"
+                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+              >
+                Discover XALI
+              </a>
+              <a
+                href="#features"
+                className="inline-flex items-center justify-center border border-cream/40 bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta/10 hover:text-magenta"
+              >
+                Explore the system
+              </a>
+            </div>
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink via-ink/55 to-transparent px-5 pb-8 pt-28 md:pb-12 md:pt-40">
+          <div className="absolute inset-x-0 bottom-0 z-[5] bg-gradient-to-t from-ink via-ink/55 to-transparent px-5 pb-8 pt-28 md:pb-12 md:pt-40">
             <div className="mx-auto max-w-3xl text-center">
               <p className="font-body text-[10px] font-light uppercase tracking-[0.3em] text-cream/60 md:text-[11px]">
                 XALI ProSeries 3-in-1
               </p>
               <p className="mt-3 font-display text-lg leading-snug text-cream md:text-2xl">
-                Teknologi udviklet med hesten i centrum
+                PEMF and massage in one modular system
               </p>
               <p className="mx-auto mt-3 max-w-xl text-[10px] font-light uppercase leading-6 tracking-[0.18em] text-cream/60 md:text-[11px] md:leading-7">
-                PEMF og massage samlet i ét modulopbygget system — skabt med fokus på fleksibilitet, praktisk anvendelse og hestens komfort.
+                Developed with a passion for the horse, respect for the user's everyday needs and focus on the details that make a real difference.
               </p>
             </div>
           </div>
         </section>
 
         <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
-          <a href="#enquire" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
-            » Find din lokale forhandler her «
+          <a href="#collection" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
+            » Discover XALI «
           </a>
         </div>
 
@@ -242,97 +259,170 @@ function Index() {
                 loading="lazy"
               />
               <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-ink/70 px-5 py-5 backdrop-blur-sm md:px-7">
-                <span className="text-[9px] uppercase tracking-[0.32em] text-cream/60">XALI-systemet</span>
+                <span className="text-[9px] uppercase tracking-[0.32em] text-cream/60">The XALI system</span>
                 <span className="font-display text-xl text-magenta">3-in-1</span>
               </figcaption>
             </figure>
 
             <div className="md:px-8">
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Vores historie · 01</p>
+              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Introduction · 01</p>
               <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
-                Udviklet i stalden – til livet med heste
+                Developed in the stable – for life with horses
               </h2>
               <p className="mt-8 max-w-lg text-sm font-light leading-7 text-mist md:text-base md:leading-8">
-                XALI begyndte ikke ved et skrivebord. Idéen opstod gennem mange års arbejde med heste og teknisk behandlingsudstyr – og gennem ønsket om at skabe en løsning, vi selv gerne ville bruge på vores egne heste.
+                XALI did not begin at a desk. The idea grew out of many years of working with horses and technical treatment equipment – and from a desire to create a solution that we would genuinely want to use on our own horses.
               </p>
               <p className="mt-5 max-w-lg text-sm font-light leading-7 text-mist md:text-base md:leading-8">
-                Resultatet er et fleksibelt system, hvor hestens komfort, brugerens hverdag og professionelle behandleres ønsker har været med i alle beslutninger.
+                The result is a flexible system where the horse's comfort, the user's everyday needs and the requirements of professional practitioners have been considered throughout the entire development process.
               </p>
-              <h3 className="mt-12 text-2xl leading-tight text-cream md:text-3xl">Et system skabt til virkeligheden</h3>
-              <div className="mt-7 border-t border-cream/10">
-                {benefits.map((benefit) => (
-                  <div key={benefit.number} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-cream/10 py-6">
-                    <span className="font-display text-xl text-magenta">{benefit.number}.</span>
-                    <div>
-                      <h3 className="text-xs font-normal uppercase tracking-[0.28em] text-cream">{benefit.title}</h3>
-                      <p className="mt-3 text-sm font-light leading-6 text-mist">{benefit.text}</p>
-                    </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-32">
+          <div className="mx-auto max-w-7xl">
+            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Key product features · 02</p>
+            <h2 className="mt-7 max-w-3xl font-display text-4xl leading-tight text-cream md:text-6xl">
+              A system designed for real life
+            </h2>
+            <div className="mt-12 border-t border-cream/10">
+              {benefits.map((benefit) => (
+                <div key={benefit.number} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-cream/10 py-6 md:grid-cols-[3rem_1fr] md:gap-6">
+                  <span className="font-display text-xl text-magenta md:text-2xl">{benefit.number}.</span>
+                  <div>
+                    <h3 className="text-xs font-normal uppercase tracking-[0.28em] text-cream md:text-sm">{benefit.title}</h3>
+                    <p className="mt-3 text-sm font-light leading-6 text-mist md:text-base md:leading-7">{benefit.text}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
           <a href="#technology" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
-            » Dokumentation og teknisk data – klik her «
+            » Learn about the technology «
           </a>
         </div>
 
-        <section id="technology" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
+        <section id="technology" className="relative border-y border-cream/10 bg-ink px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
               <div>
-                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Horse First · 02</p>
-                <p className="mt-8 text-xs uppercase leading-7 tracking-[0.22em] text-cream/50">Komfort<br />Bevægelsesfrihed<br />Praktisk anvendelse</p>
+                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Horse First · 03</p>
+                <p className="mt-8 text-xs uppercase leading-7 tracking-[0.22em] text-cream/50">Comfort<br />Freedom of movement<br />Practical use</p>
               </div>
               <div>
                 <h2 className="max-w-4xl font-display text-4xl leading-tight text-cream md:text-6xl lg:text-7xl">
-                  Hesten er ikke bare brugeren. Hesten er udgangspunktet.
+                  The horse is not just the user. The horse is where it all begins.
                 </h2>
                 <p className="mt-9 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
-                  Teknologi har kun værdi, når den fungerer i virkeligheden. Derfor ser vi ikke kun på målinger og tekniske resultater. Vi observerer også hesten: Er produktet roligt og behageligt at have på? De spørgsmål har fulgt hele udviklingen af XALI.
+                  Technology only has value when it works in the real world. That is why we do not only look at measurements and technical results. We also observe the horse.
                 </p>
-                <div className="mt-12 grid gap-8 border-t border-cream/10 pt-8 sm:grid-cols-3">
-                  <div><p className="text-[13px] uppercase tracking-[0.26em] text-magenta">Udviklingen</p><h3 className="mt-4 text-2xl leading-tight text-cream">Testet, ændret og testet igen</h3><p className="mt-4 text-sm font-light leading-6 text-mist">Vi har tegnet, bygget prototyper, afprøvet materialer og forkastet løsninger, der ikke fungerede godt nok.</p></div>
-                  <div><p className="text-[13px] uppercase tracking-[0.26em] text-magenta">Teknologien</p><h3 className="mt-4 text-2xl leading-tight text-cream">Fra elektronik til tekstil</h3><p className="mt-4 text-sm font-light leading-6 text-mist">Elektronik, spoler, programmer og strømforsyning er udviklet som dele af én samlet og praktisk løsning.</p></div>
-                  <div><p className="text-[13px] uppercase tracking-[0.26em] text-magenta">Dansk udvikling</p><h3 className="mt-4 text-2xl leading-tight text-cream">Udviklet med omhu i Bogense</h3><p className="mt-4 text-sm font-light leading-6 text-mist">Her samles teknik, tekstil og godt håndværk i en tæt proces, hvor hver detalje løbende forbedres.</p></div>
-                </div>
+                <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                  Is the product calm and comfortable to wear?
+                </p>
+                <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                  These questions have been at the heart of the entire development of XALI.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-24 grid gap-16 border-t border-cream/10 pt-16 md:grid-cols-2 md:gap-24">
+              <div>
+                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Development · 03.1</p>
+                <h3 className="mt-7 font-display text-3xl leading-tight text-cream md:text-4xl">
+                  Tested, changed and tested again
+                </h3>
+                <p className="mt-6 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                  Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
+                </p>
+                <p className="mt-5 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                  Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
+                </p>
+              </div>
+              <div>
+                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Technology · 03.2</p>
+                <h3 className="mt-7 font-display text-3xl leading-tight text-cream md:text-4xl">
+                  Thought through from electronics to textiles
+                </h3>
+                <p className="mt-6 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                  Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
+                </p>
+                <p className="mt-5 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                  The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
+                </p>
+                <a
+                  href="#enquire"
+                  className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
+                >
+                  Learn about the technology
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
-          <a href="#enquire" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
-            » Kontakt XALI – klik her «
+          <a href="#team" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
+            » Meet the people behind XALI «
           </a>
         </div>
 
-        <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
+        <section id="team" className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
                 src={testimonialImg.url}
-                alt="Detail of the XALI therapy blanket’s magenta textile and therapy ring"
+                alt="Detail of the XALI therapy blanket's magenta textile and therapy ring"
                 width={1280}
                 height={853}
                 className="h-40 w-32 object-cover object-center md:h-72 md:w-56"
               loading="lazy"
             />
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Menneskene bag · 03</p>
+              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">The people behind XALI · 04</p>
               <h2 className="mt-7 max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
-                Et lille team med en stor ambition
+                A small team with a big ambition
               </h2>
               <p className="mt-7 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
-                XALI er skabt af et lille, engageret team med mange års erfaring inden for heste, behandlingsudstyr, teknik og kundernes praktiske behov. Sammen udvikler vi det produkt, vi selv har savnet.
+                XALI was not developed by a large corporation. It was created by a small, dedicated team with many years of experience in horses, treatment equipment, technology and the practical needs of customers.
               </p>
-              <figcaption className="mt-8 border-l border-magenta pl-5 text-[13px] uppercase leading-6 tracking-[0.22em] text-mist">
-                Trine · Dennis · Gitte<br /><span className="text-cream/45">Erfaring, teknik og kendskab til hesten</span>
-              </figcaption>
+              <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                Trine brings many years of experience from the equestrian world and a deep understanding of users' everyday needs. Dennis is the technical driving force, turning ideas into electronics and functional solutions, while Gitte is the practitioner who understands what horses need to perform at their best, both in training and in competition.
+              </p>
+              <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                Together, we are developing the product we ourselves have been missing.
+              </p>
+              <a
+                href="#enquire"
+                className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
+              >
+                Meet the team
+              </a>
             </div>
           </figure>
+        </section>
+
+        <section id="danish-development" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-32">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Danish development · 05</p>
+            <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
+              Developed with care in Bogense
+            </h2>
+            <p className="mx-auto mt-8 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              XALI is taking shape in Denmark, where technology, textiles and skilled craftsmanship come together. Our close development process allows us to follow every detail, respond to the experience gained through testing and continuously improve the system.
+            </p>
+          </div>
+        </section>
+
+        <section className="relative bg-cream px-5 py-12 md:px-12 md:py-16">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-ink/50 md:text-[11px]">Supported by</p>
+            <p className="mt-3 font-display text-3xl text-ink md:text-5xl">LAG-MANK</p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm font-light leading-6 text-ink/70 md:text-base md:leading-7">
+              A big thank you to LAG-MANK for believing in the project and supporting us throughout the journey.
+            </p>
+          </div>
         </section>
 
         <section id="enquire" className="invitation-panel relative flex min-h-[72svh] items-center justify-center overflow-hidden border-t border-cream/10 px-5 py-24 text-center">
@@ -344,17 +434,61 @@ function Index() {
           />
           <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
           <div className="relative z-10 max-w-4xl">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Klar til at møde XALI?</p>
+            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Ready to meet XALI?</p>
             <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
               Not just a treatment – but also a treat.
             </h2>
-            <p className="mx-auto mt-8 max-w-xl text-sm font-light leading-7 text-mist">
-              Oplev et modulopbygget system udviklet med passion for hesten, respekt for brugerens hverdag og fokus på de detaljer, der gør en reel forskel i anvendelsen.
+            <p className="mx-auto mt-8 max-w-xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              Discover a modular system developed with a passion for the horse, respect for the user's everyday needs and a focus on the details that make a real difference in everyday use.
             </p>
-            <a href="mailto:hello@xali.dk" className="group mt-12 inline-flex flex-col items-center text-[10px] uppercase tracking-[0.36em] text-cream transition-colors hover:text-magenta">
-              Kontakt os
-              <span className="mt-4 h-px w-full bg-magenta transition-all duration-500 group-hover:w-1/2" />
-            </a>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#collection"
+                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+              >
+                Explore XALI
+              </a>
+              <a
+                href="mailto:hello@xali.dk"
+                className="inline-flex items-center justify-center border border-cream/40 bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta/10 hover:text-magenta"
+              >
+                Contact us
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="newsletter" className="relative bg-ink px-5 py-24 md:px-12 md:py-32">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Pre-launch newsletter · 06</p>
+            <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-5xl">
+              Follow the XALI journey
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              Sign up to receive news about the product, the launch and the work behind XALI. We will share prototypes, technology, testing and the experiences that are shaping the finished system.
+            </p>
+            <form
+              action="mailto:hello@xali.dk?subject=XALI%20newsletter%20signup"
+              method="post"
+              encType="text/plain"
+              className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center"
+            >
+              <label htmlFor="email" className="sr-only">Your email address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="Your email address"
+                className="w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-cream/40 outline-none transition-colors focus:border-magenta sm:w-72"
+              />
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+              >
+                Keep me updated
+              </button>
+            </form>
           </div>
         </section>
       </main>
@@ -364,7 +498,7 @@ function Index() {
           <Link to="/" aria-label="XALI home">
             <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
           </Link>
-           <p className="text-right text-[8px] uppercase leading-5 tracking-[0.3em] text-cream/35">Udviklet i Bogense · Danmark<br />Hesten kommer først</p>
+           <p className="text-right text-[8px] uppercase leading-5 tracking-[0.3em] text-cream/35">Developed in Bogense · Denmark<br />Horse First</p>
         </div>
       </footer>
     </div>
