@@ -226,19 +226,6 @@ function Index() {
             </div>
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 z-[5] bg-gradient-to-t from-ink via-ink/55 to-transparent px-5 pb-8 pt-28 md:pb-12 md:pt-40">
-            <div className="mx-auto max-w-3xl text-center">
-              <p className="font-body text-[10px] font-light uppercase tracking-[0.3em] text-cream/60 md:text-[11px]">
-                XALI ProSeries 3-in-1
-              </p>
-              <p className="mt-3 font-display text-lg leading-snug text-cream md:text-2xl">
-                PEMF and massage in one modular system
-              </p>
-              <p className="mx-auto mt-3 max-w-xl text-[10px] font-light uppercase leading-6 tracking-[0.18em] text-cream/60 md:text-[11px] md:leading-7">
-                Developed with a passion for the horse, respect for the user's everyday needs and focus on the details that make a real difference.
-              </p>
-            </div>
-          </div>
         </section>
 
         <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
