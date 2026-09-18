@@ -111,9 +111,58 @@ function Index() {
           <Link to="/" aria-label="XALI home" className="col-start-1 justify-self-start md:col-start-2 md:justify-self-center">
             <img src={logoAsset.url} alt="XALI" className="h-16 w-auto md:h-20" />
           </Link>
-          <a href="#enquire" className="col-start-3 justify-self-end text-[9px] uppercase tracking-[0.36em] text-cream/70 transition-colors hover:text-magenta">
-            Kontakt os
-          </a>
+          <div className="col-start-3 justify-self-end relative" ref={menuRef}>
+            <button
+              type="button"
+              aria-label="Menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((open) => !open)}
+              className="group flex h-10 w-10 items-center justify-center text-cream/80 transition-colors hover:text-magenta focus:outline-none"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+                {menuOpen ? (
+                  <>
+                    <line x1="4" y1="4" x2="20" y2="20" />
+                    <line x1="20" y1="4" x2="4" y2="20" />
+                  </>
+                ) : (
+                  <>
+                    <line x1="3" y1="7" x2="21" y2="7" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="17" x2="21" y2="17" />
+                  </>
+                )}
+              </svg>
+            </button>
+
+            {menuOpen && (
+              <div className="absolute right-0 top-full mt-4 w-52 origin-top-right border border-cream/10 bg-ink/95 p-2 shadow-2xl backdrop-blur-md">
+                <nav className="flex flex-col">
+                  <a
+                    href="#enquire"
+                    onClick={() => setMenuOpen(false)}
+                    className="px-4 py-3 text-left font-body text-[11px] uppercase tracking-[0.28em] text-cream transition-colors hover:bg-magenta/10 hover:text-magenta"
+                  >
+                    Kontakt
+                  </a>
+                  <a
+                    href="#collection"
+                    onClick={() => setMenuOpen(false)}
+                    className="px-4 py-3 text-left font-body text-[11px] uppercase tracking-[0.28em] text-cream transition-colors hover:bg-magenta/10 hover:text-magenta"
+                  >
+                    Om Xali
+                  </a>
+                  <a
+                    href="#technology"
+                    onClick={() => setMenuOpen(false)}
+                    className="px-4 py-3 text-left font-body text-[11px] uppercase tracking-[0.28em] text-cream transition-colors hover:bg-magenta/10 hover:text-magenta"
+                  >
+                    Brugermanual
+                  </a>
+                </nav>
+              </div>
+            )}
+          </div>
         </div>
       </header>
 
