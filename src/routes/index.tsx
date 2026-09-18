@@ -226,7 +226,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink via-ink/55 to-transparent px-5 pb-8 pt-28 md:pb-12 md:pt-40">
+          <div className="absolute inset-x-0 bottom-0 z-[5] bg-gradient-to-t from-ink via-ink/55 to-transparent px-5 pb-8 pt-28 md:pb-12 md:pt-40">
             <div className="mx-auto max-w-3xl text-center">
               <p className="font-body text-[10px] font-light uppercase tracking-[0.3em] text-cream/60 md:text-[11px]">
                 XALI ProSeries 3-in-1
