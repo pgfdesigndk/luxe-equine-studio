@@ -219,7 +219,7 @@ function Index() {
               </a>
               <a
                 href="#features"
-                className="inline-flex items-center justify-center border border-cream/40 bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta/10 hover:text-magenta"
+                className="inline-flex items-center justify-center border border-cream/70 bg-ink/40 px-8 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream text-shadow-strong drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] transition-all duration-300 hover:border-magenta hover:bg-magenta hover:text-cream"
               >
                 Explore the system
               </a>
