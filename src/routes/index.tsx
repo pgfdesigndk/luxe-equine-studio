@@ -199,7 +199,7 @@ function Index() {
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
             <h1 className="text-shadow-white font-display text-[2.7rem] leading-[0.98] text-magenta sm:text-6xl md:mt-7 md:text-8xl md:leading-[0.94] lg:text-[7rem]">
-              It&apos;s a treatment and a treat
+              It’s a treatment and a treat
             </h1>
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
@@ -215,7 +215,7 @@ function Index() {
                 href="#enquire"
                 className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
               >
-                Find your local dealer
+                Find your lokal dealer
               </a>
               <a
                 href="#features"
