@@ -174,7 +174,7 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative flex min-h-[92svh] items-end justify-center overflow-hidden px-5 pb-32 text-center md:min-h-screen md:items-center md:pb-0">
+        <section className="hero-cinematic relative flex min-h-[100svh] items-center justify-center overflow-hidden px-5 pb-16 pt-28 text-center md:min-h-screen md:px-12 md:py-0">
           <video
             ref={heroVideoRef}
             poster={cinematicHero.url}
@@ -198,19 +198,19 @@ function Index() {
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
-            <h1 className="text-shadow-white mt-7 font-display text-5xl leading-[0.94] text-magenta sm:text-6xl md:text-8xl lg:text-[7rem]">
+            <h1 className="text-shadow-white font-display text-[2.7rem] leading-[0.98] text-magenta sm:text-6xl md:mt-7 md:text-8xl md:leading-[0.94] lg:text-[7rem]">
               Technology developed with the horse at the centre
             </h1>
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
             </p>
-            <p className="mx-auto mt-8 max-w-2xl text-sm font-light leading-7 text-cream/90 md:text-base md:leading-8">
+            <p className="mx-auto mt-6 max-w-2xl text-sm font-light leading-7 text-cream/90 md:mt-8 md:text-base md:leading-8">
               XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
             </p>
             <p className="mx-auto mt-5 max-w-xl text-xs font-light uppercase tracking-[0.22em] text-cream/70 md:text-[13px]">
               Not just a treatment – but also a treat.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
               <a
                 href="#collection"
                 className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
