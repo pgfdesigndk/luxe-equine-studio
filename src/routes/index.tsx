@@ -117,9 +117,9 @@ function Index() {
               aria-label="Menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((open) => !open)}
-              className="group flex h-10 w-10 items-center justify-center text-cream/80 transition-colors hover:text-magenta focus:outline-none"
+              className="group flex h-12 w-12 items-center justify-center text-cream/90 transition-colors hover:text-magenta focus:outline-none"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden="true">
                 {menuOpen ? (
                   <>
                     <line x1="4" y1="4" x2="20" y2="20" />
@@ -199,23 +199,23 @@ function Index() {
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
             <h1 className="text-shadow-white font-display text-[2.7rem] leading-[0.98] text-magenta sm:text-6xl md:mt-7 md:text-8xl md:leading-[0.94] lg:text-[7rem]">
-              Technology developed with the horse at the centre
+              It’s a treatment and a treat
             </h1>
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
             </p>
-            <p className="mx-auto mt-6 max-w-2xl text-sm font-light leading-7 text-cream/90 md:mt-8 md:text-base md:leading-8">
+            <p className="text-shadow-strong mx-auto mt-6 max-w-2xl text-sm font-normal leading-7 text-cream md:mt-8 md:text-base md:leading-8">
               XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
             </p>
-            <p className="mx-auto mt-5 max-w-xl text-xs font-light uppercase tracking-[0.22em] text-cream/70 md:text-[13px]">
+            <p className="text-shadow-strong mx-auto mt-5 max-w-xl text-xs font-medium uppercase tracking-[0.22em] text-cream md:text-[13px]">
               Not just a treatment – but also a treat.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
               <a
-                href="#collection"
+                href="#enquire"
                 className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
               >
-                Discover XALI
+                Find your lokal dealer
               </a>
               <a
                 href="#features"
