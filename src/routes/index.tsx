@@ -117,9 +117,9 @@ function Index() {
               aria-label="Menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((open) => !open)}
-              className="group flex h-12 w-12 items-center justify-center text-cream/90 transition-colors hover:text-magenta focus:outline-none"
+              className="group flex h-16 w-16 items-center justify-center text-cream/90 transition-colors hover:text-magenta focus:outline-none md:h-[72px] md:w-[72px]"
             >
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden="true">
+              <svg className="h-9 w-9 md:h-10 md:w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                 {menuOpen ? (
                   <>
                     <line x1="4" y1="4" x2="20" y2="20" />
@@ -204,10 +204,10 @@ function Index() {
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
             </p>
-            <p className="text-shadow-strong mx-auto mt-6 max-w-2xl text-sm font-normal leading-7 text-cream md:mt-8 md:text-base md:leading-8">
+            <p className="text-shadow-strong mx-auto mt-6 max-w-2xl text-base font-semibold leading-7 text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:mt-8 md:text-lg md:leading-8">
               XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
             </p>
-            <p className="text-shadow-strong mx-auto mt-5 max-w-xl text-xs font-medium uppercase tracking-[0.22em] text-cream md:text-[13px]">
+            <p className="text-shadow-strong mx-auto mt-5 max-w-xl text-[13px] font-bold uppercase tracking-[0.22em] text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-sm">
               Not just a treatment – but also a treat.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
