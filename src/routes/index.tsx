@@ -204,10 +204,10 @@ function Index() {
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
             </p>
-            <p className="text-shadow-strong mx-auto mt-6 max-w-2xl text-base font-semibold leading-7 text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:mt-8 md:text-lg md:leading-8">
+            <p className="text-shadow-strong mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:mt-8 md:text-xl md:leading-9">
               XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
             </p>
-            <p className="text-shadow-strong mx-auto mt-5 max-w-xl text-[13px] font-bold uppercase tracking-[0.22em] text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-sm">
+            <p className="text-shadow-strong mx-auto mt-5 max-w-xl text-sm font-bold uppercase tracking-[0.22em] text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-base">
               Not just a treatment – but also a treat.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
@@ -256,10 +256,10 @@ function Index() {
               <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
                 Developed in the stable – for life with horses
               </h2>
-              <p className="mt-8 max-w-lg text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              <p className="mt-8 max-w-lg text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                 XALI did not begin at a desk. The idea grew out of many years of working with horses and technical treatment equipment – and from a desire to create a solution that we would genuinely want to use on our own horses.
               </p>
-              <p className="mt-5 max-w-lg text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              <p className="mt-5 max-w-lg text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                 The result is a flexible system where the horse's comfort, the user's everyday needs and the requirements of professional practitioners have been considered throughout the entire development process.
               </p>
             </div>
@@ -278,7 +278,7 @@ function Index() {
                   <span className="font-display text-xl text-magenta md:text-2xl">{benefit.number}.</span>
                   <div>
                     <h3 className="text-xs font-normal uppercase tracking-[0.28em] text-cream md:text-sm">{benefit.title}</h3>
-                    <p className="mt-3 text-sm font-light leading-6 text-mist md:text-base md:leading-7">{benefit.text}</p>
+                    <p className="mt-3 text-base font-light leading-7 text-mist md:text-lg md:leading-8">{benefit.text}</p>
                   </div>
                 </div>
               ))}
@@ -303,13 +303,13 @@ function Index() {
                 <h2 className="max-w-4xl font-display text-4xl leading-tight text-cream md:text-6xl lg:text-7xl">
                   The horse is not just the user. The horse is where it all begins.
                 </h2>
-                <p className="mt-9 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-9 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Technology only has value when it works in the real world. That is why we do not only look at measurements and technical results. We also observe the horse.
                 </p>
-                <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Is the product calm and comfortable to wear?
                 </p>
-                <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   These questions have been at the heart of the entire development of XALI.
                 </p>
               </div>
@@ -321,10 +321,10 @@ function Index() {
                 <h3 className="mt-7 font-display text-3xl leading-tight text-cream md:text-4xl">
                   Tested, changed and tested again
                 </h3>
-                <p className="mt-6 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-6 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
                 </p>
-                <p className="mt-5 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
                 </p>
               </div>
@@ -333,10 +333,10 @@ function Index() {
                 <h3 className="mt-7 font-display text-3xl leading-tight text-cream md:text-4xl">
                   Thought through from electronics to textiles
                 </h3>
-                <p className="mt-6 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-6 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
                 </p>
-                <p className="mt-5 text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+                <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
                 </p>
                 <a
@@ -371,13 +371,13 @@ function Index() {
               <h2 className="mt-7 max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
                 A small team with a big ambition
               </h2>
-              <p className="mt-7 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              <p className="mt-7 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                 XALI was not developed by a large corporation. It was created by a small, dedicated team with many years of experience in horses, treatment equipment, technology and the practical needs of customers.
               </p>
-              <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                 Trine brings many years of experience from the equestrian world and a deep understanding of users' everyday needs. Dennis is the technical driving force, turning ideas into electronics and functional solutions, while Gitte is the practitioner who understands what horses need to perform at their best, both in training and in competition.
               </p>
-              <p className="mt-5 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+              <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                 Together, we are developing the product we ourselves have been missing.
               </p>
               <a
@@ -396,7 +396,7 @@ function Index() {
             <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
               Developed with care in Bogense
             </h2>
-            <p className="mx-auto mt-8 max-w-3xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+            <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               XALI is taking shape in Denmark, where technology, textiles and skilled craftsmanship come together. Our close development process allows us to follow every detail, respond to the experience gained through testing and continuously improve the system.
             </p>
           </div>
@@ -406,7 +406,7 @@ function Index() {
           <div className="mx-auto max-w-4xl text-center">
             <p className="text-[10px] uppercase tracking-[0.3em] text-ink/50 md:text-[11px]">Supported by</p>
             <p className="mt-3 font-display text-3xl text-ink md:text-5xl">LAG-MANK</p>
-            <p className="mx-auto mt-4 max-w-2xl text-sm font-light leading-6 text-ink/70 md:text-base md:leading-7">
+            <p className="mx-auto mt-4 max-w-2xl text-base font-light leading-7 text-ink/70 md:text-lg md:leading-8">
               A big thank you to LAG-MANK for believing in the project and supporting us throughout the journey.
             </p>
           </div>
@@ -425,7 +425,7 @@ function Index() {
             <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
               Not just a treatment – but also a treat.
             </h2>
-            <p className="mx-auto mt-8 max-w-xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+            <p className="mx-auto mt-8 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               Discover a modular system developed with a passion for the horse, respect for the user's everyday needs and a focus on the details that make a real difference in everyday use.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -451,7 +451,7 @@ function Index() {
             <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-5xl">
               Follow the XALI journey
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-7 text-mist md:text-base md:leading-8">
+            <p className="mx-auto mt-6 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               Sign up to receive news about the product, the launch and the work behind XALI. We will share prototypes, technology, testing and the experiences that are shaping the finished system.
             </p>
             <form
@@ -485,7 +485,7 @@ function Index() {
           <Link to="/" aria-label="XALI home">
             <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
           </Link>
-           <p className="text-right text-[8px] uppercase leading-5 tracking-[0.3em] text-cream/35">Developed in Bogense · Denmark<br />Horse First</p>
+           <p className="text-right text-[10px] uppercase leading-5 tracking-[0.3em] text-cream/35 md:text-xs">Developed in Bogense · Denmark<br />Horse First</p>
         </div>
       </footer>
     </div>
