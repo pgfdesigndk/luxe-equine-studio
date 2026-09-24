@@ -198,17 +198,14 @@ function Index() {
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-5xl reveal-up">
-            <h1 className="text-shadow-white font-display text-[2.7rem] leading-[0.98] text-magenta sm:text-6xl md:mt-7 md:text-8xl md:leading-[0.94] lg:text-[7rem]">
+            <p className="text-shadow-strong mx-auto max-w-2xl text-lg font-semibold leading-8 text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-xl md:leading-9">
+              XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
+            </p>
+            <h1 className="text-shadow-white mt-6 font-display text-[1.8rem] leading-[0.98] text-magenta sm:text-[2.5rem] md:mt-8 md:text-[4rem] md:leading-[0.94] lg:text-[4.5rem]">
               It’s a treatment and a treat
             </h1>
             <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
               FOR THE BETTER HORSE
-            </p>
-            <p className="text-shadow-strong mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:mt-8 md:text-xl md:leading-9">
-              XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
-            </p>
-            <p className="text-shadow-strong mx-auto mt-5 max-w-xl text-sm font-bold uppercase tracking-[0.22em] text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-base">
-              Not just a treatment – but also a treat.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
               <a
