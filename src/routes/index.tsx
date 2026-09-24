@@ -195,7 +195,7 @@ function Index() {
           <div className="hero-shade absolute inset-0" />
           <div className="dot-hero-right" aria-hidden="true" />
           <div className="pointer-events-none absolute inset-x-0 top-0 z-[6] h-[34%] bg-gradient-to-b from-ink via-ink/80 to-transparent" aria-hidden="true" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-[31%] bg-gradient-to-t from-ink via-ink/85 to-transparent" aria-hidden="true" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-[42%] bg-gradient-to-t from-ink via-ink/95 to-transparent" aria-hidden="true" />
 
           <div className="relative z-10 grid min-h-[920px] grid-rows-[minmax(0,1fr)_minmax(300px,38%)_minmax(0,1fr)] px-5 pb-12 pt-32 md:min-h-[960px] md:grid-rows-[minmax(0,1fr)_minmax(360px,42%)_minmax(0,1fr)] md:px-12 md:pb-14 md:pt-36">
             <div className="mx-auto max-w-5xl self-end reveal-up">
