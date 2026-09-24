@@ -199,7 +199,7 @@ function Index() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-20 bg-gradient-to-t from-ink to-transparent" aria-hidden="true" />
           </div>
 
-          <div className="relative z-10 grid min-h-[920px] grid-rows-[350px_300px_270px] px-5 pb-12 pt-32 md:min-h-[1180px] md:grid-rows-[340px_560px_280px] md:px-12 md:pb-14 md:pt-36">
+          <div className="relative z-10 grid min-h-[920px] grid-rows-[350px_300px_270px] px-5 md:min-h-[1180px] md:grid-rows-[340px_560px_280px] md:px-12">
             <div className="mx-auto max-w-5xl self-end reveal-up">
               <p className="mx-auto max-w-2xl text-base font-semibold leading-7 text-cream md:text-lg md:leading-8">
                 XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
