@@ -174,14 +174,14 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative overflow-hidden bg-ink text-center">
-          <div className="relative h-[58svh] min-h-[420px] overflow-hidden bg-ink md:h-[72svh] md:min-h-[620px]">
+        <section className="hero-cinematic relative min-h-[920px] overflow-hidden bg-ink text-center md:min-h-[1180px]">
+          <div className="absolute inset-x-0 top-[350px] h-[300px] overflow-hidden md:top-[340px] md:h-[560px]">
             <video
               ref={heroVideoRef}
               poster={cinematicHero.url}
               width={1920}
               height={1080}
-              className="absolute inset-0 h-full w-full object-contain object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center"
               autoPlay
               muted
               loop
@@ -192,26 +192,30 @@ function Index() {
               <source src={heroFilm.url} type="video/mp4" />
               <source src={heroFilmWebm.url} type="video/webm" />
             </video>
-            <div
-              className="pointer-events-none absolute inset-0 z-[1] bg-black/25"
-              aria-hidden="true"
-            />
+            <div className="pointer-events-none absolute inset-0 z-[1] bg-black/25" aria-hidden="true" />
             <div className="hero-shade absolute inset-0" />
             <div className="dot-hero-right" aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-[6] h-16 bg-gradient-to-b from-ink to-transparent" aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-20 bg-gradient-to-t from-ink to-transparent" aria-hidden="true" />
           </div>
 
-          <div className="relative z-10 bg-ink px-5 py-12 md:px-12 md:py-16">
-            <div className="mx-auto max-w-5xl reveal-up">
-              <p className="mx-auto max-w-2xl text-lg font-semibold leading-8 text-cream md:text-xl md:leading-9">
+          <div className="relative z-10 grid min-h-[920px] grid-rows-[350px_300px_270px] px-5 md:min-h-[1180px] md:grid-rows-[340px_560px_280px] md:px-12">
+            <div className="mx-auto max-w-5xl self-end reveal-up">
+              <p className="mx-auto max-w-2xl text-base font-semibold leading-7 text-cream md:text-lg md:leading-8">
                 XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
               </p>
-              <h1 className="mt-6 font-display text-[1.8rem] leading-[0.98] text-magenta sm:text-[2.5rem] md:mt-8 md:text-[4rem] md:leading-[0.94] lg:text-[4.5rem]">
+              <h1 className="text-shadow-white mt-4 font-display text-[1.8rem] leading-[0.98] text-magenta sm:text-[2.5rem] md:mt-5 md:text-[4rem] md:leading-[0.94] lg:text-[4.5rem]">
                 It’s a treatment and a treat
               </h1>
-              <p className="mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-cream md:mt-6 md:text-lg">
+            </div>
+
+            <div aria-hidden="true" />
+
+            <div className="self-start">
+              <p className="text-shadow-strong text-base font-body font-black uppercase tracking-[0.35em] text-cream md:text-lg">
                 FOR THE BETTER HORSE
               </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
                 <a
                   href="#enquire"
                   className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
