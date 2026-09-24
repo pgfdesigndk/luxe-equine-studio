@@ -180,7 +180,7 @@ function Index() {
             poster={cinematicHero.url}
             width={1920}
             height={1080}
-            className="absolute inset-0 h-full w-full object-contain object-center"
+            className="absolute inset-0 h-full w-full object-contain object-center md:object-bottom"
             autoPlay
             muted
             loop
