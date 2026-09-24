@@ -174,55 +174,59 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative flex min-h-[100svh] items-center justify-center overflow-hidden px-5 pb-16 pt-28 text-center md:min-h-screen md:px-12 md:py-0">
-          <video
-            ref={heroVideoRef}
-            poster={cinematicHero.url}
-            width={1920}
-            height={1080}
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-          >
-            <source src={heroFilm.url} type="video/mp4" />
-            <source src={heroFilmWebm.url} type="video/webm" />
-          </video>
-          <div
-            className="absolute inset-0 z-[1] bg-black/25 pointer-events-none"
-            aria-hidden="true"
-          />
-          <div className="hero-shade absolute inset-0" />
-          <div className="dot-hero-right" aria-hidden="true" />
-          <div className="relative z-10 mx-auto max-w-5xl reveal-up">
-            <p className="text-shadow-strong mx-auto max-w-2xl text-lg font-semibold leading-8 text-cream drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-xl md:leading-9">
-              XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
-            </p>
-            <h1 className="text-shadow-white mt-6 font-display text-[1.8rem] leading-[0.98] text-magenta sm:text-[2.5rem] md:mt-8 md:text-[4rem] md:leading-[0.94] lg:text-[4.5rem]">
-              It’s a treatment and a treat
-            </h1>
-            <p className="text-shadow-white-strong mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-ink md:mt-6 md:text-lg">
-              FOR THE BETTER HORSE
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
-              <a
-                href="#enquire"
-                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
-              >
-                Find your lokal dealer
-              </a>
-              <a
-                href="#features"
-                className="inline-flex items-center justify-center border border-cream/70 bg-ink/40 px-8 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream text-shadow-strong drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] transition-all duration-300 hover:border-magenta hover:bg-magenta hover:text-cream"
-              >
-                Explore the system
-              </a>
-            </div>
+        <section className="hero-cinematic relative overflow-hidden bg-ink text-center">
+          <div className="relative h-[58svh] min-h-[420px] overflow-hidden bg-ink md:h-[72svh] md:min-h-[620px]">
+            <video
+              ref={heroVideoRef}
+              poster={cinematicHero.url}
+              width={1920}
+              height={1080}
+              className="absolute inset-0 h-full w-full object-contain object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source src={heroFilm.url} type="video/mp4" />
+              <source src={heroFilmWebm.url} type="video/webm" />
+            </video>
+            <div
+              className="pointer-events-none absolute inset-0 z-[1] bg-black/25"
+              aria-hidden="true"
+            />
+            <div className="hero-shade absolute inset-0" />
+            <div className="dot-hero-right" aria-hidden="true" />
           </div>
 
+          <div className="relative z-10 bg-ink px-5 py-12 md:px-12 md:py-16">
+            <div className="mx-auto max-w-5xl reveal-up">
+              <p className="mx-auto max-w-2xl text-lg font-semibold leading-8 text-cream md:text-xl md:leading-9">
+                XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
+              </p>
+              <h1 className="mt-6 font-display text-[1.8rem] leading-[0.98] text-magenta sm:text-[2.5rem] md:mt-8 md:text-[4rem] md:leading-[0.94] lg:text-[4.5rem]">
+                It’s a treatment and a treat
+              </h1>
+              <p className="mt-5 text-base font-body font-black uppercase tracking-[0.35em] text-cream md:mt-6 md:text-lg">
+                FOR THE BETTER HORSE
+              </p>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:mt-10">
+                <a
+                  href="#enquire"
+                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+                >
+                  Find your lokal dealer
+                </a>
+                <a
+                  href="#features"
+                  className="inline-flex items-center justify-center border border-cream/70 bg-ink/40 px-8 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta hover:text-cream"
+                >
+                  Explore the system
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
 
         <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">

@@ -252,8 +252,8 @@
   pointer-events: none;
   position: absolute;
   top: 8%;
-  right: -16%;
-  width: min(54vw, 720px);
+  right: -8%;
+  width: min(46vw, 640px);
   height: 72%;
   z-index: 5;
   background-image: url("/__l5e/assets-v1/3095481e-dd53-494a-b124-6985c5c27ec5/Dots_right.png");
@@ -381,9 +381,9 @@
   }
 
   .dot-hero-right {
-    width: 340px;
+    width: 260px;
     height: 56%;
-    right: -48%;
+    right: -22%;
     top: 12%;
   }
 }
