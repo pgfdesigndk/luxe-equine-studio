@@ -175,7 +175,7 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative min-h-[760px] overflow-hidden bg-ink text-center md:min-h-[760px] md:h-screen">
+        <section className="hero-cinematic relative h-[760px] overflow-hidden bg-ink text-center md:h-[clamp(760px,100svh,920px)]">
           <div className="absolute inset-0 overflow-hidden">
             <video
               ref={heroVideoRef}
@@ -198,7 +198,7 @@ function Index() {
             <div className="dot-hero-right" aria-hidden="true" />
           </div>
 
-          <div className="relative z-10 flex min-h-[760px] flex-col justify-end px-5 pb-5 pt-32 md:h-screen md:min-h-[760px] md:px-12 md:pb-6">
+          <div className="relative z-10 flex h-full flex-col justify-end px-5 pb-5 pt-32 md:px-12 md:pb-6">
             <div className="mx-auto mb-8 max-w-6xl reveal-up md:mb-10">
               <h1 className="text-shadow-strong font-display text-[2.55rem] leading-[0.95] text-magenta sm:text-[3.25rem] md:text-[4.6rem] lg:text-[5.4rem]">
                 The treatment and the treat
