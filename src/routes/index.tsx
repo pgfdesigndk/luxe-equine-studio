@@ -103,13 +103,14 @@ function Index() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
-      <header className="absolute inset-x-0 top-0 z-30 px-5 py-6 md:px-12 md:py-9">
+      <header className="absolute inset-x-0 top-0 z-30 px-5 py-5 md:px-12 md:py-8">
         <div className="mx-auto grid max-w-[1480px] grid-cols-3 items-center">
           <a href="#collection" className="hidden text-[13px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block">
             Discover XALI
           </a>
-          <Link to="/" aria-label="XALI home" className="col-start-1 justify-self-start md:col-start-2 md:justify-self-center">
-            <img src={logoAsset.url} alt="XALI" className="h-16 w-auto md:h-20" />
+          <Link to="/" aria-label="XALI home" className="col-start-2 flex flex-col items-center justify-self-center">
+            <img src={logoAsset.url} alt="XALI" className="h-14 w-auto md:h-20" />
+            <span className="mt-1 whitespace-nowrap text-[12px] font-light text-ink md:text-base">A treatment and a treat</span>
           </Link>
           <div className="col-start-3 justify-self-end relative" ref={menuRef}>
             <button
@@ -174,8 +175,8 @@ function Index() {
       </header>
 
       <main>
-        <section className="hero-cinematic relative min-h-[920px] overflow-hidden bg-ink text-center md:min-h-[1180px]">
-          <div className="absolute inset-x-0 top-[350px] h-[300px] overflow-hidden md:top-[340px] md:h-[560px]">
+        <section className="hero-cinematic relative h-[760px] overflow-hidden bg-ink text-center md:h-[clamp(760px,100svh,920px)]">
+          <div className="absolute inset-0 overflow-hidden">
             <video
               ref={heroVideoRef}
               poster={cinematicHero.url}
@@ -192,39 +193,33 @@ function Index() {
               <source src={heroFilm.url} type="video/mp4" />
               <source src={heroFilmWebm.url} type="video/webm" />
             </video>
-            <div className="pointer-events-none absolute inset-0 z-[1] bg-black/25" aria-hidden="true" />
-            <div className="hero-shade absolute inset-0" />
+            <div className="pointer-events-none absolute inset-0 z-[1] bg-ink/10" aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[42%] bg-gradient-to-t from-ink via-ink/55 to-transparent" aria-hidden="true" />
             <div className="dot-hero-right" aria-hidden="true" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-[6] h-16 bg-gradient-to-b from-ink to-transparent" aria-hidden="true" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-20 bg-gradient-to-t from-ink to-transparent" aria-hidden="true" />
           </div>
 
-          <div className="relative z-10 grid min-h-[920px] grid-rows-[350px_300px_270px] px-5 md:min-h-[1180px] md:grid-rows-[340px_560px_280px] md:px-12">
-            <div className="mx-auto max-w-5xl self-end reveal-up">
-              <p className="mx-auto max-w-2xl text-base font-semibold leading-7 text-cream md:text-lg md:leading-8">
-                XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.
-              </p>
-              <h1 className="text-shadow-white mt-4 font-display text-[1.8rem] leading-[0.98] text-magenta sm:text-[2.5rem] md:mt-5 md:text-[4rem] md:leading-[0.94] lg:text-[4.5rem]">
-                It’s a treatment and a treat
+          <div className="relative z-10 flex h-full flex-col justify-end px-5 pb-5 pt-32 md:px-12 md:pb-6">
+            <div className="mx-auto mb-8 max-w-6xl reveal-up md:mb-10">
+              <h1 className="text-shadow-strong font-display text-[2.55rem] leading-[0.95] text-magenta sm:text-[3.25rem] md:text-[4.6rem] lg:text-[5.4rem]">
+                The treatment and the treat
               </h1>
+              <p className="text-shadow-strong mx-auto mt-4 max-w-3xl text-[13px] font-bold uppercase leading-6 tracking-[0.04em] text-cream md:mt-5 md:text-base md:leading-7">
+                XALI is a modular system that combines PEMF and massage,
+                <br className="hidden sm:block" /> with a focus on flexibility, practical use and the horse’s comfort.
+              </p>
             </div>
 
-            <div aria-hidden="true" />
-
-            <div className="self-start">
-              <p className="text-shadow-strong text-base font-body font-black uppercase tracking-[0.35em] text-cream md:text-lg">
-                FOR THE BETTER HORSE
-              </p>
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
+            <div className="mx-auto w-full max-w-[1080px] border-t border-cream/10 bg-ink/95 px-4 py-3 shadow-2xl backdrop-blur-md md:px-6 md:py-4">
+              <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#enquire"
-                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+                  className="inline-flex min-w-[218px] items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
                 >
                   Find your lokal dealer
                 </a>
                 <a
                   href="#features"
-                  className="inline-flex items-center justify-center border border-cream/70 bg-ink/40 px-8 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta hover:text-cream"
+                  className="inline-flex min-w-[218px] items-center justify-center border border-cream/60 bg-ink px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta"
                 >
                   Explore the system
                 </a>
