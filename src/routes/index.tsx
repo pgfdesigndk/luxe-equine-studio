@@ -209,7 +209,7 @@ function Index() {
               </p>
             </div>
 
-            <div className="mx-auto w-full max-w-[1080px] border-t border-cream/10 bg-ink/95 px-4 py-3 shadow-2xl backdrop-blur-md md:px-6 md:py-4">
+            <div className="mx-auto w-full max-w-[1080px]">
               <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#enquire"
