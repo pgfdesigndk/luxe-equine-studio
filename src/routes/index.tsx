@@ -228,7 +228,7 @@ function Index() {
           </div>
         </section>
 
-        <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
+        <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
           <a href="#collection" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
             » Discover XALI «
           </a>
@@ -266,19 +266,19 @@ function Index() {
           </div>
         </section>
 
-        <section id="features" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-32">
+        <section id="features" className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto max-w-7xl">
             <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Key product features · 02</p>
-            <h2 className="mt-7 max-w-3xl font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h2 className="mt-7 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
               A system designed for real life
             </h2>
-            <div className="mt-12 border-t border-cream/10">
+            <div className="mt-12 border-t border-ink/15">
               {benefits.map((benefit) => (
-                <div key={benefit.number} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-cream/10 py-6 md:grid-cols-[3rem_1fr] md:gap-6">
+                <div key={benefit.number} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-ink/15 py-6 md:grid-cols-[3rem_1fr] md:gap-6">
                   <span className="font-display text-xl text-magenta md:text-2xl">{benefit.number}.</span>
                   <div>
-                    <h3 className="text-xs font-normal uppercase tracking-[0.28em] text-cream md:text-sm">{benefit.title}</h3>
-                    <p className="mt-3 text-base font-light leading-7 text-mist md:text-lg md:leading-8">{benefit.text}</p>
+                    <h3 className="text-xs font-normal uppercase tracking-[0.28em] text-ink md:text-sm">{benefit.title}</h3>
+                    <p className="mt-3 text-base font-light leading-7 text-ink/70 md:text-lg md:leading-8">{benefit.text}</p>
                   </div>
                 </div>
               ))}
@@ -286,7 +286,7 @@ function Index() {
           </div>
         </section>
 
-        <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
+        <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
           <a href="#technology" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
             » Learn about the technology «
           </a>
@@ -315,42 +315,45 @@ function Index() {
               </div>
             </div>
 
-            <div className="mt-24 grid gap-16 border-t border-cream/10 pt-16 md:grid-cols-2 md:gap-24">
-              <div>
-                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Development · 03.1</p>
-                <h3 className="mt-7 font-display text-3xl leading-tight text-cream md:text-4xl">
-                  Tested, changed and tested again
-                </h3>
-                <p className="mt-6 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-                  Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
-                </p>
-                <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-                  Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
-                </p>
-              </div>
-              <div>
-                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Technology · 03.2</p>
-                <h3 className="mt-7 font-display text-3xl leading-tight text-cream md:text-4xl">
-                  Thought through from electronics to textiles
-                </h3>
-                <p className="mt-6 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-                  Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
-                </p>
-                <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-                  The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
-                </p>
-                <a
-                  href="#enquire"
-                  className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
-                >
-                  Learn about the technology
-                </a>
-              </div>
+          </div>
+        </section>
+
+        <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+          <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
+            <div>
+              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Development · 03.1</p>
+              <h3 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+                Tested, changed and tested again
+              </h3>
+              <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
+              </p>
+              <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
+              </p>
+            </div>
+            <div>
+              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Technology · 03.2</p>
+              <h3 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+                Thought through from electronics to textiles
+              </h3>
+              <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
+              </p>
+              <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
+              </p>
+              <a
+                href="#enquire"
+                className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
+              >
+                Learn about the technology
+              </a>
             </div>
           </div>
         </section>
 
-        <div className="relative z-20 flex min-h-14 items-center justify-center bg-cream px-5 py-4 text-center md:min-h-16">
+        <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
           <a href="#team" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
             » Meet the people behind XALI «
           </a>
