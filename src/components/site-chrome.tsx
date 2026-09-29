@@ -94,10 +94,14 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
             aria-label="Menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
-            className="group flex h-16 w-16 items-center justify-center text-cream/90 transition-colors hover:text-magenta focus:outline-none md:h-[72px] md:w-[72px]"
+            className={`group flex items-center justify-center text-cream/90 transition-all duration-500 hover:text-magenta focus:outline-none ${
+              scrolled ? "h-11 w-11 md:h-12 md:w-12" : "h-16 w-16 md:h-[72px] md:w-[72px]"
+            }`}
           >
             <svg
-              className="h-9 w-9 md:h-10 md:w-10"
+              className={`transition-[width,height] duration-500 ${
+                scrolled ? "h-6 w-6 md:h-7 md:w-7" : "h-9 w-9 md:h-10 md:w-10"
+              }`}
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
