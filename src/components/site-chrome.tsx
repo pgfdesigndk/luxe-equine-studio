@@ -44,9 +44,11 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
 
   return (
     <header
-      className={`${
-        home ? "absolute inset-x-0 top-0 z-30" : "relative z-30"
-      } px-5 py-5 md:px-12 md:py-8`}
+      className={`fixed inset-x-0 top-0 z-40 transition-[padding,background-color,backdrop-filter] duration-500 ${
+        scrolled
+          ? "border-b border-cream/10 bg-ink/90 px-5 py-2 backdrop-blur-xl md:px-12 md:py-3"
+          : "px-5 py-5 md:px-12 md:py-8"
+      }`}
     >
       <div className="mx-auto grid max-w-[1480px] grid-cols-3 items-center">
         {home ? (
@@ -69,10 +71,18 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
           aria-label="XALI home"
           className="col-start-2 flex flex-col items-center justify-self-center"
         >
-          <img src={logoAsset.url} alt="XALI" className="h-14 w-auto md:h-20" />
+          <img
+            src={logoAsset.url}
+            alt="XALI"
+            className={`w-auto transition-[height] duration-500 ${
+              scrolled ? "h-9 md:h-11" : "h-14 md:h-20"
+            }`}
+          />
           <span
-            className={`mt-1 whitespace-nowrap text-[12px] font-light md:text-base ${
-              home ? "text-ink" : "text-cream/70"
+            className={`whitespace-nowrap font-light transition-[margin,font-size,color] duration-500 ${
+              scrolled
+                ? "mt-0.5 text-[10px] text-cream/70 md:text-xs"
+                : `mt-1 text-[12px] md:text-base ${home ? "text-ink" : "text-cream/70"}`
             }`}
           >
             A treatment and a treat
