@@ -43,9 +43,10 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  /* Direction typography */
+  /* Direction typography — Google Poppins first: the converted Poppins subset
+     renders digits, @, %, », « etc. as blank glyphs, so it must never be primary */
   --font-display: "Wargika", Georgia, serif;
-  --font-body: "Poppins XALI", "Poppins", system-ui, sans-serif;
+  --font-body: "Poppins", "Poppins XALI", system-ui, sans-serif;
 
   /* Direction-specific tokens (Rarefied Editorial Black) */
   --color-ink: var(--ink);
