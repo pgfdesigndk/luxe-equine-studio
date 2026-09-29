@@ -82,76 +82,7 @@ function Index() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
-      <header className="absolute inset-x-0 top-0 z-30 px-5 py-5 md:px-12 md:py-8">
-        <div className="mx-auto grid max-w-[1480px] grid-cols-3 items-center">
-          <a href="#collection" className="hidden text-[13px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block">
-            Discover XALI
-          </a>
-          <Link to="/" aria-label="XALI home" className="col-start-2 flex flex-col items-center justify-self-center">
-            <img src={logoAsset.url} alt="XALI" className="h-14 w-auto md:h-20" />
-            <span className="mt-1 whitespace-nowrap text-[12px] font-light text-ink md:text-base">A treatment and a treat</span>
-          </Link>
-          <div className="col-start-3 justify-self-end relative" ref={menuRef}>
-            <button
-              type="button"
-              aria-label="Menu"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((open) => !open)}
-              className="group flex h-16 w-16 items-center justify-center text-cream/90 transition-colors hover:text-magenta focus:outline-none md:h-[72px] md:w-[72px]"
-            >
-              <svg className="h-9 w-9 md:h-10 md:w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-                {menuOpen ? (
-                  <>
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
-                  </>
-                ) : (
-                  <>
-                    <line x1="3" y1="7" x2="21" y2="7" />
-                    <line x1="3" y1="12" x2="21" y2="12" />
-                    <line x1="3" y1="17" x2="21" y2="17" />
-                  </>
-                )}
-              </svg>
-            </button>
-
-            {menuOpen && (
-              <div className="absolute right-0 top-full mt-5 w-60 origin-top-right animate-scale-in overflow-hidden rounded-sm border border-cream/10 bg-ink/95 shadow-2xl backdrop-blur-xl">
-                <nav className="flex flex-col py-5">
-                  <a
-                    href="#enquire"
-                    onClick={() => setMenuOpen(false)}
-                    className="group relative px-8 py-4 text-left font-body text-[15px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
-                  >
-                    <span className="relative z-10">Contact</span>
-                    <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
-                  </a>
-                  <a
-                    href="#collection"
-                    onClick={() => setMenuOpen(false)}
-                    className="group relative px-8 py-4 text-left font-body text-[15px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
-                  >
-                    <span className="relative z-10">About XALI</span>
-                    <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
-                  </a>
-                  <a
-                    href="#technology"
-                    onClick={() => setMenuOpen(false)}
-                    className="group relative px-8 py-4 text-left font-body text-[15px] font-light uppercase tracking-[0.26em] text-cream/90 transition-colors duration-300 hover:text-magenta"
-                  >
-                    <span className="relative z-10">Technology</span>
-                    <div className="absolute inset-0 bg-cream/[0.04] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <div className="absolute left-0 top-1/2 h-0 w-0.5 -translate-y-1/2 bg-magenta transition-all duration-300 group-hover:h-1/2" />
-                  </a>
-                </nav>
-                <div className="h-px w-full bg-gradient-to-r from-transparent via-cream/20 to-transparent" />
-              </div>
-            )}
-          </div>
-        </div>
-      </header>
+      <SiteHeader home />
 
       <main>
         <section className="hero-cinematic relative h-[760px] overflow-hidden bg-ink text-center md:h-[clamp(760px,100svh,920px)]">
@@ -207,11 +138,7 @@ function Index() {
           </div>
         </section>
 
-        <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
-          <a href="#collection" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
-            » Discover XALI «
-          </a>
-        </div>
+        <CreamBar href="#collection">» Discover XALI «</CreamBar>
 
         <section id="collection" className="relative bg-ink px-5 py-24 md:px-12 md:py-40 dot-scatter">
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
@@ -265,11 +192,7 @@ function Index() {
           </div>
         </section>
 
-        <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
-          <a href="#technology" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
-            » Learn about the technology «
-          </a>
-        </div>
+        <CreamBar href="#technology">» Learn about the technology «</CreamBar>
 
         <section id="technology" className="relative border-y border-cream/10 bg-ink px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="relative mx-auto max-w-7xl">
@@ -322,21 +245,17 @@ function Index() {
               <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
                 The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
               </p>
-              <a
-                href="#enquire"
+              <Link
+                to="/technology"
                 className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
               >
                 Learn about the technology
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
-        <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
-          <a href="#team" className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl">
-            » Meet the people behind XALI «
-          </a>
-        </div>
+        <CreamBar href="#team">» Meet the people behind XALI «</CreamBar>
 
         <section id="team" className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
@@ -362,12 +281,12 @@ function Index() {
               <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                 Together, we are developing the product we ourselves have been missing.
               </p>
-              <a
-                href="#enquire"
+              <Link
+                to="/about"
                 className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
               >
                 Meet the team
-              </a>
+              </Link>
             </div>
           </figure>
         </section>
@@ -417,12 +336,12 @@ function Index() {
               >
                 Explore XALI
               </a>
-              <a
-                href="mailto:hello@xali.dk"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center border border-cream/40 bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta/10 hover:text-magenta"
               >
                 Contact us
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -462,14 +381,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="relative border-t border-cream/10 bg-ink px-5 py-10 md:px-12">
-        <div className="mx-auto flex max-w-[1480px] items-end justify-between gap-8">
-          <Link to="/" aria-label="XALI home">
-            <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
-          </Link>
-           <p className="text-right text-[10px] uppercase leading-5 tracking-[0.3em] text-cream/35 md:text-xs">Developed in Bogense · Denmark<br />Horse First</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
