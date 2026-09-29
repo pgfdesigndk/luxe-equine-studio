@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-import logoAsset from "../assets/xali-logo.png.asset.json";
+import { CreamBar, SiteFooter, SiteHeader } from "../components/site-chrome";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
 import heroFilm from "../assets/xali-hero-film-compatible.mp4.asset.json";
 import heroFilmWebm from "../assets/xali-hero-film.webm.asset.json";
@@ -56,8 +56,6 @@ const benefits = [
 
 function Index() {
   const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const video = heroVideoRef.current;
@@ -81,25 +79,6 @@ function Index() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!menuOpen) return;
-
-    const handleClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setMenuOpen(false);
-      }
-    };
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMenuOpen(false);
-    };
-
-    document.addEventListener("mousedown", handleClick);
-    document.addEventListener("keydown", handleKey);
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-      document.removeEventListener("keydown", handleKey);
-    };
-  }, [menuOpen]);
 
   return (
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
