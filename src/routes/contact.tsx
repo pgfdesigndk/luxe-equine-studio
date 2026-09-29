@@ -28,7 +28,7 @@ function ContactPage() {
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader />
       <main>
-        <section className="dot-scatter relative bg-ink px-5 pb-14 pt-14 md:px-12 md:pb-20 md:pt-20">
+        <section className="dot-scatter relative bg-ink px-5 pb-14 pt-32 md:px-12 md:pb-20 md:pt-44">
           <div className="mx-auto max-w-4xl">
             <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Contact · XALI</p>
             <h1 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">

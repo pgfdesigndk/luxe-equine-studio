@@ -41,7 +41,7 @@ function AboutPage() {
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader />
       <main>
-        <section className="dot-scatter relative bg-ink px-5 pb-16 pt-14 md:px-12 md:pb-24 md:pt-20">
+        <section className="dot-scatter relative bg-ink px-5 pb-16 pt-32 md:px-12 md:pb-24 md:pt-44">
           <div className="mx-auto max-w-4xl">
             <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
               About XALI · Horse First

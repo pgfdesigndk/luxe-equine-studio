@@ -54,7 +54,7 @@ function TechnologyPage() {
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader />
       <main>
-        <section className="dot-field dot-field-technology relative border-b border-cream/10 bg-ink px-5 pb-24 pt-14 md:px-12 md:pb-40 md:pt-20">
+        <section className="dot-field dot-field-technology relative border-b border-cream/10 bg-ink px-5 pb-24 pt-32 md:px-12 md:pb-40 md:pt-44">
           <div className="relative mx-auto max-w-4xl">
             <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">PEMF · 01</p>
             <h1 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
