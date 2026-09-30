@@ -129,7 +129,7 @@ function Index() {
                 </a>
                 <a
                   href="#features"
-                  className="inline-flex min-w-[218px] items-center justify-center border border-cream/60 bg-ink px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta"
+                  className="inline-flex min-w-[218px] items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
                 >
                   Explore the system
                 </a>
@@ -151,15 +151,10 @@ function Index() {
                 className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
                 loading="lazy"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-ink/70 px-5 py-5 backdrop-blur-sm md:px-7">
-                <span className="text-[9px] uppercase tracking-[0.32em] text-cream/60">The XALI system</span>
-                <span className="font-display text-xl text-magenta">3-in-1</span>
-              </figcaption>
             </figure>
 
             <div className="md:px-8">
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Introduction · 01</p>
-              <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
+              <h2 className="font-display text-4xl leading-tight text-cream md:text-6xl">
                 Developed in the stable – for life with horses
               </h2>
               <p className="mt-8 max-w-lg text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -174,8 +169,7 @@ function Index() {
 
         <section id="features" className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto max-w-7xl">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Key product features · 02</p>
-            <h2 className="mt-7 max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
+            <h2 className="max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
               A system designed for real life
             </h2>
             <div className="mt-12 border-t border-ink/15">
@@ -196,22 +190,18 @@ function Index() {
 
         <section id="technology" className="relative border-y border-cream/10 bg-ink px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="relative mx-auto max-w-7xl">
-            <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr] md:gap-24">
+            <div className="mx-auto max-w-4xl text-center">
               <div>
-                <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Horse First · 03</p>
-                <p className="mt-8 text-xs uppercase leading-7 tracking-[0.22em] text-cream/50">Comfort<br />Freedom of movement<br />Practical use</p>
-              </div>
-              <div>
-                <h2 className="max-w-4xl font-display text-4xl leading-tight text-cream md:text-6xl lg:text-7xl">
+                <h2 className="font-display text-4xl leading-tight text-cream md:text-6xl lg:text-7xl">
                   The horse is not just the user. The horse is where it all begins.
                 </h2>
-                <p className="mt-9 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+                <p className="mx-auto mt-9 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Technology only has value when it works in the real world. That is why we do not only look at measurements and technical results. We also observe the horse.
                 </p>
-                <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+                <p className="mx-auto mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   Is the product calm and comfortable to wear?
                 </p>
-                <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+                <p className="mx-auto mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
                   These questions have been at the heart of the entire development of XALI.
                 </p>
               </div>
@@ -223,8 +213,7 @@ function Index() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Development · 03.1</p>
-              <h3 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+              <h3 className="font-display text-3xl leading-tight text-ink md:text-4xl">
                 Tested, changed and tested again
               </h3>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -235,8 +224,7 @@ function Index() {
               </p>
             </div>
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Technology · 03.2</p>
-              <h3 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+              <h3 className="font-display text-3xl leading-tight text-ink md:text-4xl">
                 Thought through from electronics to textiles
               </h3>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -247,7 +235,7 @@ function Index() {
               </p>
               <Link
                 to="/technology"
-                className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
+                className="mt-8 inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
               >
                 Learn about the technology
               </Link>
@@ -268,8 +256,7 @@ function Index() {
               loading="lazy"
             />
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">The people behind XALI · 04</p>
-              <h2 className="mt-7 max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
+              <h2 className="max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
                 A small team with a big ambition
               </h2>
               <p className="mt-7 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -283,7 +270,7 @@ function Index() {
               </p>
               <Link
                 to="/about"
-                className="mt-8 inline-flex items-center justify-center border border-magenta bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-magenta transition-all duration-300 hover:bg-magenta hover:text-cream"
+                className="mt-8 inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
               >
                 Meet the team
               </Link>
@@ -293,8 +280,7 @@ function Index() {
 
         <section id="danish-development" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Danish development · 05</p>
-            <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h2 className="font-display text-4xl leading-tight text-cream md:text-6xl">
               Developed with care in Bogense
             </h2>
             <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -322,8 +308,7 @@ function Index() {
           />
           <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
           <div className="relative z-10 max-w-4xl">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Ready to meet XALI?</p>
-            <h2 className="mt-8 font-display text-4xl leading-tight text-cream md:text-7xl">
+            <h2 className="font-display text-4xl leading-tight text-cream md:text-7xl">
               Not just a treatment – but also a treat.
             </h2>
             <p className="mx-auto mt-8 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -338,7 +323,7 @@ function Index() {
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center border border-cream/40 bg-transparent px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta hover:bg-magenta/10 hover:text-magenta"
+                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
               >
                 Contact us
               </Link>
@@ -348,8 +333,7 @@ function Index() {
 
         <section id="newsletter" className="relative bg-ink px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Pre-launch newsletter · 06</p>
-            <h2 className="mt-7 font-display text-4xl leading-tight text-cream md:text-5xl">
+            <h2 className="font-display text-4xl leading-tight text-cream md:text-5xl">
               Follow the XALI journey
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">

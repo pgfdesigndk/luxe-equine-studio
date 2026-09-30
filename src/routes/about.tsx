@@ -43,10 +43,7 @@ function AboutPage() {
       <main>
         <section className="dot-scatter relative bg-ink px-5 pb-16 pt-32 md:px-12 md:pb-24 md:pt-44">
           <div className="mx-auto max-w-4xl">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-              About XALI · Horse First
-            </p>
-            <h1 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h1 className="font-display text-4xl leading-tight text-cream md:text-6xl">
               It began in the stable
             </h1>
             <p className="mt-8 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -68,10 +65,7 @@ function AboutPage() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-                With the horse at the centre · 02
-              </p>
-              <h2 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
                 Developed with the horse at the centre
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -90,10 +84,7 @@ function AboutPage() {
               </p>
             </div>
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-                From idea to system · 03
-              </p>
-              <h2 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
                 From idea to finished system
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -124,10 +115,7 @@ function AboutPage() {
               loading="lazy"
             />
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-                The people behind XALI · 04
-              </p>
-              <h2 className="mt-7 max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
+              <h2 className="max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
                 A small team with a big ambition
               </h2>
               <p className="mt-7 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -156,10 +144,7 @@ function AboutPage() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-                Danish development · 05
-              </p>
-              <h2 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
                 Developed in Denmark
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -174,10 +159,7 @@ function AboutPage() {
               </p>
             </div>
             <div>
-              <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-                Our approach · 06
-              </p>
-              <h2 className="mt-7 font-display text-3xl leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
                 Built on a few simple principles
               </h2>
               <ul className="mt-8">

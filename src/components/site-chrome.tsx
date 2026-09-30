@@ -51,21 +51,7 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
       }`}
     >
       <div className="mx-auto grid max-w-[1480px] grid-cols-3 items-center">
-        {home ? (
-          <a
-            href="#collection"
-            className="hidden text-[13px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block"
-          >
-            Discover XALI
-          </a>
-        ) : (
-          <Link
-            to="/"
-            className="hidden text-[13px] uppercase tracking-[0.36em] text-cream/60 transition-colors hover:text-cream md:block"
-          >
-            Discover XALI
-          </Link>
-        )}
+        <div aria-hidden="true" />
         <Link
           to="/"
           aria-label="XALI home"
@@ -94,7 +80,7 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
             aria-label="Menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
-            className={`group flex items-center justify-center text-cream/90 transition-all duration-500 hover:text-magenta focus:outline-none ${
+            className={`group flex items-center justify-center text-magenta transition-all duration-500 hover:text-magenta-deep focus:outline-none ${
               scrolled ? "h-11 w-11 md:h-12 md:w-12" : "h-16 w-16 md:h-[72px] md:w-[72px]"
             }`}
           >

@@ -56,8 +56,7 @@ function TechnologyPage() {
       <main>
         <section className="dot-field dot-field-technology relative border-b border-cream/10 bg-ink px-5 pb-24 pt-32 md:px-12 md:pb-40 md:pt-44">
           <div className="relative mx-auto max-w-4xl">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">PEMF · 01</p>
-            <h1 className="mt-7 font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h1 className="font-display text-4xl leading-tight text-cream md:text-6xl">
               What is PEMF?
             </h1>
             <p className="mt-8 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
@@ -81,8 +80,7 @@ function TechnologyPage() {
 
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto max-w-7xl border-t border-ink/15 pt-16 md:pt-20">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">Practical use · 02</p>
-            <h2 className="mt-7 max-w-3xl font-display text-3xl leading-tight text-ink md:text-4xl">
+            <h2 className="max-w-3xl font-display text-3xl leading-tight text-ink md:text-4xl">
               Adapted to the individual horse
             </h2>
             <p className="mt-6 max-w-3xl text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -119,10 +117,7 @@ function TechnologyPage() {
 
         <section className="dot-constellation relative bg-ink px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-5xl">
-            <p className="text-[13px] uppercase tracking-[0.3em] text-magenta">
-              Therapeutic effects · 03
-            </p>
-            <h2 className="mt-7 font-display text-3xl leading-tight text-cream md:text-5xl">
+            <h2 className="font-display text-3xl leading-tight text-cream md:text-5xl">
               XALI may contribute to
             </h2>
             <ul className="mt-12 grid gap-x-16 gap-y-5 sm:grid-cols-2">
