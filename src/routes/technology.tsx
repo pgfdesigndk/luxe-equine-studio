@@ -100,7 +100,7 @@ function TechnologyPage() {
     <div className="min-h-screen overflow-hidden bg-cream text-ink font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader light />
       <main className="px-4 pb-20 pt-32 md:px-10 md:pt-44">
-        <article className="relative mx-auto max-w-6xl px-6 py-14 text-ink md:px-16 md:py-20">
+        <article className="relative w-full px-6 py-14 text-ink md:px-16 md:py-20">
           <div className="dot-hero-right pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-80" />
           <h1 className="relative font-display text-4xl leading-tight md:text-6xl">
             <span className="text-magenta">Technical data:</span>{" "}
