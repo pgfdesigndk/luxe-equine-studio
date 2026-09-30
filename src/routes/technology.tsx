@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { CreamBar, SiteFooter, SiteHeader } from "../components/site-chrome";
+import { SiteFooter, SiteHeader } from "../components/site-chrome";
 
 export const Route = createFileRoute("/technology")({
   head: () => ({
