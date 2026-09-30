@@ -407,7 +407,7 @@ function Index() {
                 type="email"
                 required
                 placeholder="Your email address"
-                className="w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-cream/40 outline-none transition-colors focus:border-magenta sm:w-72"
+                className="w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-magenta outline-none transition-colors focus:border-magenta sm:w-72"
               />
               <button
                 type="submit"
