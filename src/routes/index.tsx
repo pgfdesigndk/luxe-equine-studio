@@ -346,27 +346,50 @@ function Index() {
             loading="lazy"
           />
           <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
-          <div className="relative z-10 max-w-4xl">
+          <div className="relative z-10 w-full max-w-2xl">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-7xl">
               Not just a treatment – but also a treat.
             </h2>
             <p className="mx-auto mt-8 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               Discover a modular system developed with a passion for the horse, respect for the user's everyday needs and a focus on the details that make a real difference in everyday use.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="#collection"
-                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
-              >
-                Explore XALI
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-              >
-                Contact us
-              </Link>
-            </div>
+            <form onSubmit={handleContactSubmit} noValidate className="mt-12 flex flex-col gap-4 text-left">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="contact-name" className="sr-only">Your name</label>
+                  <input id="contact-name" name="name" type="text" required placeholder="Your name" className={contactInputClass} />
+                </div>
+                <div>
+                  <label htmlFor="contact-email" className="sr-only">Your email address</label>
+                  <input id="contact-email" name="email" type="email" required placeholder="Your email address" className={contactInputClass} />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="contact-phone" className="sr-only">Your phone number</label>
+                <input id="contact-phone" name="phone" type="tel" placeholder="Your phone number" className={contactInputClass} />
+              </div>
+              <div>
+                <label htmlFor="contact-message" className="sr-only">Your message</label>
+                <textarea id="contact-message" name="message" required rows={5} placeholder="Your message" className={`${contactInputClass} resize-none`} />
+              </div>
+              {contactError ? (
+                <p className="text-sm font-light text-cream">{contactError}</p>
+              ) : null}
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+                >
+                  Send message
+                </button>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+                >
+                  Contact us
+                </Link>
+              </div>
+            </form>
           </div>
         </section>
 
