@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { z } from "zod";
 
 import { CreamBar, SiteFooter, SiteHeader } from "../components/site-chrome";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
@@ -54,8 +55,41 @@ const benefits = [
   },
 ];
 
+const contactInputClass =
+  "w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-cream/40 outline-none transition-colors focus:border-magenta";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Please enter your name.").max(100),
+  email: z.string().trim().email("Please enter a valid email address.").max(255),
+  phone: z.string().trim().max(40).optional(),
+  message: z.string().trim().min(1, "Please write a message.").max(2000),
+});
+
 function Index() {
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [contactError, setContactError] = useState<string | null>(null);
+
+  const handleContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const parsed = contactSchema.safeParse({
+      name: formData.get("name") ?? "",
+      email: formData.get("email") ?? "",
+      phone: (formData.get("phone") as string | null)?.trim() || undefined,
+      message: formData.get("message") ?? "",
+    });
+    if (!parsed.success) {
+      setContactError(parsed.error.issues[0]?.message ?? "Please check the form and try again.");
+      return;
+    }
+    setContactError(null);
+    const { name, email, phone, message } = parsed.data;
+    const subject = encodeURIComponent(`XALI enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\n\n${message}`,
+    );
+    window.location.href = `mailto:trine@broholm-consult.dk?subject=${subject}&body=${body}`;
+  };
 
   useEffect(() => {
     const video = heroVideoRef.current;
@@ -312,34 +346,57 @@ function Index() {
             loading="lazy"
           />
           <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
-          <div className="relative z-10 max-w-4xl">
+          <div className="relative z-10 w-full max-w-2xl">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-7xl">
               Not just a treatment – but also a treat.
             </h2>
             <p className="mx-auto mt-8 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               Discover a modular system developed with a passion for the horse, respect for the user's everyday needs and a focus on the details that make a real difference in everyday use.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="#collection"
-                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
-              >
-                Explore XALI
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-              >
-                Contact us
-              </Link>
-            </div>
+            <form onSubmit={handleContactSubmit} noValidate className="mt-12 flex flex-col gap-4 text-left">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="contact-name" className="sr-only">Your name</label>
+                  <input id="contact-name" name="name" type="text" required placeholder="Your name" className={contactInputClass} />
+                </div>
+                <div>
+                  <label htmlFor="contact-email" className="sr-only">Your email address</label>
+                  <input id="contact-email" name="email" type="email" required placeholder="Your email address" className={contactInputClass} />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="contact-phone" className="sr-only">Your phone number</label>
+                <input id="contact-phone" name="phone" type="tel" placeholder="Your phone number" className={contactInputClass} />
+              </div>
+              <div>
+                <label htmlFor="contact-message" className="sr-only">Your message</label>
+                <textarea id="contact-message" name="message" required rows={5} placeholder="Your message" className={`${contactInputClass} resize-none`} />
+              </div>
+              {contactError ? (
+                <p className="text-sm font-light text-cream">{contactError}</p>
+              ) : null}
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
+                >
+                  Send message
+                </button>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+                >
+                  Contact us
+                </Link>
+              </div>
+            </form>
           </div>
         </section>
 
         <section id="newsletter" className="relative bg-ink px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-5xl">
-              Follow the XALI journey
+              Sign up for the newsletter
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               Sign up to receive news about the product, the launch and the work behind XALI. We will share prototypes, technology, testing and the experiences that are shaping the finished system.
