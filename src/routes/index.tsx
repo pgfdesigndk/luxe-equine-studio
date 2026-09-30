@@ -56,7 +56,7 @@ const benefits = [
 ];
 
 const contactInputClass =
-  "w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-cream/40 outline-none transition-colors focus:border-magenta";
+  "w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-magenta outline-none transition-colors focus:border-magenta";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name.").max(100),
@@ -204,7 +204,7 @@ function Index() {
             <h2 className="max-w-3xl font-display text-4xl leading-tight text-ink md:text-6xl">
               A system designed for real life
             </h2>
-            <div className="mt-12 border-t border-ink/15">
+          <div className="mt-12 border-t border-ink/15">
               {benefits.map((benefit) => (
                 <div key={benefit.number} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-ink/15 py-6 md:grid-cols-[3rem_1fr] md:gap-6">
                   <span className="font-display text-xl text-magenta md:text-2xl">{benefit.number}.</span>
@@ -215,17 +215,16 @@ function Index() {
                 </div>
               ))}
             </div>
+            <div className="mt-14 flex justify-center">
+              <a
+                href="#technology"
+                className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+              >
+                Learn about the technology
+              </a>
+            </div>
           </div>
         </section>
-
-        <div className="flex justify-center bg-ink px-5 py-12 md:py-16">
-          <a
-            href="#technology"
-            className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-          >
-            Learn about the technology
-          </a>
-        </div>
 
         <section id="technology" className="relative border-y border-cream/10 bg-ink px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="relative mx-auto max-w-7xl">
@@ -320,7 +319,7 @@ function Index() {
         <section id="danish-development" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-6xl">
-              Developed with care in Bogense
+              Developed with care in Denmark
             </h2>
             <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               XALI is taking shape in Denmark, where technology, textiles and skilled craftsmanship come together. Our close development process allows us to follow every detail, respond to the experience gained through testing and continuously improve the system.
@@ -380,14 +379,8 @@ function Index() {
                   type="submit"
                   className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
                 >
-                  Send message
-                </button>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-                >
                   Contact us
-                </Link>
+                </button>
               </div>
             </form>
           </div>
@@ -414,7 +407,7 @@ function Index() {
                 type="email"
                 required
                 placeholder="Your email address"
-                className="w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-cream/40 outline-none transition-colors focus:border-magenta sm:w-72"
+                className="w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-magenta outline-none transition-colors focus:border-magenta sm:w-72"
               />
               <button
                 type="submit"
