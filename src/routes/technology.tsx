@@ -109,7 +109,7 @@ function TechnologyPage() {
 
           <figure className="relative mt-10">
             <img src={detailImg.url} alt="Close-up of the XALI blanket with PEMF applicators"
-              className="aspect-[16/10] w-full object-cover" />
+              className="aspect-[21/9] w-full object-cover" />
           </figure>
 
           <div className="relative mt-12 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
