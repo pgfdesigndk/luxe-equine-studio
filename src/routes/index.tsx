@@ -55,8 +55,41 @@ const benefits = [
   },
 ];
 
+const contactInputClass =
+  "w-full border border-cream/20 bg-transparent px-5 py-3 text-sm font-light text-cream placeholder:text-cream/40 outline-none transition-colors focus:border-magenta";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Please enter your name.").max(100),
+  email: z.string().trim().email("Please enter a valid email address.").max(255),
+  phone: z.string().trim().max(40).optional(),
+  message: z.string().trim().min(1, "Please write a message.").max(2000),
+});
+
 function Index() {
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [contactError, setContactError] = useState<string | null>(null);
+
+  const handleContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const parsed = contactSchema.safeParse({
+      name: formData.get("name") ?? "",
+      email: formData.get("email") ?? "",
+      phone: (formData.get("phone") as string | null)?.trim() || undefined,
+      message: formData.get("message") ?? "",
+    });
+    if (!parsed.success) {
+      setContactError(parsed.error.issues[0]?.message ?? "Please check the form and try again.");
+      return;
+    }
+    setContactError(null);
+    const { name, email, phone, message } = parsed.data;
+    const subject = encodeURIComponent(`XALI enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\n\n${message}`,
+    );
+    window.location.href = `mailto:trine@broholm-consult.dk?subject=${subject}&body=${body}`;
+  };
 
   useEffect(() => {
     const video = heroVideoRef.current;
