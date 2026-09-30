@@ -165,9 +165,7 @@ export function SiteFooter() {
           <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
         </Link>
         <p className="text-right text-[10px] uppercase leading-5 tracking-[0.3em] text-cream/35 md:text-xs">
-          Developed in Bogense · Denmark
-          <br />
-          Horse First
+          Clever science, engineered, assembled and designed in Denmark
         </p>
       </div>
     </footer>
