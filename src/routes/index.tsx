@@ -110,10 +110,8 @@ function Index() {
 
           <div className="relative z-10 flex h-full flex-col justify-end px-5 pb-5 pt-32 md:px-12 md:pb-6">
             <div className="mx-auto mb-8 max-w-6xl reveal-up md:mb-10">
-              <h1 className="text-shadow-strong font-display text-[2.55rem] leading-[0.95] text-magenta sm:text-[3.25rem] md:text-[4.6rem] lg:text-[5.4rem]">
-                The treatment and the treat
-              </h1>
-              <p className="text-shadow-strong mx-auto mt-4 max-w-3xl text-[13px] font-bold uppercase leading-6 tracking-[0.04em] text-cream md:mt-5 md:text-base md:leading-7">
+              <h1 className="sr-only">XALI – a treatment and a treat</h1>
+              <p className="text-shadow-strong mx-auto max-w-3xl text-[13px] font-bold uppercase leading-6 tracking-[0.04em] text-cream md:text-base md:leading-7">
                 XALI is a modular system that combines PEMF and massage,
                 <br className="hidden sm:block" /> with a focus on flexibility, practical use and the horse’s comfort.
               </p>
@@ -186,7 +184,14 @@ function Index() {
           </div>
         </section>
 
-        <CreamBar href="#technology">» Learn about the technology «</CreamBar>
+        <div className="flex justify-center bg-ink px-5 py-12 md:py-16">
+          <a
+            href="#technology"
+            className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+          >
+            Learn about the technology
+          </a>
+        </div>
 
         <section id="technology" className="relative border-y border-cream/10 bg-ink px-5 py-24 md:px-12 md:py-40 dot-field dot-field-technology">
           <div className="relative mx-auto max-w-7xl">
