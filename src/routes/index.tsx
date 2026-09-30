@@ -396,7 +396,7 @@ function Index() {
         <section id="newsletter" className="relative bg-ink px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-5xl">
-              Follow the XALI journey
+              Sign up for the newsletter
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               Sign up to receive news about the product, the launch and the work behind XALI. We will share prototypes, technology, testing and the experiences that are shaping the finished system.
