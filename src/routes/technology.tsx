@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import type React from "react";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
+import detailImg from "../assets/xali-customer-detail.jpeg.asset.json";
+import logoAsset from "../assets/xali-logo.png.asset.json";
 
 export const Route = createFileRoute("/technology")({
   head: () => ({
@@ -49,89 +52,120 @@ const therapeuticEffects = [
 
 const benefitNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 
+function Chart({ variant }: { variant: "small" | "wide" }) {
+  if (variant === "small") {
+    return (
+      <svg viewBox="0 0 200 110" className="mt-8 w-full" aria-hidden="true">
+        {[10, 30, 50, 70, 90].map((y) => (
+          <line key={y} x1="10" x2="195" y1={y} y2={y} className="stroke-ink/10" />
+        ))}
+        {Array.from({ length: 9 }).map((_, i) => (
+          <line key={i} x1={20 + i * 21} x2={20 + i * 21} y1="5" y2="95" className="stroke-ink/15" />
+        ))}
+        <polyline fill="none" className="stroke-magenta" strokeWidth="1.2"
+          points="15,75 40,68 60,72 80,55 100,60 120,30 140,20 160,40 180,25 195,30" />
+        <polyline fill="none" className="stroke-ink" strokeWidth="1"
+          points="15,85 40,80 60,78 80,82 100,70 120,78 140,50 160,60 180,85 195,88" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 400 120" className="w-full" aria-hidden="true">
+      {[10, 30, 50, 70, 90, 110].map((y) => (
+        <line key={y} x1="0" x2="400" y1={y} y2={y} className="stroke-ink/40" />
+      ))}
+      <polyline fill="none" className="stroke-magenta" strokeWidth="2"
+        points="10,36 80,32 150,12 250,20 330,28 390,14" />
+      <rect x="4" y="30" width="10" height="10" className="fill-magenta" />
+      <circle cx="390" cy="14" r="6" className="fill-magenta" />
+      <polyline fill="none" className="stroke-ink" strokeWidth="1.5" strokeDasharray="2 2"
+        points="10,86 120,72 170,20 230,80 270,104 390,62" />
+      <rect x="4" y="80" width="10" height="10" className="fill-ink" />
+      <rect x="384" y="56" width="12" height="12" className="fill-ink" />
+    </svg>
+  );
+}
+
+function Block({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-8">
+      <h3 className="text-sm font-bold text-ink md:text-base">{title}</h3>
+      <div className="mt-1 text-sm font-light leading-6 text-ink/80 md:text-[15px]">{children}</div>
+    </div>
+  );
+}
+
 function TechnologyPage() {
   return (
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader />
-      <main>
-        <section className="dot-field dot-field-technology relative border-b border-cream/10 bg-ink px-5 pb-24 pt-32 md:px-12 md:pb-40 md:pt-44">
-          <div className="relative mx-auto max-w-4xl">
-            <h1 className="font-display text-4xl leading-tight text-cream md:text-6xl">
-              What is PEMF?
-            </h1>
-            <p className="mt-8 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-              PEMF stands for Pulsed Electromagnetic Fields. The technology works by means of
-              applicators that emit controlled magnetic pulses.
-            </p>
-            <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-              PEMF is a non-thermal and non-invasive technology that can form part of a horse’s
-              daily routine. The system can be used both before and after physical activity – as a
-              calm part of the preparation before training or as part of the horse’s well-being and
-              recovery afterwards.
-            </p>
-            <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-              During use, the horse can stand calmly in the stable while wearing the equipment and
-              the selected programme is running. When PEMF is combined with massage in one
-              integrated system, its use can be adapted to the individual horse and incorporated as
-              a practical supplement to training, care and daily management.
-            </p>
-          </div>
-        </section>
+      <main className="px-4 pb-20 pt-32 md:px-10 md:pt-44">
+        <article className="relative mx-auto max-w-6xl overflow-hidden bg-cream px-6 py-14 text-ink shadow-2xl md:px-16 md:py-20">
+          <div className="dot-hero-right pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-80" />
+          <h1 className="relative font-display text-4xl leading-tight md:text-6xl">
+            <span className="text-magenta">Technical data:</span>{" "}
+            <span className="text-ink">ProSeries 3-in-1</span>
+          </h1>
 
-        <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
-          <div className="mx-auto max-w-7xl border-t border-ink/15 pt-16 md:pt-20">
-            <h2 className="max-w-3xl font-display text-3xl leading-tight text-ink md:text-4xl">
-              Adapted to the individual horse
-            </h2>
-            <p className="mt-6 max-w-3xl text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
-              Every horse is different. The programme and duration should therefore always be
-              selected based on the individual horse and the product’s instructions for use. During
-              use, it is important to observe the horse’s behaviour and response.
-            </p>
-            <p className="mt-5 max-w-3xl text-base font-light italic leading-8 text-ink/60 md:text-lg md:leading-9">
-              PEMF should be considered a supplement and not a replacement for veterinary
-              examination, diagnosis or treatment. In cases of illness, injury, pregnancy, implants
-              or other special circumstances, a veterinarian should be consulted before use.
-            </p>
+          <figure className="relative mt-10 shadow-[0_25px_50px_-15px_color-mix(in_oklab,var(--ink)_70%,transparent)]">
+            <img src={detailImg.url} alt="Close-up of the XALI blanket with PEMF applicators"
+              className="aspect-[16/10] w-full object-cover" />
+          </figure>
 
-            <h3 className="mt-16 font-display text-2xl leading-tight text-ink md:text-3xl">
-              Practical benefits of PEMF
-            </h3>
-            <div className="mt-10 border-t border-ink/15">
-              {pemfBenefits.map((benefit, index) => (
-                <div
-                  key={benefit}
-                  className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-ink/15 py-5 md:grid-cols-[3rem_1fr] md:gap-6"
-                >
-                  <span className="font-display text-lg leading-7 text-magenta md:text-xl">
-                    {benefitNumerals[index]}.
-                  </span>
-                  <p className="text-base font-light leading-7 text-ink/70 md:text-lg md:leading-8">
-                    {benefit}
-                  </p>
+          <div className="relative mt-12 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <Block title="What is PEMF?">
+                PEMF stands for Pulsed Electromagnetic Fields. The technology works by means of
+                applicators that emit controlled magnetic pulses. It is non-thermal and
+                non-invasive and can form part of a horse’s daily routine – before training or as
+                part of well-being and recovery afterwards.
+              </Block>
+              <Block title="In the stable">
+                The horse can stand calmly in the stable while wearing the equipment and the
+                selected programme is running.
+              </Block>
+            </div>
+            <div>
+              <Block title="Adapted to the individual horse">
+                Every horse is different. Programme and duration should always be selected based on
+                the individual horse and the instructions for use, observing behaviour and response.
+              </Block>
+              <Chart variant="small" />
+            </div>
+            <div className="lg:col-span-2">
+              <div className="grid gap-x-8 sm:grid-cols-2">
+                <Block title="Practical benefits">
+                  <ul className="space-y-1">
+                    {pemfBenefits.slice(0, 4).map((b) => <li key={b}>{b}</li>)}
+                  </ul>
+                </Block>
+                <Block title="Integrated system">
+                  <ul className="space-y-1">
+                    {pemfBenefits.slice(4).map((b) => <li key={b}>{b}</li>)}
+                  </ul>
+                </Block>
+              </div>
+              <Chart variant="wide" />
+              <div className="mt-8 grid items-end gap-x-8 sm:grid-cols-2">
+                <Block title="XALI may contribute to">
+                  {therapeuticEffects.join(" ")}
+                </Block>
+                <div className="mb-8 text-center">
+                  <img src={logoAsset.url} alt="XALI" className="mx-auto h-24 w-auto" />
+                  <p className="mt-1 text-sm text-ink">A treatment and a treat</p>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
-        </section>
 
-        <section className="dot-constellation relative bg-ink px-5 py-24 md:px-12 md:py-32">
-          <div className="mx-auto max-w-5xl">
-            <h2 className="font-display text-3xl leading-tight text-cream md:text-5xl">
-              XALI may contribute to
-            </h2>
-            <ul className="mt-12 grid gap-x-16 gap-y-5 sm:grid-cols-2">
-              {therapeuticEffects.map((effect) => (
-                <li key={effect} className="flex items-start gap-4 border-b border-cream/10 pb-5">
-                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-magenta" />
-                  <span className="text-base font-light leading-7 text-mist md:text-lg md:leading-8">
-                    {effect}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+          <p className="relative mt-4 text-sm italic font-light text-ink/60">
+            PEMF is a supplement and not a replacement for veterinary examination, diagnosis or
+            treatment. Consult a veterinarian in cases of illness, injury, pregnancy or implants.
+          </p>
+          <p className="relative mt-10 text-center text-base font-bold uppercase tracking-wide text-magenta">
+            Get more info: xali.dk
+          </p>
+        </article>
       </main>
       <SiteFooter />
     </div>
