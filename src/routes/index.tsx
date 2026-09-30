@@ -379,14 +379,8 @@ function Index() {
                   type="submit"
                   className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:bg-magenta-deep hover:border-magenta-deep"
                 >
-                  Send message
-                </button>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-                >
                   Contact us
-                </Link>
+                </button>
               </div>
             </form>
           </div>
