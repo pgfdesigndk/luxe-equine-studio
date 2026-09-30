@@ -319,7 +319,7 @@ function Index() {
         <section id="danish-development" className="relative border-y border-cream/10 bg-ink-soft px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-6xl">
-              Developed with care in Bogense
+              Developed with care in Denmark
             </h2>
             <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
               XALI is taking shape in Denmark, where technology, textiles and skilled craftsmanship come together. Our close development process allows us to follow every detail, respond to the experience gained through testing and continuously improve the system.
