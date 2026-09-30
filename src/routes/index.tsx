@@ -312,7 +312,6 @@ function Index() {
           </div>
         </section>
 
-        <CreamBar href="#team">» Meet the people behind XALI «</CreamBar>
 
         <section id="team" className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
           <figure className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
