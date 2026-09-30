@@ -97,17 +97,17 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
 
 function TechnologyPage() {
   return (
-    <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
-      <SiteHeader />
+    <div className="min-h-screen overflow-hidden bg-cream text-ink font-body antialiased selection:bg-magenta selection:text-cream">
+      <SiteHeader light />
       <main className="px-4 pb-20 pt-32 md:px-10 md:pt-44">
-        <article className="relative mx-auto max-w-6xl overflow-hidden bg-cream px-6 py-14 text-ink shadow-2xl md:px-16 md:py-20">
+        <article className="relative mx-auto max-w-6xl px-6 py-14 text-ink md:px-16 md:py-20">
           <div className="dot-hero-right pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-80" />
           <h1 className="relative font-display text-4xl leading-tight md:text-6xl">
             <span className="text-magenta">Technical data:</span>{" "}
             <span className="text-ink">ProSeries 3-in-1</span>
           </h1>
 
-          <figure className="relative mt-10 shadow-[0_25px_50px_-15px_color-mix(in_oklab,var(--ink)_70%,transparent)]">
+          <figure className="relative mt-10">
             <img src={detailImg.url} alt="Close-up of the XALI blanket with PEMF applicators"
               className="aspect-[16/10] w-full object-cover" />
           </figure>
@@ -167,7 +167,7 @@ function TechnologyPage() {
           </p>
         </article>
       </main>
-      <SiteFooter />
+      <SiteFooter light />
     </div>
   );
 }

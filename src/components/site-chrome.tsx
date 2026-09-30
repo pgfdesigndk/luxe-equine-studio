@@ -10,7 +10,7 @@ const menuItems = [
   { label: "Technology", to: "/technology" },
 ];
 
-export function SiteHeader({ home = false }: { home?: boolean }) {
+export function SiteHeader({ home = false, light = false }: { home?: boolean; light?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -46,7 +46,9 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-[padding,background-color,backdrop-filter] duration-500 ${
         scrolled
-          ? "border-b border-cream/10 bg-ink/90 px-5 py-2 backdrop-blur-xl md:px-12 md:py-3"
+          ? `border-b px-5 py-2 backdrop-blur-xl md:px-12 md:py-3 ${
+              light ? "border-ink/10 bg-cream/90" : "border-cream/10 bg-ink/90"
+            }`
           : "px-5 py-5 md:px-12 md:py-8"
       }`}
     >
@@ -67,8 +69,8 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
           <span
             className={`whitespace-nowrap font-light transition-[margin,font-size,color] duration-500 ${
               scrolled
-                ? "mt-0.5 text-[10px] text-cream/70 md:text-xs"
-                : `mt-1 text-[12px] md:text-base ${home ? "text-ink" : "text-cream/70"}`
+                ? `mt-0.5 text-[10px] md:text-xs ${light ? "text-ink/70" : "text-cream/70"}`
+                : `mt-1 text-[12px] md:text-base ${home || light ? "text-ink" : "text-cream/70"}`
             }`}
           >
             A treatment and a treat
@@ -157,14 +159,22 @@ export function CreamBar({ children, href }: { children: ReactNode; href: string
   );
 }
 
-export function SiteFooter() {
+export function SiteFooter({ light = false }: { light?: boolean }) {
   return (
-    <footer className="relative border-t border-cream/10 bg-ink px-5 py-10 md:px-12">
+    <footer
+      className={`relative px-5 py-10 md:px-12 ${
+        light ? "border-t border-ink/15 bg-cream" : "border-t border-cream/10 bg-ink"
+      }`}
+    >
       <div className="mx-auto flex max-w-[1480px] items-end justify-between gap-8">
         <Link to="/" aria-label="XALI home">
           <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
         </Link>
-        <p className="text-right text-[10px] uppercase leading-5 tracking-[0.3em] text-cream/35 md:text-xs">
+        <p
+          className={`text-right text-[10px] uppercase leading-5 tracking-[0.3em] md:text-xs ${
+            light ? "text-ink/50" : "text-cream/35"
+          }`}
+        >
           Clever science, engineered, assembled and designed in Denmark
         </p>
       </div>
