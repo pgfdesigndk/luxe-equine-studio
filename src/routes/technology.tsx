@@ -132,8 +132,6 @@ function TechnologyPage() {
             </ul>
           </div>
         </section>
-
-        <CreamBar href="/about">» Meet the people behind XALI «</CreamBar>
       </main>
       <SiteFooter />
     </div>
