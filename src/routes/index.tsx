@@ -249,34 +249,65 @@ function Index() {
         </section>
 
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
-          <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
-            <div>
-              <h3 className="font-display text-3xl leading-tight text-ink md:text-4xl">
-                Tested, changed and tested again
-              </h3>
-              <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
-                Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
-              </p>
-              <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
-                Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
-              </p>
+          <div className="mx-auto max-w-7xl space-y-20 border-t border-ink/15 pt-16 md:space-y-28 md:pt-20">
+            <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-20">
+              <figure className="relative order-1 overflow-hidden">
+                <img
+                  src={productImg.url}
+                  alt="Close-up of the XALI ProSeries blanket textile with embroidered magenta logo"
+                  width={1024}
+                  height={1280}
+                  className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
+                  loading="lazy"
+                />
+              </figure>
+              <div className="order-2">
+                <h3 className="font-display text-3xl leading-tight text-ink md:text-4xl">
+                  Tested, changed and tested again
+                </h3>
+                <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                  Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
+                </p>
+                <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                  Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
+                </p>
+                <Link
+                  to="/technology"
+                  className="mt-8 inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+                >
+                  Learn about the technology
+                </Link>
+              </div>
             </div>
-            <div>
-              <h3 className="font-display text-3xl leading-tight text-ink md:text-4xl">
-                Thought through from electronics to textiles
-              </h3>
-              <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
-                Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
-              </p>
-              <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
-                The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
-              </p>
-              <Link
-                to="/technology"
-                className="mt-8 inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-              >
-                Learn about the technology
-              </Link>
+
+            <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-20">
+              <div className="order-2 md:order-1">
+                <h3 className="font-display text-3xl leading-tight text-ink md:text-4xl">
+                  Thought through from electronics to textiles
+                </h3>
+                <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                  Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
+                </p>
+                <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+                  The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
+                </p>
+                <Link
+                  to="/about"
+                  className="mt-8 inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+                >
+                  Learn about the team
+                </Link>
+              </div>
+              <figure className="relative order-1 md:order-2 overflow-hidden">
+                <img
+                  src={testimonialImg.url}
+                  alt="Detail of the XALI therapy blanket's magenta textile and therapy ring"
+                  width={1280}
+                  height={853}
+                  className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
+                  loading="lazy"
+                />
+              </figure>
             </div>
           </div>
         </section>
