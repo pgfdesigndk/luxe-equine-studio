@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { z } from "zod";
 
 import { CreamBar, SiteFooter, SiteHeader } from "../components/site-chrome";
 import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
