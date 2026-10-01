@@ -377,10 +377,10 @@ function Index() {
           <div className="absolute inset-0 bg-ink/75" aria-hidden="true" />
           <div className="relative z-10 w-full max-w-2xl">
             <h2 className="font-display text-4xl leading-tight text-cream md:text-7xl">
-              Not just a treatment – but also a treat.
+              Contact
             </h2>
             <p className="mx-auto mt-8 max-w-xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
-              Discover a modular system developed with a passion for the horse, respect for the user's everyday needs and a focus on the details that make a real difference in everyday use.
+              You can always contact us here. We respond to all enquireies within 24 hours on weekdays.
             </p>
             <form onSubmit={handleContactSubmit} noValidate className="mt-12 flex flex-col gap-4 text-left">
               <div className="grid gap-4 sm:grid-cols-2">
