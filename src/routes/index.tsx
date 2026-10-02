@@ -56,7 +56,7 @@ const benefits = [
 ];
 
 const contactInputClass =
-  "w-full border border-ink/25 bg-transparent px-5 py-3 text-sm font-normal text-ink placeholder:font-semibold placeholder:text-magenta outline-none transition-colors focus:border-magenta";
+  "w-full border border-cream/30 bg-transparent px-5 py-3 text-sm font-normal text-cream placeholder:font-semibold placeholder:text-magenta outline-none transition-colors focus:border-magenta";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name.").max(100),

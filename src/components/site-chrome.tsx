@@ -154,27 +154,19 @@ export function CreamBar({ children, href }: { children: ReactNode; href: string
   );
 }
 
-export function SiteFooter({ light = false }: { light?: boolean }) {
+export function SiteFooter() {
   return (
-    <footer
-      className={`relative px-5 py-10 md:px-12 ${
-        light ? "border-t border-ink/15 bg-cream" : "border-t border-cream/10 bg-ink"
-      }`}
-    >
+    <footer className="relative border-t border-cream/15 bg-ink px-5 py-10 text-cream md:px-12">
       <div className="mx-auto grid max-w-[1480px] grid-cols-[auto_minmax(0,1fr)] items-end gap-6 md:gap-8">
         <Link to="/" aria-label="XALI home" className="shrink-0">
           <img
             src={logoAsset.url}
             alt="XALI"
-            className="h-16 w-auto max-w-none shrink-0 object-contain opacity-75"
+            className="h-16 w-auto max-w-none shrink-0 object-contain opacity-90"
             loading="lazy"
           />
         </Link>
-        <p
-          className={`min-w-0 text-right text-xs font-medium uppercase leading-6 tracking-[0.16em] md:text-sm ${
-            light ? "text-ink/75" : "text-cream/75"
-          }`}
-        >
+        <p className="min-w-0 text-right text-sm font-bold uppercase leading-6 tracking-[0.14em] text-cream md:text-base md:leading-7">
           Clever science, engineered, assembled and designed in Denmark
         </p>
       </div>
