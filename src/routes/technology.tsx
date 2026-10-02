@@ -197,7 +197,7 @@ function TechnologyPage() {
           </p>
         </article>
       </main>
-      <SiteFooter light />
+      <SiteFooter />
     </div>
   );
 }
