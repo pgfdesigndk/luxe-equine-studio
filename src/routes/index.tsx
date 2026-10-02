@@ -178,7 +178,7 @@ function Index() {
 
         <section
           id="collection"
-          className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32"
+          className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-20"
         >
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
             <figure className="relative overflow-hidden">
@@ -210,7 +210,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="features" className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+        <section id="features" className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-20">
           <div className="mx-auto max-w-7xl">
             <h2 className="max-w-3xl font-display text-4xl font-black leading-tight text-ink md:text-6xl">
               A system designed for real life
@@ -242,9 +242,9 @@ function Index() {
 
         <section
           id="technology"
-          className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-24"
+          className="relative bg-cream px-5 py-14 text-ink md:px-12 md:py-20"
         >
-          <div className="mx-auto max-w-7xl space-y-16 md:space-y-24">
+          <div className="mx-auto max-w-7xl space-y-14 md:space-y-20">
             <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-20">
               <figure className="relative order-1 overflow-hidden">
                 <img
@@ -310,7 +310,7 @@ function Index() {
 
         <section
           id="enquire"
-          className="relative border-t border-cream/15 bg-ink px-5 py-24 text-cream md:px-12 md:py-32"
+          className="relative border-t border-cream/15 bg-ink px-5 py-16 text-cream md:px-12 md:py-20"
         >
           <div className="mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
             <div>
