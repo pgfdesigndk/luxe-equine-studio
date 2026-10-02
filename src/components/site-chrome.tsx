@@ -166,12 +166,17 @@ export function SiteFooter({ light = false }: { light?: boolean }) {
         light ? "border-t border-ink/15 bg-cream" : "border-t border-cream/10 bg-ink"
       }`}
     >
-      <div className="mx-auto flex max-w-[1480px] items-end justify-between gap-8">
-        <Link to="/" aria-label="XALI home">
-          <img src={logoAsset.url} alt="XALI" className="h-16 w-auto opacity-75" loading="lazy" />
+      <div className="mx-auto grid max-w-[1480px] grid-cols-[auto_minmax(0,1fr)] items-end gap-6 md:gap-8">
+        <Link to="/" aria-label="XALI home" className="shrink-0">
+          <img
+            src={logoAsset.url}
+            alt="XALI"
+            className="h-16 w-auto max-w-none shrink-0 object-contain opacity-75"
+            loading="lazy"
+          />
         </Link>
         <p
-          className={`text-right text-[10px] uppercase leading-5 tracking-[0.3em] md:text-xs ${
+          className={`min-w-0 text-right text-[10px] uppercase leading-5 tracking-[0.3em] md:text-xs ${
             light ? "text-ink/50" : "text-cream/35"
           }`}
         >
