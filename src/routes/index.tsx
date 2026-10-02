@@ -113,7 +113,6 @@ function Index() {
     };
   }, []);
 
-
   return (
     <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader home />
@@ -137,8 +136,14 @@ function Index() {
               <source src={heroFilm.url} type="video/mp4" />
               <source src={heroFilmWebm.url} type="video/webm" />
             </video>
-            <div className="pointer-events-none absolute inset-0 z-[1] bg-ink/10" aria-hidden="true" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[42%] bg-gradient-to-t from-ink via-ink/55 to-transparent" aria-hidden="true" />
+            <div
+              className="pointer-events-none absolute inset-0 z-[1] bg-ink/10"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[42%] bg-gradient-to-t from-ink via-ink/55 to-transparent"
+              aria-hidden="true"
+            />
             <div className="dot-hero-right" aria-hidden="true" />
           </div>
 
@@ -147,7 +152,8 @@ function Index() {
               <h1 className="sr-only">XALI – a treatment and a treat</h1>
               <p className="text-shadow-strong mx-auto max-w-3xl text-[13px] font-bold uppercase leading-6 tracking-[0.04em] text-cream md:text-base md:leading-7">
                 XALI is a modular system that combines PEMF and massage,
-                <br className="hidden sm:block" /> with a focus on flexibility, practical use and the horse’s comfort.
+                <br className="hidden sm:block" /> with a focus on flexibility, practical use and
+                the horse’s comfort.
               </p>
             </div>
 
@@ -170,7 +176,10 @@ function Index() {
           </div>
         </section>
 
-        <section id="collection" className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+        <section
+          id="collection"
+          className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32"
+        >
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
             <figure className="relative overflow-hidden">
               <img
@@ -188,10 +197,14 @@ function Index() {
                 Developed in the stable – for life with horses
               </h2>
               <p className="mt-8 max-w-lg text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                XALI did not begin at a desk. The idea grew out of many years of working with horses and technical treatment equipment – and from a desire to create a solution that we would genuinely want to use on our own horses.
+                XALI did not begin at a desk. The idea grew out of many years of working with horses
+                and technical treatment equipment – and from a desire to create a solution that we
+                would genuinely want to use on our own horses.
               </p>
               <p className="mt-5 max-w-lg text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                The result is a flexible system where the horse's comfort, the user's everyday needs and the requirements of professional practitioners have been considered throughout the entire development process.
+                The result is a flexible system where the horse's comfort, the user's everyday needs
+                and the requirements of professional practitioners have been considered throughout
+                the entire development process.
               </p>
             </div>
           </div>
@@ -202,23 +215,32 @@ function Index() {
             <h2 className="max-w-3xl font-display text-4xl font-black leading-tight text-ink md:text-6xl">
               A system designed for real life
             </h2>
-          <div className="mt-12 border-t border-ink/15">
+            <div className="mt-12 border-t border-ink/15">
               {benefits.map((benefit) => (
                 <div key={benefit.number} className="border-b border-ink/15 py-6">
                   <div>
-                    <h3 className="font-body text-base font-bold text-ink md:text-lg">{benefit.title}</h3>
-                    <p className="mt-3 text-base font-normal leading-7 text-ink/80 md:text-lg md:leading-8">{benefit.text}</p>
+                    <h3 className="font-body text-base font-bold text-ink md:text-lg">
+                      {benefit.title}
+                    </h3>
+                    <p className="mt-3 text-base font-normal leading-7 text-ink/80 md:text-lg md:leading-8">
+                      {benefit.text}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-14 flex justify-center">
-              <XaliButton asChild><Link to="/technology">Learn about the technology</Link></XaliButton>
+              <XaliButton asChild>
+                <Link to="/technology">Learn about the technology</Link>
+              </XaliButton>
             </div>
           </div>
         </section>
 
-        <section id="technology" className="relative border-t border-ink/15 bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+        <section
+          id="technology"
+          className="relative border-t border-ink/15 bg-cream px-5 py-24 text-ink md:px-12 md:py-32"
+        >
           <div className="mx-auto max-w-7xl space-y-20 border-t border-ink/15 pt-16 md:space-y-28 md:pt-20">
             <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-20">
               <figure className="relative order-1 overflow-hidden">
@@ -236,12 +258,18 @@ function Index() {
                   Tested, changed and tested again
                 </h3>
                 <p className="mt-6 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                  Product development is rarely a straight path. Along the way, we have designed, built prototypes, tested materials and rejected solutions that did not work well enough.
+                  Product development is rarely a straight path. Along the way, we have designed,
+                  built prototypes, tested materials and rejected solutions that did not work well
+                  enough.
                 </p>
                 <p className="mt-5 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                  Every change has taught us something. That knowledge is now built into XALI – from the modular design and coil placement to pockets, stitching and choice of materials.
+                  Every change has taught us something. That knowledge is now built into XALI – from
+                  the modular design and coil placement to pockets, stitching and choice of
+                  materials.
                 </p>
-                <XaliButton asChild className="mt-8"><Link to="/technology">Learn about the technology</Link></XaliButton>
+                <XaliButton asChild className="mt-8">
+                  <Link to="/technology">Learn about the technology</Link>
+                </XaliButton>
               </div>
             </div>
 
@@ -251,12 +279,17 @@ function Index() {
                   Thought through from electronics to textiles
                 </h3>
                 <p className="mt-6 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                  Behind XALI is a close collaboration between experience from the equestrian world and technical development. Electronics, coils, programmes and power supply have been developed as parts of one integrated solution.
+                  Behind XALI is a close collaboration between experience from the equestrian world
+                  and technical development. Electronics, coils, programmes and power supply have
+                  been developed as parts of one integrated solution.
                 </p>
                 <p className="mt-5 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                  The goal has been clear: the technology must be reliable and practical – and it must work in the real world where horses and people use it.
+                  The goal has been clear: the technology must be reliable and practical – and it
+                  must work in the real world where horses and people use it.
                 </p>
-                <XaliButton asChild className="mt-8"><Link to="/about">Learn about the team</Link></XaliButton>
+                <XaliButton asChild className="mt-8">
+                  <Link to="/about">Learn about the team</Link>
+                </XaliButton>
               </div>
               <figure className="relative order-1 md:order-2 overflow-hidden">
                 <img
@@ -272,47 +305,102 @@ function Index() {
           </div>
         </section>
 
-
-        <section id="enquire" className="relative border-t border-ink/15 bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+        <section
+          id="enquire"
+          className="relative border-t border-ink/15 bg-cream px-5 py-24 text-ink md:px-12 md:py-32"
+        >
           <div className="mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
             <div>
               <h2 className="font-display text-4xl font-black leading-tight text-ink md:text-6xl">
-              Contact
+                Contact
               </h2>
               <p className="mt-6 max-w-xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                You can always contact us here. We respond to all enquiries within 24 hours on weekdays.
+                You can always contact us here. We respond to all enquiries within 24 hours on
+                weekdays.
               </p>
               <address className="mt-10 not-italic text-base font-normal leading-8 text-ink/80 md:text-lg">
-                <strong className="font-bold text-ink">Broholm</strong><br />
-                Østre Havnevej 12<br />
-                5400 Bogense, Denmark<br />
-                <a className="font-semibold text-magenta hover:text-magenta-deep" href="mailto:trine@broholm-consult.dk">trine@broholm-consult.dk</a><br />
-                <a className="font-semibold text-magenta hover:text-magenta-deep" href="tel:12345678">12345678</a><br />
+                <strong className="font-bold text-ink">Broholm</strong>
+                <br />
+                Østre Havnevej 12
+                <br />
+                5400 Bogense, Denmark
+                <br />
+                <a
+                  className="font-semibold text-magenta hover:text-magenta-deep"
+                  href="mailto:trine@broholm-consult.dk"
+                >
+                  trine@broholm-consult.dk
+                </a>
+                <br />
+                <a
+                  className="font-semibold text-magenta hover:text-magenta-deep"
+                  href="tel:12345678"
+                >
+                  12345678
+                </a>
+                <br />
                 Company registration no. 30607376
               </address>
             </div>
-            <form onSubmit={handleContactSubmit} noValidate className="flex flex-col gap-4 text-left lg:pt-3">
+            <form
+              onSubmit={handleContactSubmit}
+              noValidate
+              className="flex flex-col gap-4 text-left lg:pt-3"
+            >
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="contact-name" className="sr-only">Your name</label>
-                  <input id="contact-name" name="name" type="text" required placeholder="Your name" className={contactInputClass} />
+                  <label htmlFor="contact-name" className="sr-only">
+                    Your name
+                  </label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Your name"
+                    className={contactInputClass}
+                  />
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="sr-only">Your email address</label>
-                  <input id="contact-email" name="email" type="email" required placeholder="Your email address" className={contactInputClass} />
+                  <label htmlFor="contact-email" className="sr-only">
+                    Your email address
+                  </label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="Your email address"
+                    className={contactInputClass}
+                  />
                 </div>
               </div>
               <div>
-                <label htmlFor="contact-phone" className="sr-only">Your phone number</label>
-                <input id="contact-phone" name="phone" type="tel" placeholder="Your phone number" className={contactInputClass} />
+                <label htmlFor="contact-phone" className="sr-only">
+                  Your phone number
+                </label>
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Your phone number"
+                  className={contactInputClass}
+                />
               </div>
               <div>
-                <label htmlFor="contact-message" className="sr-only">Your message</label>
-                <textarea id="contact-message" name="message" required rows={5} placeholder="Your message" className={`${contactInputClass} resize-none`} />
+                <label htmlFor="contact-message" className="sr-only">
+                  Your message
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  required
+                  rows={5}
+                  placeholder="Your message"
+                  className={`${contactInputClass} resize-none`}
+                />
               </div>
-              {contactError ? (
-                <p className="text-sm font-medium text-ink">{contactError}</p>
-              ) : null}
+              {contactError ? <p className="text-sm font-medium text-ink">{contactError}</p> : null}
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
                 <XaliButton type="submit">Contact us</XaliButton>
               </div>

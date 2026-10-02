@@ -39,7 +39,9 @@ function ContactPage() {
 
         <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-40">
           <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
-            <p className="font-display text-3xl font-black leading-tight text-ink md:text-5xl">Broholm</p>
+            <p className="font-display text-3xl font-black leading-tight text-ink md:text-5xl">
+              Broholm
+            </p>
             <p className="mt-8 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
               Østre Havnevej 12
               <br />
@@ -48,8 +50,13 @@ function ContactPage() {
               Denmark
             </p>
 
-            <p className="mt-12 text-[13px] font-bold uppercase tracking-[0.16em] text-magenta">Phone</p>
-            <a href="tel:12345678" className="mt-3 inline-block text-lg font-semibold text-ink transition-colors hover:text-magenta md:text-xl">
+            <p className="mt-12 text-[13px] font-bold uppercase tracking-[0.16em] text-magenta">
+              Phone
+            </p>
+            <a
+              href="tel:12345678"
+              className="mt-3 inline-block text-lg font-semibold text-ink transition-colors hover:text-magenta md:text-xl"
+            >
               12345678
             </a>
 
@@ -65,10 +72,11 @@ function ContactPage() {
               Company registration no. 30607376
             </p>
 
-            <XaliButton asChild className="mt-12"><a href="mailto:trine@broholm-consult.dk">Send us an email</a></XaliButton>
+            <XaliButton asChild className="mt-12">
+              <a href="mailto:trine@broholm-consult.dk">Send us an email</a>
+            </XaliButton>
           </div>
         </section>
-
       </main>
       <SiteFooter light />
     </div>

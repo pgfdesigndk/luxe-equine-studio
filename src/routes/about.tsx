@@ -64,7 +64,7 @@ function AboutPage() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 Developed with the horse at the centre
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -77,13 +77,13 @@ function AboutPage() {
               </p>
               <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
                 That is why we do not only measure and test the technology. We also observe the
-                horse. How does the horse stand while wearing the equipment? How does it respond?
-                Is the system calm and practical to use? These observations are an important part
-                of our development work.
+                horse. How does the horse stand while wearing the equipment? How does it respond? Is
+                the system calm and practical to use? These observations are an important part of
+                our development work.
               </p>
             </div>
             <div>
-               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 From idea to finished system
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -120,8 +120,7 @@ function AboutPage() {
               <p className="mt-7 max-w-3xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
                 XALI was not developed by a large corporation. It was created by a small and
                 dedicated team with many years of experience and a shared ambition to develop
-                something that is genuinely useful for both horses and the people who care for
-                them.
+                something that is genuinely useful for both horses and the people who care for them.
               </p>
               <p className="mt-5 max-w-3xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
                 Trine is the driving force behind the idea and brings her many years of experience
@@ -133,8 +132,8 @@ function AboutPage() {
                 competition.
               </p>
               <p className="mt-5 max-w-3xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-                Together, we combine experience from the equestrian world with technical
-                development and an in-depth understanding of life in the stable.
+                Together, we combine experience from the equestrian world with technical development
+                and an in-depth understanding of life in the stable.
               </p>
             </div>
           </div>
@@ -143,7 +142,7 @@ function AboutPage() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 Developed in Denmark
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -152,13 +151,13 @@ function AboutPage() {
               </p>
               <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
                 The close development process allows us to follow every detail, respond to the
-                experience gained through our testing and continuously improve the system. We do
-                not simply want to create another product, but a carefully considered solution that
-                we ourselves would want to use on our own horses.
+                experience gained through our testing and continuously improve the system. We do not
+                simply want to create another product, but a carefully considered solution that we
+                ourselves would want to use on our own horses.
               </p>
             </div>
             <div>
-               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 Built on a few simple principles
               </h2>
               <ul className="mt-8">
@@ -183,7 +182,9 @@ function AboutPage() {
           <p className="font-display text-3xl font-black leading-tight text-magenta md:text-5xl">
             Not just a treatment – but also a treat.
           </p>
-          <XaliButton asChild className="mt-10"><a href="/technology">Explore the technology</a></XaliButton>
+          <XaliButton asChild className="mt-10">
+            <a href="/technology">Explore the technology</a>
+          </XaliButton>
         </section>
       </main>
       <SiteFooter light />
