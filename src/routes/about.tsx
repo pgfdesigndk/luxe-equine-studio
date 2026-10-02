@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { CreamBar, SiteFooter, SiteHeader } from "../components/site-chrome";
+import { SiteFooter, SiteHeader } from "../components/site-chrome";
+import { XaliButton } from "../components/xali-button";
 import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
 
 export const Route = createFileRoute("/about")({
@@ -34,27 +35,25 @@ const principles = [
   "A well-designed solution should be offered at a responsible price.",
 ];
 
-const principleNumerals = ["I", "II", "III", "IV", "V", "VI"];
-
 function AboutPage() {
   return (
-    <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
-      <SiteHeader />
+    <div className="min-h-screen overflow-hidden bg-cream text-ink font-body antialiased selection:bg-magenta selection:text-cream">
+      <SiteHeader light />
       <main>
-        <section className="dot-scatter relative bg-ink px-5 pb-16 pt-32 md:px-12 md:pb-24 md:pt-44">
+        <section className="relative bg-cream px-5 pb-16 pt-32 md:px-12 md:pb-24 md:pt-44">
           <div className="mx-auto max-w-4xl">
-            <h1 className="font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h1 className="font-display text-4xl font-black leading-tight text-ink md:text-6xl">
               It began in the stable
             </h1>
-            <p className="mt-8 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+            <p className="mt-8 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
               Some ideas start at a desk. XALI began in the stable.
             </p>
-            <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+            <p className="mt-5 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
               Through almost 18 years of working with horses and technical treatment equipment, we
               have developed a solid understanding of both the solutions that work and the
               challenges faced by riders, grooms and horse owners in everyday life.
             </p>
-            <p className="mt-5 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+            <p className="mt-5 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
               With that experience came a question: Could we develop a system that was more
               flexible, more practical and created with an even greater focus on the horse? That
               became the beginning of XALI.
@@ -65,7 +64,7 @@ function AboutPage() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
+               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 Developed with the horse at the centre
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -84,7 +83,7 @@ function AboutPage() {
               </p>
             </div>
             <div>
-              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
+               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 From idea to finished system
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -104,7 +103,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="relative bg-ink px-5 py-24 md:px-12 md:py-40">
+        <section className="relative border-y border-ink/15 bg-cream px-5 py-24 md:px-12 md:py-32">
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
               src={testimonialImg.url}
@@ -115,16 +114,16 @@ function AboutPage() {
               loading="lazy"
             />
             <div>
-              <h2 className="max-w-4xl font-display text-3xl leading-snug text-cream md:text-5xl">
+              <h2 className="max-w-4xl font-display text-3xl font-black leading-snug text-ink md:text-5xl">
                 A small team with a big ambition
               </h2>
-              <p className="mt-7 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+              <p className="mt-7 max-w-3xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
                 XALI was not developed by a large corporation. It was created by a small and
                 dedicated team with many years of experience and a shared ambition to develop
                 something that is genuinely useful for both horses and the people who care for
                 them.
               </p>
-              <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+              <p className="mt-5 max-w-3xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
                 Trine is the driving force behind the idea and brings her many years of experience
                 with horses, treatment equipment, sales and the practical needs of customers into
                 the development process. Dennis is the technical driving force, turning the ideas
@@ -133,7 +132,7 @@ function AboutPage() {
                 horses need and how to keep a horse fit during both training periods and
                 competition.
               </p>
-              <p className="mt-5 max-w-3xl text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+              <p className="mt-5 max-w-3xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
                 Together, we combine experience from the equestrian world with technical
                 development and an in-depth understanding of life in the stable.
               </p>
@@ -144,7 +143,7 @@ function AboutPage() {
         <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
-              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
+               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 Developed in Denmark
               </h2>
               <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
@@ -159,15 +158,12 @@ function AboutPage() {
               </p>
             </div>
             <div>
-              <h2 className="font-display text-3xl leading-tight text-ink md:text-4xl">
+               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
                 Built on a few simple principles
               </h2>
               <ul className="mt-8">
-                {principles.map((principle, index) => (
-                  <li key={principle} className="flex items-start gap-4 border-b border-ink/15 py-4">
-                    <span className="font-display text-lg leading-7 text-magenta">
-                      {principleNumerals[index]}.
-                    </span>
+                {principles.map((principle) => (
+                  <li key={principle} className="border-b border-ink/15 py-4">
                     <span className="text-base font-light leading-7 text-ink/70 md:text-lg md:leading-8">
                       {principle}
                     </span>
@@ -183,15 +179,14 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="relative border-t border-cream/10 bg-ink px-5 py-24 text-center md:py-32">
-          <p className="font-display text-3xl leading-tight text-magenta md:text-5xl">
+        <section className="relative border-t border-ink/15 bg-cream px-5 py-24 text-center md:py-32">
+          <p className="font-display text-3xl font-black leading-tight text-magenta md:text-5xl">
             Not just a treatment – but also a treat.
           </p>
+          <XaliButton asChild className="mt-10"><a href="/technology">Explore the technology</a></XaliButton>
         </section>
-
-        <CreamBar href="/technology">» Explore the technology «</CreamBar>
       </main>
-      <SiteFooter />
+      <SiteFooter light />
     </div>
   );
 }

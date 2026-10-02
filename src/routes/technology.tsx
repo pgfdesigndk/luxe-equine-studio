@@ -89,8 +89,8 @@ function Chart({ variant }: { variant: "small" | "wide" }) {
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-8">
-      <h3 className="text-sm font-bold text-ink md:text-base">{title}</h3>
-      <div className="mt-1 text-sm font-light leading-6 text-ink/80 md:text-[15px]">{children}</div>
+      <h3 className="font-body text-base font-bold text-ink md:text-lg">{title}</h3>
+      <div className="mt-2 text-sm font-normal leading-6 text-ink/85 md:text-base md:leading-7">{children}</div>
     </div>
   );
 }
@@ -101,8 +101,7 @@ function TechnologyPage() {
       <SiteHeader light />
       <main className="px-4 pb-20 pt-32 md:px-10 md:pt-44">
         <article className="relative w-full px-6 py-14 text-ink md:px-16 md:py-20">
-          <div className="dot-hero-right pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-80" />
-          <h1 className="relative font-display text-4xl leading-tight md:text-6xl">
+          <h1 className="font-display text-4xl font-black leading-tight md:text-6xl">
             <span className="text-magenta">Technical data:</span>{" "}
             <span className="text-ink">ProSeries 3-in-1</span>
           </h1>
@@ -158,7 +157,7 @@ function TechnologyPage() {
             </div>
           </div>
 
-          <p className="relative mt-4 text-sm italic font-light text-ink/60">
+          <p className="relative mt-4 text-sm italic font-normal text-ink/75">
             PEMF is a supplement and not a replacement for veterinary examination, diagnosis or
             treatment. Consult a veterinarian in cases of illness, injury, pregnancy or implants.
           </p>

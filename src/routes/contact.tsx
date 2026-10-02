@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { CreamBar, SiteFooter, SiteHeader } from "../components/site-chrome";
+import { SiteFooter, SiteHeader } from "../components/site-chrome";
+import { XaliButton } from "../components/xali-button";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -25,21 +26,21 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   return (
-    <div className="min-h-screen overflow-hidden bg-ink text-cream font-body antialiased selection:bg-magenta selection:text-cream">
-      <SiteHeader />
+    <div className="min-h-screen overflow-hidden bg-cream text-ink font-body antialiased selection:bg-magenta selection:text-cream">
+      <SiteHeader light />
       <main>
-        <section className="dot-scatter relative bg-ink px-5 pb-14 pt-32 md:px-12 md:pb-20 md:pt-44">
+        <section className="relative bg-cream px-5 pb-14 pt-32 md:px-12 md:pb-20 md:pt-44">
           <div className="mx-auto max-w-4xl">
-            <h1 className="font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h1 className="font-display text-4xl font-black leading-tight text-ink md:text-6xl">
               Contact us
             </h1>
           </div>
         </section>
 
-        <section className="relative bg-ink px-5 pb-24 md:px-12 md:pb-40">
-          <div className="mx-auto max-w-4xl border-t border-cream/10 pt-16 text-center md:pt-20">
-            <p className="font-display text-3xl leading-tight text-cream md:text-5xl">Broholm</p>
-            <p className="mt-8 text-base font-light leading-8 text-mist md:text-lg md:leading-9">
+        <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-40">
+          <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
+            <p className="font-display text-3xl font-black leading-tight text-ink md:text-5xl">Broholm</p>
+            <p className="mt-8 text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
               Østre Havnevej 12
               <br />
               5400 Bogense
@@ -47,30 +48,29 @@ function ContactPage() {
               Denmark
             </p>
 
+            <p className="mt-12 text-[13px] font-bold uppercase tracking-[0.16em] text-magenta">Phone</p>
+            <a href="tel:12345678" className="mt-3 inline-block text-lg font-semibold text-ink transition-colors hover:text-magenta md:text-xl">
+              12345678
+            </a>
+
             <p className="mt-12 text-[13px] uppercase tracking-[0.3em] text-magenta">Email</p>
             <a
               href="mailto:trine@broholm-consult.dk"
-              className="mt-3 inline-block text-lg font-light text-cream underline decoration-magenta/60 underline-offset-8 transition-colors hover:text-magenta md:text-xl"
+              className="mt-3 inline-block text-lg font-semibold text-ink underline decoration-magenta/60 underline-offset-8 transition-colors hover:text-magenta md:text-xl"
             >
               trine@broholm-consult.dk
             </a>
 
-            <p className="mt-12 text-[11px] uppercase tracking-[0.3em] text-cream/40 md:text-xs">
+            <p className="mt-12 text-xs font-semibold uppercase tracking-[0.16em] text-ink/70 md:text-sm">
               Company registration no. 30607376
             </p>
 
-            <a
-              href="mailto:trine@broholm-consult.dk"
-              className="mt-12 inline-flex items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
-            >
-              Send us an email
-            </a>
+            <XaliButton asChild className="mt-12"><a href="mailto:trine@broholm-consult.dk">Send us an email</a></XaliButton>
           </div>
         </section>
 
-        <CreamBar href="/">» Back to the front page «</CreamBar>
       </main>
-      <SiteFooter />
+      <SiteFooter light />
     </div>
   );
 }
