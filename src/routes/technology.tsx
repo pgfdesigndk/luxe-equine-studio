@@ -192,9 +192,6 @@ function TechnologyPage() {
             PEMF is a supplement and not a replacement for veterinary examination, diagnosis or
             treatment. Consult a veterinarian in cases of illness, injury, pregnancy or implants.
           </p>
-          <p className="relative mt-10 text-center text-base font-bold uppercase tracking-wide text-magenta">
-            Get more info: xali.dk
-          </p>
         </article>
       </main>
       <SiteFooter />
