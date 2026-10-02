@@ -4,7 +4,7 @@ import { z } from "zod";
 
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { XaliButton } from "../components/xali-button";
-import cinematicHero from "../assets/xali-customer-hero.jpeg.asset.json";
+import cinematicHero from "../assets/xali-hero-poster.jpg.asset.json";
 import heroFilm from "../assets/xali-hero-film-compatible.mp4.asset.json";
 import heroFilmWebm from "../assets/xali-hero-film.webm.asset.json";
 import productImg from "../assets/xali-customer-collection.jpeg.asset.json";
