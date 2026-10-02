@@ -10,4 +10,4 @@
 - [x] Standardize all action buttons and strengthen heading typography.
 - [x] Add complete company details and phone number beside the contact form.
 - [x] Remove dots from Technology content and improve footer readability.
-- [ ] Verify all content pages on desktop and mobile.
+- [x] Verify all content pages on desktop and mobile.
