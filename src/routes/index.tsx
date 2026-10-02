@@ -321,7 +321,7 @@ function Index() {
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter light />
     </div>
   );
 }
