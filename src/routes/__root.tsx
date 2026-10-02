@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -34,7 +35,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -78,10 +79,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "XALI · Technology developed with the horse at the centre" },
-      { name: "description", content: "XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort." },
+      {
+        name: "description",
+        content:
+          "XALI is a modular system that combines PEMF and massage, with a focus on flexibility, practical use and the horse's comfort.",
+      },
       { name: "author", content: "XALI" },
       { property: "og:title", content: "XALI · Technology developed with the horse at the centre" },
-      { property: "og:description", content: "A modular system that combines PEMF and massage, developed in the stable for life with horses." },
+      {
+        property: "og:description",
+        content:
+          "A modular system that combines PEMF and massage, developed in the stable for life with horses.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
