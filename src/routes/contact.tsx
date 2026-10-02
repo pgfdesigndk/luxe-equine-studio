@@ -78,7 +78,7 @@ function ContactPage() {
           </div>
         </section>
       </main>
-      <SiteFooter light />
+      <SiteFooter />
     </div>
   );
 }

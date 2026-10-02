@@ -56,7 +56,7 @@ const benefits = [
 ];
 
 const contactInputClass =
-  "w-full border border-ink/25 bg-transparent px-5 py-3 text-sm font-normal text-ink placeholder:font-semibold placeholder:text-magenta outline-none transition-colors focus:border-magenta";
+  "w-full border border-cream/30 bg-transparent px-5 py-3 text-sm font-normal text-cream placeholder:font-semibold placeholder:text-magenta outline-none transition-colors focus:border-magenta";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name.").max(100),
@@ -310,35 +310,32 @@ function Index() {
 
         <section
           id="enquire"
-          className="relative border-t border-ink/15 bg-cream px-5 py-24 text-ink md:px-12 md:py-32"
+          className="relative border-t border-cream/15 bg-ink px-5 py-24 text-cream md:px-12 md:py-32"
         >
           <div className="mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
             <div>
-              <h2 className="font-display text-4xl font-black leading-tight text-ink md:text-6xl">
+              <h2 className="font-display text-4xl font-black leading-tight text-cream md:text-6xl">
                 Contact
               </h2>
-              <p className="mt-6 max-w-xl text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
+              <p className="mt-6 max-w-xl text-base font-normal leading-8 text-cream/80 md:text-lg md:leading-9">
                 You can always contact us here. We respond to all enquiries within 24 hours on
                 weekdays.
               </p>
-              <address className="mt-10 not-italic text-base font-normal leading-8 text-ink/80 md:text-lg">
-                <strong className="font-bold text-ink">Broholm</strong>
+              <address className="mt-10 not-italic text-base font-bold leading-8 text-cream md:text-lg">
+                <strong className="font-bold text-cream">Broholm</strong>
                 <br />
                 Østre Havnevej 12
                 <br />
                 5400 Bogense, Denmark
                 <br />
                 <a
-                  className="font-semibold text-magenta hover:text-magenta-deep"
+                  className="font-bold text-magenta hover:text-magenta-deep"
                   href="mailto:trine@broholm-consult.dk"
                 >
                   trine@broholm-consult.dk
                 </a>
                 <br />
-                <a
-                  className="font-semibold text-magenta hover:text-magenta-deep"
-                  href="tel:12345678"
-                >
+                <a className="font-bold text-magenta hover:text-magenta-deep" href="tel:12345678">
                   12345678
                 </a>
                 <br />
@@ -403,7 +400,9 @@ function Index() {
                   className={`${contactInputClass} resize-none`}
                 />
               </div>
-              {contactError ? <p className="text-sm font-medium text-ink">{contactError}</p> : null}
+              {contactError ? (
+                <p className="text-sm font-bold text-cream">{contactError}</p>
+              ) : null}
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
                 <XaliButton type="submit">Contact us</XaliButton>
               </div>
@@ -412,7 +411,7 @@ function Index() {
         </section>
       </main>
 
-      <SiteFooter light />
+      <SiteFooter />
     </div>
   );
 }

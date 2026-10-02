@@ -187,7 +187,7 @@ function AboutPage() {
           </XaliButton>
         </section>
       </main>
-      <SiteFooter light />
+      <SiteFooter />
     </div>
   );
 }
