@@ -215,9 +215,12 @@ function Index() {
             <h2 className="max-w-3xl font-display text-4xl font-black leading-tight text-ink md:text-6xl">
               A system designed for real life
             </h2>
-            <div className="mt-12 border-t border-ink/15">
-              {benefits.map((benefit) => (
-                <div key={benefit.number} className="border-b border-ink/15 py-6">
+            <div className="mt-12">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={benefit.number}
+                  className={`py-6 ${index < benefits.length - 1 ? "border-b border-ink/15" : ""}`}
+                >
                   <div>
                     <h3 className="font-body text-base font-bold text-ink md:text-lg">
                       {benefit.title}
@@ -239,9 +242,9 @@ function Index() {
 
         <section
           id="technology"
-          className="relative border-t border-ink/15 bg-cream px-5 py-24 text-ink md:px-12 md:py-32"
+          className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-24"
         >
-          <div className="mx-auto max-w-7xl space-y-20 border-t border-ink/15 pt-16 md:space-y-28 md:pt-20">
+          <div className="mx-auto max-w-7xl space-y-16 md:space-y-24">
             <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-20">
               <figure className="relative order-1 overflow-hidden">
                 <img
