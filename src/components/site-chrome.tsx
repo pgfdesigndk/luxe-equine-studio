@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 
 import logoAsset from "../assets/xali-logo.png.asset.json";
+import { XaliButton } from "./xali-button";
 
 const menuItems = [
   { label: "Contact", to: "/contact" },
@@ -141,19 +142,13 @@ export function CreamBar({ children, href }: { children: ReactNode; href: string
   return (
     <div className="relative z-20 flex min-h-14 items-center justify-center border-y border-ink/10 bg-cream px-5 py-4 text-center md:min-h-16">
       {href.startsWith("#") ? (
-        <a
-          href={href}
-          className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl"
-        >
-          {children}
-        </a>
+        <XaliButton asChild>
+          <a href={href}>{children}</a>
+        </XaliButton>
       ) : (
-        <Link
-          to={href}
-          className="font-display text-lg text-magenta transition-colors hover:text-magenta-deep md:text-xl"
-        >
-          {children}
-        </Link>
+        <XaliButton asChild>
+          <Link to={href}>{children}</Link>
+        </XaliButton>
       )}
     </div>
   );
@@ -176,8 +171,8 @@ export function SiteFooter({ light = false }: { light?: boolean }) {
           />
         </Link>
         <p
-          className={`min-w-0 text-right text-[10px] uppercase leading-5 tracking-[0.3em] md:text-xs ${
-            light ? "text-ink/50" : "text-cream/35"
+          className={`min-w-0 text-right text-xs font-medium uppercase leading-6 tracking-[0.16em] md:text-sm ${
+            light ? "text-ink/75" : "text-cream/75"
           }`}
         >
           Clever science, engineered, assembled and designed in Denmark
