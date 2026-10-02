@@ -261,7 +261,9 @@
   background-position: right center;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.9;
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 32%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 32%);
   animation: dot-hero-right-breathe 14s ease-in-out infinite;
 }
 
@@ -496,10 +498,10 @@
 @keyframes dot-hero-right-breathe {
   0%,
   100% {
-    opacity: 0.72;
+    opacity: 0.34;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.45;
   }
 }
 
