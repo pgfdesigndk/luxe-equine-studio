@@ -161,9 +161,9 @@ function Index() {
               <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#enquire"
-                  className="inline-flex min-w-[218px] items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-medium uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
+                  className="inline-flex min-w-[218px] items-center justify-center border border-magenta bg-magenta px-8 py-4 text-[11px] font-bold uppercase tracking-[0.28em] text-cream transition-all duration-300 hover:border-magenta-deep hover:bg-magenta-deep"
                 >
-                  Find your lokal dealer
+                  Find your local dealer
                 </a>
                 <a
                   href="#features"
