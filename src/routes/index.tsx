@@ -210,22 +210,25 @@ function Index() {
           </div>
         </section>
 
-        <section id="features" className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-20">
+        <section
+          id="features"
+          className="relative bg-ink px-5 py-16 text-cream md:px-12 md:py-20"
+        >
           <div className="mx-auto max-w-7xl">
-            <h2 className="max-w-3xl font-display text-4xl font-black leading-tight text-ink md:text-6xl">
+            <h2 className="max-w-3xl font-display text-4xl font-black leading-tight text-cream md:text-6xl">
               A system designed for real life
             </h2>
             <div className="mt-12">
               {benefits.map((benefit, index) => (
                 <div
                   key={benefit.number}
-                  className={`py-6 ${index < benefits.length - 1 ? "border-b border-ink/15" : ""}`}
+                  className={`py-6 ${index < benefits.length - 1 ? "border-b border-cream/15" : ""}`}
                 >
                   <div>
-                    <h3 className="font-body text-base font-bold text-ink md:text-lg">
+                    <h3 className="font-body text-base font-bold text-cream md:text-lg">
                       {benefit.title}
                     </h3>
-                    <p className="mt-3 text-base font-normal leading-7 text-ink/80 md:text-lg md:leading-8">
+                    <p className="mt-3 text-base font-normal leading-7 text-cream/80 md:text-lg md:leading-8">
                       {benefit.text}
                     </p>
                   </div>
