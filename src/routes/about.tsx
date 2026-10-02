@@ -61,7 +61,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+        <section className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-20">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
@@ -103,7 +103,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="relative border-y border-ink/15 bg-cream px-5 py-24 md:px-12 md:py-32">
+        <section className="relative border-y border-ink/15 bg-cream px-5 py-16 md:px-12 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
               src={testimonialImg.url}
@@ -139,7 +139,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="relative bg-cream px-5 py-24 text-ink md:px-12 md:py-32">
+        <section className="relative bg-cream px-5 py-16 text-ink md:px-12 md:py-20">
           <div className="mx-auto grid max-w-7xl gap-16 border-t border-ink/15 pt-16 md:grid-cols-2 md:gap-24 md:pt-20">
             <div>
               <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
@@ -178,7 +178,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="relative border-t border-ink/15 bg-cream px-5 py-24 text-center md:py-32">
+        <section className="relative border-t border-ink/15 bg-cream px-5 py-16 text-center md:py-20">
           <p className="font-display text-3xl font-black leading-tight text-magenta md:text-5xl">
             Not just a treatment – but also a treat.
           </p>

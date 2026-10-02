@@ -126,7 +126,7 @@ function TechnologyPage() {
     <div className="min-h-screen overflow-hidden bg-cream text-ink font-body antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader light />
       <main className="px-4 pb-20 pt-32 md:px-10 md:pt-44">
-        <article className="relative w-full px-6 py-14 text-ink md:px-16 md:py-20">
+        <article className="relative w-full px-6 py-12 text-ink md:px-16 md:py-16">
           <h1 className="font-display text-4xl font-black leading-tight md:text-6xl">
             <span className="text-magenta">Technical data:</span>{" "}
             <span className="text-ink">ProSeries 3-in-1</span>
