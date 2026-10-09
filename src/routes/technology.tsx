@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
+import { ArrowDown, ArrowRight, Check } from "lucide-react";
 
-import type React from "react";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import detailImg from "../assets/xali-customer-detail.jpeg.asset.json";
 import logoAsset from "../assets/xali-logo.png.asset.json";
@@ -8,17 +9,15 @@ import logoAsset from "../assets/xali-logo.png.asset.json";
 export const Route = createFileRoute("/technology")({
   head: () => ({
     meta: [
-      { title: "The technology behind XALI — PEMF and massage" },
+      { title: "XALI Technology — Understanding PEMF therapy for horses" },
       {
         name: "description",
-        content:
-          "PEMF is a non-thermal and non-invasive technology that, combined with massage, becomes a practical part of the horse's daily routine.",
+        content: "An evidence-informed introduction to PEMF therapy for horses: how pulsed electromagnetic fields work, potential applications and the limits of current equine research.",
       },
-      { property: "og:title", content: "The technology behind XALI — PEMF and massage" },
+      { property: "og:title", content: "XALI Technology — Understanding PEMF therapy for horses" },
       {
         property: "og:description",
-        content:
-          "Pulsed Electromagnetic Fields and massage in one integrated system, adapted to the individual horse.",
+        content: "Explore how PEMF interacts with equine tissues, its potential role in rehabilitation and recovery, and what the scientific evidence says.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -27,171 +26,189 @@ export const Route = createFileRoute("/technology")({
   component: TechnologyPage,
 });
 
-const pemfBenefits = [
-  "Can easily be integrated into the horse’s daily routine.",
-  "Can be used both before and after training.",
-  "Can be used with a focus on well-being, relaxation and recovery.",
-  "Allows use on the whole body or selected areas.",
-  "Is a non-thermal and non-invasive technology.",
-  "Can be combined with massage in one integrated system.",
-  "Can be used while the horse stands calmly in the stable.",
-  "Can supplement training, care and daily management.",
+const biologicalProcesses = [
+  {
+    title: "Muscles and muscular tension",
+    text: "PEMF may influence muscular tension and sensitivity. Small equine studies have reported reduced palpation sensitivity and muscular tension following treatment, although research remains limited.",
+  },
+  {
+    title: "Pain and discomfort",
+    text: "PEMF is being investigated for potential effects on pain and inflammatory mechanisms. Recent equine research has reported some short-term changes in horses with osteoarthritis, but objective measurements have not consistently demonstrated the same effects.",
+  },
+  {
+    title: "Inflammation",
+    text: "Electromagnetic fields may influence some cellular signalling pathways involved in inflammation. This does not mean that PEMF simply ‘removes inflammation’; it may potentially modulate aspects of the biological response.",
+  },
+  {
+    title: "Bone and tissue healing",
+    text: "Bone is a particularly interesting area of PEMF research. Experimental equine research has demonstrated increased bone formation in PEMF-treated bone defects compared with control sites.",
+  },
+  {
+    title: "Recovery",
+    text: "PEMF is commonly used following exercise and competition. Strong evidence that it generally accelerates recovery or improves performance in healthy sport horses is still lacking.",
+  },
 ];
 
-const therapeuticEffects = [
-  "Activation of blood circulation.",
-  "Increased blood flow.",
-  "Increased oxygenation of the blood.",
-  "Muscle relaxation.",
-  "Deep tissue massage.",
-  "Stimulation of metabolism.",
-  "Supporting the body’s natural healing processes.",
-  "Shorter recovery periods.",
-  "Pain relief.",
+const applications = [
+  "As an adjunct for muscular tension and soreness",
+  "During recovery following exercise or competition",
+  "As part of rehabilitation following injury",
+  "As an adjunctive modality for certain musculoskeletal problems",
+  "In rehabilitation involving bone tissue",
+  "Alongside physiotherapy, manual therapy and structured rehabilitation",
 ];
 
-const benefitNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
+const fieldSteps = [
+  "PEMF blanket",
+  "Pulsed electromagnetic field",
+  "Interaction with tissue",
+  "Potential biological effects",
+];
 
-function Chart({ variant }: { variant: "small" | "wide" }) {
-  if (variant === "small") {
-    return (
-      <svg viewBox="0 0 200 110" className="mt-8 w-full" aria-hidden="true">
-        {[10, 30, 50, 70, 90].map((y) => (
-          <line key={y} x1="10" x2="195" y1={y} y2={y} className="stroke-ink/10" />
-        ))}
-        {Array.from({ length: 9 }).map((_, i) => (
-          <line
-            key={i}
-            x1={20 + i * 21}
-            x2={20 + i * 21}
-            y1="5"
-            y2="95"
-            className="stroke-ink/15"
-          />
-        ))}
-        <polyline
-          fill="none"
-          className="stroke-magenta"
-          strokeWidth="1.2"
-          points="15,75 40,68 60,72 80,55 100,60 120,30 140,20 160,40 180,25 195,30"
-        />
-        <polyline
-          fill="none"
-          className="stroke-ink"
-          strokeWidth="1"
-          points="15,85 40,80 60,78 80,82 100,70 120,78 140,50 160,60 180,85 195,88"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg viewBox="0 0 400 120" className="w-full" aria-hidden="true">
-      {[10, 30, 50, 70, 90, 110].map((y) => (
-        <line key={y} x1="0" x2="400" y1={y} y2={y} className="stroke-ink/40" />
-      ))}
-      <polyline
-        fill="none"
-        className="stroke-magenta"
-        strokeWidth="2"
-        points="10,36 80,32 150,12 250,20 330,28 390,14"
-      />
-      <rect x="4" y="30" width="10" height="10" className="fill-magenta" />
-      <circle cx="390" cy="14" r="6" className="fill-magenta" />
-      <polyline
-        fill="none"
-        className="stroke-ink"
-        strokeWidth="1.5"
-        strokeDasharray="2 2"
-        points="10,86 120,72 170,20 230,80 270,104 390,62"
-      />
-      <rect x="4" y="80" width="10" height="10" className="fill-ink" />
-      <rect x="384" y="56" width="12" height="12" className="fill-ink" />
-    </svg>
-  );
-}
+const references = [
+  { pmid: "29775839", text: "Gaynor JS, Hagberg S, Gurfein BT. Veterinary applications of pulsed electromagnetic field therapy. Research in Veterinary Science. 2018;119:1–8." },
+  { pmid: "36611674", text: "Systematic review of electrotherapy modalities in veterinary medicine." },
+  { pmid: "42556520", text: "Equine study of PEMF and distal tarsal osteoarthritis (2026)." },
+  { pmid: "41514765", text: "Equine pilot study investigating magnetotherapy and longissimus dorsi sensitivity (2026)." },
+  { pmid: "8410466", text: "Experimental equine bone-healing study using low-frequency pulsed electromagnetic fields." },
+];
 
-function Block({ title, children }: { title: string; children: React.ReactNode }) {
+function Block({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="mb-8">
-      <h3 className="font-body text-base font-bold text-ink md:text-lg">{title}</h3>
-      <div className="mt-2 text-sm font-normal leading-6 text-ink/85 md:text-base md:leading-7">
+    <div className="min-w-0">
+      <h3 className="font-body text-base font-bold leading-7 text-ink md:text-lg">{title}</h3>
+      <div className="mt-3 space-y-4 text-sm font-normal leading-7 text-ink/85 md:text-base md:leading-8">
         {children}
       </div>
     </div>
   );
 }
 
+function SectionHeading({ children }: { children: ReactNode }) {
+  return <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">{children}</h2>;
+}
+
 function TechnologyPage() {
   return (
-    <div className="min-h-screen overflow-hidden bg-cream text-ink font-body antialiased selection:bg-magenta selection:text-cream">
+    <div className="min-h-screen bg-cream font-body text-ink antialiased selection:bg-magenta selection:text-cream">
       <SiteHeader light />
-      <main className="px-4 pb-20 pt-32 md:px-10 md:pt-44">
-        <article className="relative w-full px-6 py-12 text-ink md:px-16 md:py-16">
+      <main className="px-5 pb-16 pt-40 md:px-12 md:pb-20 md:pt-48">
+        <article className="mx-auto w-full max-w-[1480px]">
           <h1 className="font-display text-4xl font-black leading-tight md:text-6xl">
-            <span className="text-magenta">Technical data:</span>{" "}
-            <span className="text-ink">ProSeries 3-in-1</span>
+            <span className="text-magenta">Technology:</span>{" "}
+            <span className="text-ink">PEMF therapy for horses</span>
           </h1>
+          <p className="mt-5 text-base font-medium leading-8 text-ink/85 md:text-lg">
+            An accessible, evidence-informed introduction.
+          </p>
 
-          <figure className="relative mt-10">
+          <figure className="mt-8 md:mt-10">
             <img
               src={detailImg.url}
-              alt="Close-up of the XALI blanket with PEMF applicators"
+              alt="Close-up of the XALI equine therapy blanket"
               className="aspect-[21/9] w-full object-cover"
             />
           </figure>
 
-          <div className="relative mt-12 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <Block title="What is PEMF?">
-                PEMF stands for Pulsed Electromagnetic Fields. The technology works by means of
-                applicators that emit controlled magnetic pulses. It is non-thermal and non-invasive
-                and can form part of a horse’s daily routine – before training or as part of
-                well-being and recovery afterwards.
-              </Block>
-              <Block title="In the stable">
-                The horse can stand calmly in the stable while wearing the equipment and the
-                selected programme is running.
-              </Block>
+          <section className="mt-10 grid gap-8 md:mt-12 md:grid-cols-2 md:gap-12" aria-label="An introduction to PEMF">
+            <Block title="What is PEMF?">
+              <p>Magnetic therapy is increasingly used in horses as an adjunct to treatment, rehabilitation and recovery following training and competition.</p>
+              <p>PEMF stands for Pulsed Electromagnetic Field Therapy. A PEMF blanket produces weak, pulsed electromagnetic fields around different areas of the horse’s body.</p>
+            </Block>
+            <Block title="Pulsed fields, not permanent magnets">
+              <p>PEMF differs from simply placing permanent magnets on the horse. With PEMF, the electromagnetic field continuously changes or ‘pulses’, allowing it to interact with biological processes within the tissues.</p>
+              <p>The supplied introduction uses an Activomed-type blanket as an example of this technology. The explanation here concerns PEMF in general, rather than evidence for a specific XALI product.</p>
+            </Block>
+          </section>
+
+          <section className="mt-12 md:mt-16" aria-labelledby="body-heading">
+            <div id="body-heading"><SectionHeading>What happens inside the horse’s body?</SectionHeading></div>
+            <p className="mt-5 max-w-4xl text-sm leading-7 text-ink/85 md:text-base md:leading-8">
+              The horse’s body consists of billions of cells that communicate through electrical and chemical signals. Exposure to pulsed electromagnetic fields may influence some of these processes.
+            </p>
+            <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
+              {biologicalProcesses.map((process) => (
+                <Block key={process.title} title={process.title}><p>{process.text}</p></Block>
+              ))}
             </div>
-            <div>
-              <Block title="Adapted to the individual horse">
-                Every horse is different. Programme and duration should always be selected based on
-                the individual horse and the instructions for use, observing behaviour and response.
-              </Block>
-              <Chart variant="small" />
+          </section>
+
+          <section className="mt-12 md:mt-16" aria-labelledby="blanket-heading">
+            <div id="blanket-heading"><SectionHeading>How does a PEMF blanket work?</SectionHeading></div>
+            <div className="mt-5 grid gap-6 text-sm leading-7 text-ink/85 md:grid-cols-2 md:gap-12 md:text-base md:leading-8">
+              <p>The blanket contains electromagnetic coils positioned over different areas of the horse’s body. This allows PEMF to be applied across relatively large areas, including the back, lumbar region, neck and pelvic region.</p>
+              <p>The blanket is therefore not physically ‘massaging’ the muscles with magnets. The therapeutic principle is based on interaction between pulsed electromagnetic fields and biological tissue.</p>
             </div>
-            <div className="lg:col-span-2">
-              <div className="grid gap-x-8 sm:grid-cols-2">
-                <Block title="Practical benefits">
-                  <ul className="space-y-1">
-                    {pemfBenefits.slice(0, 4).map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                </Block>
-                <Block title="Integrated system">
-                  <ul className="space-y-1">
-                    {pemfBenefits.slice(4).map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                </Block>
+            <ol className="mt-8 grid gap-4 border-y border-ink/15 py-6 md:grid-cols-4 md:gap-6 md:py-8">
+              {fieldSteps.map((step, index) => (
+                <li key={step} className="flex min-w-0 items-center justify-between gap-4 md:items-start">
+                  <span className="font-body text-sm font-bold leading-6 text-ink md:text-base">{step}</span>
+                  {index < fieldSteps.length - 1 && (
+                    <>
+                      <ArrowRight className="mt-1 hidden size-5 shrink-0 text-magenta md:block" aria-hidden="true" />
+                      <ArrowDown className="size-5 shrink-0 text-magenta md:hidden" aria-hidden="true" />
+                    </>
+                  )}
+                </li>
+              ))}
+            </ol>
+            <p className="mt-4 text-sm leading-7 text-ink/85">Potential effects include changes in cellular signalling, pain modulation, inflammatory processes and tissue repair.</p>
+          </section>
+
+          <div className="mt-12 grid gap-10 md:mt-16 lg:grid-cols-2 lg:gap-16">
+            <section aria-labelledby="applications-heading">
+              <div id="applications-heading"><SectionHeading>When might PEMF be useful?</SectionHeading></div>
+              <ul className="mt-6 space-y-4">
+                {applications.map((application) => (
+                  <li key={application} className="flex items-start gap-3 text-sm leading-7 text-ink/85 md:text-base md:leading-8">
+                    <Check className="mt-1.5 size-4 shrink-0 text-magenta" aria-hidden="true" />
+                    <span>{application}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+            <section aria-labelledby="science-heading">
+              <div id="science-heading"><SectionHeading>What does the science say?</SectionHeading></div>
+              <div className="mt-6 space-y-5 text-sm leading-7 text-ink/85 md:text-base md:leading-8">
+                <p>Scientific research shows that pulsed electromagnetic fields can interact with biological processes. Equine research has investigated areas including bone formation, muscular sensitivity and osteoarthritis.</p>
+                <p>However, clinical research in horses remains relatively limited. It is therefore not scientifically justified to conclude that PEMF is effective for every condition for which magnetic therapy may be promoted.</p>
               </div>
-              <Chart variant="wide" />
-              <div className="mt-8 grid items-end gap-x-8 sm:grid-cols-2">
-                <Block title="XALI may contribute to">{therapeuticEffects.join(" ")}</Block>
-                <div className="mb-8 text-center">
-                  <img src={logoAsset.url} alt="XALI" className="mx-auto h-24 w-auto" />
-                  <p className="mt-1 text-sm text-ink">A treatment and a treat</p>
-                </div>
-              </div>
+            </section>
+          </div>
+
+          <aside className="mt-10 border-l-2 border-magenta pl-5 md:mt-12 md:pl-7" aria-label="Veterinary guidance">
+            <h3 className="font-body text-base font-bold text-ink md:text-lg">A supplement — not a substitute</h3>
+            <p className="mt-3 max-w-5xl text-sm leading-7 text-ink/85 md:text-base md:leading-8">
+              PEMF should be considered an adjunct to treatment rather than a replacement for a proper diagnosis. Persistent pain, lameness, neurological signs or unexplained loss of performance should be appropriately investigated by a veterinarian.
+            </p>
+          </aside>
+
+          <div className="mt-12 grid items-center gap-8 md:mt-16 md:grid-cols-[minmax(0,1fr)_220px] md:gap-12">
+            <p className="max-w-4xl font-body text-lg font-bold leading-8 text-ink md:text-xl md:leading-9">
+              In simple terms: PEMF may be a useful addition to equine treatment, rehabilitation and recovery — but it should not be regarded as a miracle treatment.
+            </p>
+            <div className="justify-self-start text-center md:justify-self-end">
+              <img src={logoAsset.url} alt="XALI" className="mx-auto h-20 w-auto md:h-24" loading="lazy" />
+              <p className="mt-2 text-sm text-ink">A treatment and a treat</p>
             </div>
           </div>
 
-          <p className="relative mt-4 text-sm italic font-normal text-ink/75">
-            PEMF is a supplement and not a replacement for veterinary examination, diagnosis or
-            treatment. Consult a veterinarian in cases of illness, injury, pregnancy or implants.
-          </p>
+          <section className="mt-12 border-t border-ink/15 pt-8 md:mt-16" aria-labelledby="references-heading">
+            <h2 id="references-heading" className="font-body text-lg font-bold text-ink md:text-xl">Selected scientific references</h2>
+            <ol className="mt-5 space-y-4">
+              {references.map((reference) => (
+                <li key={reference.pmid} className="text-sm leading-7 text-ink/85">
+                  {reference.text}{" "}
+                  <a href={`https://pubmed.ncbi.nlm.nih.gov/${reference.pmid}/`} target="_blank" rel="noreferrer" className="break-words font-semibold text-ink underline decoration-magenta underline-offset-4 transition-colors hover:text-magenta">
+                    PMID: {reference.pmid}
+                  </a>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-6 max-w-5xl text-sm italic leading-7 text-ink/80">
+              The scientific evidence varies considerably according to indication, device parameters, treatment protocol and outcome measure. Product-specific claims should therefore be evaluated separately from the broader PEMF literature.
+            </p>
+          </section>
         </article>
       </main>
       <SiteFooter />
