@@ -117,7 +117,7 @@ function TechnologyPage() {
             </Block>
             <Block title="Pulsed fields, not permanent magnets">
               <p>PEMF differs from simply placing permanent magnets on the horse. With PEMF, the electromagnetic field continuously changes or ‘pulses’, allowing it to interact with biological processes within the tissues.</p>
-              <p>The supplied introduction uses an Activomed-type blanket as an example of this technology. The explanation here concerns PEMF in general, rather than evidence for a specific XALI product.</p>
+              <p>The explanation here concerns PEMF in general, rather than evidence for a specific XALI product.</p>
             </Block>
           </section>
 
