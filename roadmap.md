@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Update Technology with the document's English PEMF information and verify layout and citations.
+- [x] Update Technology with the document's English PEMF information and verify layout and citations.
 
 - [x] Make every action button solid pink with a darker hover state.
 - [x] Remove the small numbered section headings across all pages.

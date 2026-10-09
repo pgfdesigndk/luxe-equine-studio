@@ -12,3 +12,4 @@
 <!-- LOVABLE:END -->
 
 - Use the shared XaliButton for all text-based calls to action so typography and states remain consistent.
+- Present Technology as a structured educational article with a labelled process flow and linked references, not decorative data charts; this avoids implying measured product results.
