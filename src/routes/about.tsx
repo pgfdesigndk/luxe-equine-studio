@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { XaliButton } from "../components/xali-button";
-import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
+import arenaImg from "../assets/xali-horse-4.jpeg.asset.json";
+import teamImg from "../assets/xali-horse-6.jpeg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -58,6 +59,14 @@ function AboutPage() {
               flexible, more practical and created with an even greater focus on the horse? That
               became the beginning of XALI.
             </p>
+            <figure className="mt-12">
+              <img
+                src={arenaImg.url}
+                alt="Horse wearing the XALI therapy blanket with neck piece in the riding arena"
+                className="aspect-[16/9] w-full object-cover"
+                loading="lazy"
+              />
+            </figure>
           </div>
         </section>
 
@@ -106,11 +115,11 @@ function AboutPage() {
         <section className="relative border-y border-ink/15 bg-cream px-5 py-16 md:px-12 md:py-20">
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[auto_1fr] md:items-center md:gap-20">
             <img
-              src={testimonialImg.url}
-              alt="Detail of the XALI therapy blanket's magenta textile and therapy ring"
-              width={1280}
-              height={853}
-              className="h-40 w-32 object-cover object-center md:h-72 md:w-56"
+              src={teamImg.url}
+              alt="Horse owner standing with her horse wearing the XALI therapy blanket"
+              width={1024}
+              height={1536}
+              className="h-64 w-48 object-cover object-top md:h-96 md:w-72"
               loading="lazy"
             />
             <div>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { XaliButton } from "../components/xali-button";
+import stableImg from "../assets/xali-horse-5.jpeg.asset.json";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -39,6 +40,14 @@ function ContactPage() {
 
         <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-40">
           <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
+            <figure className="mb-14 flex justify-center">
+              <img
+                src={stableImg.url}
+                alt="Horse wearing the XALI therapy blanket in the stable"
+                className="h-72 w-auto object-cover md:h-96"
+                loading="lazy"
+              />
+            </figure>
             <p className="font-display text-3xl font-black leading-tight text-ink md:text-5xl">
               Broholm
             </p>

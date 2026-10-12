@@ -7,8 +7,9 @@ import { XaliButton } from "../components/xali-button";
 import cinematicHero from "../assets/xali-hero-poster.jpg.asset.json";
 import heroFilm from "../assets/xali-hero-film-compatible.mp4.asset.json";
 import heroFilmWebm from "../assets/xali-hero-film.webm.asset.json";
-import productImg from "../assets/xali-customer-collection.jpeg.asset.json";
-import testimonialImg from "../assets/xali-customer-detail.jpeg.asset.json";
+import collectionImg from "../assets/xali-horse-1.jpeg.asset.json";
+import developmentImg from "../assets/xali-horse-7.jpeg.asset.json";
+import teamImg from "../assets/xali-horse-8.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -183,8 +184,8 @@ function Index() {
           <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[1.12fr_0.88fr] md:items-center md:gap-24">
             <figure className="relative overflow-hidden">
               <img
-                src={productImg.url}
-                alt="Close-up of the XALI ProSeries blanket textile with embroidered magenta logo"
+                src={collectionImg.url}
+                alt="Horse wearing the complete XALI therapy blanket with neck piece in the stable aisle"
                 width={1024}
                 height={1280}
                 className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
@@ -251,8 +252,8 @@ function Index() {
             <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-20">
               <figure className="relative order-1 overflow-hidden">
                 <img
-                  src={productImg.url}
-                  alt="Close-up of the XALI ProSeries blanket textile with embroidered magenta logo"
+                  src={developmentImg.url}
+                  alt="Horse in the riding arena wearing the XALI therapy blanket"
                   width={1024}
                   height={1280}
                   className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
@@ -299,8 +300,8 @@ function Index() {
               </div>
               <figure className="relative order-1 md:order-2 overflow-hidden">
                 <img
-                  src={testimonialImg.url}
-                  alt="Detail of the XALI therapy blanket's magenta textile and therapy ring"
+                  src={teamImg.url}
+                  alt="Horse owner adjusting the XALI therapy blanket on her horse"
                   width={1280}
                   height={853}
                   className="aspect-[4/5] w-full object-cover grayscale-[18%] transition-transform duration-1000 hover:scale-[1.025]"
