@@ -1,14 +1,28 @@
-# Welcome to your Lovable project
+# Equine Elegance
+
+Kan du lave en fed og ekslusiv hjemmeside - IKKE WEBSHOP, der ville være Vogue, Porche, Louis Vuitton osv. værdig.
+Den skal have med hesteudstyr at gøre, og konkurrenterne er p.t.
+https://activomed.de/
+https://www.sportinnovations.net/product/proseries-3-in-1/
+https://www.sportinnovations.net/
+https://jfcare.dk/bemer-horse-set/
+https://www.muscletherapy.dk/
+
+Jeg vedhæfter noget materiale om firmaet. Og hjemmeside skal holdes i primært sort og lilla (begge en del af materialet).
+
+Du må også gerne tage udgangspunkt i de beskrivelser der er i materialet.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://luxe-equine-studio.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/816ebc1c-c31b-4f52-8d9c-bc06c9ab0a6f).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +34,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
