@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import { ArrowDown, ArrowRight, Check } from "lucide-react";
 
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
-import detailImg from "../assets/xali-customer-detail.jpeg.asset.json";
+import bannerImg from "../assets/xali-horse-2.jpeg.asset.json";
+import deviceImg from "../assets/xali-horse-3.jpeg.asset.json";
 import logoAsset from "../assets/xali-logo.png.asset.json";
 
 export const Route = createFileRoute("/technology")({
@@ -104,8 +105,8 @@ function TechnologyPage() {
 
           <figure className="mt-8 md:mt-10">
             <img
-              src={detailImg.url}
-              alt="Close-up of the XALI equine therapy blanket"
+              src={bannerImg.url}
+              alt="Horse wearing the XALI therapy blanket with its owner"
               className="aspect-[21/9] w-full object-cover"
             />
           </figure>
@@ -139,6 +140,14 @@ function TechnologyPage() {
               <p>The blanket contains electromagnetic coils positioned over different areas of the horse’s body. This allows PEMF to be applied across relatively large areas, including the back, lumbar region, neck and pelvic region.</p>
               <p>The blanket is therefore not physically ‘massaging’ the muscles with magnets. The therapeutic principle is based on interaction between pulsed electromagnetic fields and biological tissue.</p>
             </div>
+            <figure className="mt-8">
+              <img
+                src={deviceImg.url}
+                alt="Close-up of the XALI blanket textile with the control unit and therapy coils"
+                className="aspect-[16/9] w-full max-w-4xl object-cover"
+                loading="lazy"
+              />
+            </figure>
             <ol className="mt-8 grid gap-4 border-y border-ink/15 py-6 md:grid-cols-4 md:gap-6 md:py-8">
               {fieldSteps.map((step, index) => (
                 <li key={step} className="flex min-w-0 items-center justify-between gap-4 md:items-start">
