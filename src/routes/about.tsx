@@ -4,6 +4,9 @@ import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { XaliButton } from "../components/xali-button";
 import arenaImg from "../assets/xali-horse-4.jpeg.asset.json";
 import teamImg from "../assets/xali-horse-6.jpeg.asset.json";
+import teamTrineImg from "../assets/xali-team-1.jpg.asset.json";
+import teamDennisImg from "../assets/xali-team-2.jpg.asset.json";
+import teamGitteImg from "../assets/xali-team-gitte.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,6 +37,24 @@ const principles = [
   "Development requires testing, honesty and persistence.",
   "Professional claims must be precise and supported by evidence.",
   "A well-designed solution should be offered at a responsible price.",
+];
+
+const team = [
+  {
+    name: "Trine",
+    role: "Idea, horses and customer insight",
+    photo: teamTrineImg,
+  },
+  {
+    name: "Dennis",
+    role: "Electronics, coils and programmes",
+    photo: teamDennisImg,
+  },
+  {
+    name: "Gitte",
+    role: "Horse health, training and competition",
+    photo: teamGitteImg,
+  },
 ];
 
 function AboutPage() {
@@ -145,6 +166,52 @@ function AboutPage() {
                 and an in-depth understanding of life in the stable.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="relative border-t border-ink/15 bg-cream px-5 py-16 md:px-12 md:py-20">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
+              Team
+            </h2>
+            <div className="mt-10 grid gap-10 sm:grid-cols-3 md:mt-14 md:gap-14">
+              {team.map((member) => (
+                <figure key={member.name}>
+                  <img
+                    src={member.photo.url}
+                    alt={`${member.name}, part of the XALI team`}
+                    className="aspect-[4/5] w-full object-cover object-top grayscale-[18%]"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-5">
+                    <span className="block font-display text-xl font-black leading-tight text-ink md:text-2xl">
+                      {member.name}
+                    </span>
+                    <span className="mt-2 block text-[13px] font-normal uppercase leading-6 tracking-[0.14em] text-magenta">
+                      {member.role}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="relative bg-cream px-5 py-16 md:px-12 md:py-20">
+          <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 md:pt-20">
+            <h2 className="font-display text-3xl font-black leading-tight text-ink md:text-4xl">
+              Lorem ipsum dolor sit amet
+            </h2>
+            <p className="mt-6 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p className="mt-5 text-base font-light leading-8 text-ink/70 md:text-lg md:leading-9">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
+            </p>
           </div>
         </section>
 
