@@ -82,7 +82,7 @@ const placements = [
     title: "Back and loin",
     alt: "Close-up of the XALI blanket fitted over the horse’s back and loin with the control unit resting on top",
     text: "The most common placement, covering the back and loin from the withers towards the croup.",
-    fit: "object-center brightness-[1.18] contrast-[1.04]",
+    fit: "object-center brightness-[1.32] contrast-[1.06] saturate-[1.05]",
   },
   {
     img: hindImg,
