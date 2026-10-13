@@ -5,7 +5,10 @@ import { ArrowDown, ArrowRight, Check } from "lucide-react";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import bannerImg from "../assets/xali-horse-2.jpeg.asset.json";
 import deviceImg from "../assets/xali-horse-3.jpeg.asset.json";
+import hindImg from "../assets/xali-horse-7.jpeg.asset.json";
+import neckImg from "../assets/xali-horse-4.jpeg.asset.json";
 import logoAsset from "../assets/xali-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/technology")({
   head: () => ({
@@ -65,6 +68,28 @@ const fieldSteps = [
   "Interaction with tissue",
   "Potential biological effects",
 ];
+
+const placements = [
+  {
+    img: neckImg,
+    title: "Neck and shoulder",
+    alt: "Horse standing in an indoor arena wearing the XALI blanket positioned over the neck, shoulder and chest",
+    text: "Coils placed along the neck, shoulder and chest — commonly used when these areas are stiff or sensitive after work.",
+  },
+  {
+    img: deviceImg,
+    title: "Back and loin",
+    alt: "Close-up of the XALI blanket fitted over the horse’s back and loin with the control unit resting on top",
+    text: "The most common placement, covering the back and loin from the withers towards the croup.",
+  },
+  {
+    img: hindImg,
+    title: "Hindquarters and croup",
+    alt: "Horse in profile wearing the XALI blanket over the hindquarters, croup and loin",
+    text: "Coverage across the croup and pelvic region, often used during rehabilitation of the hindquarters.",
+  },
+];
+
 
 const references = [
   { pmid: "29775839", text: "Gaynor JS, Hagberg S, Gurfein BT. Veterinary applications of pulsed electromagnetic field therapy. Research in Veterinary Science. 2018;119:1–8." },
@@ -140,14 +165,6 @@ function TechnologyPage() {
               <p>The blanket contains electromagnetic coils positioned over different areas of the horse’s body. This allows PEMF to be applied across relatively large areas, including the back, lumbar region, neck and pelvic region.</p>
               <p>The blanket is therefore not physically ‘massaging’ the muscles with magnets. The therapeutic principle is based on interaction between pulsed electromagnetic fields and biological tissue.</p>
             </div>
-            <figure className="mt-8">
-              <img
-                src={deviceImg.url}
-                alt="Close-up of the XALI blanket textile with the control unit and therapy coils"
-                className="aspect-[16/9] w-full max-w-4xl object-cover"
-                loading="lazy"
-              />
-            </figure>
             <ol className="mt-8 grid gap-4 border-y border-ink/15 py-6 md:grid-cols-4 md:gap-6 md:py-8">
               {fieldSteps.map((step, index) => (
                 <li key={step} className="flex min-w-0 items-center justify-between gap-4 md:items-start">
@@ -163,6 +180,34 @@ function TechnologyPage() {
             </ol>
             <p className="mt-4 text-sm leading-7 text-ink/85">Potential effects include changes in cellular signalling, pain modulation, inflammatory processes and tissue repair.</p>
           </section>
+
+          <section className="mt-12 md:mt-16" aria-labelledby="placements-heading">
+            <div id="placements-heading"><SectionHeading>Three placements, one system</SectionHeading></div>
+            <p className="mt-5 max-w-4xl text-sm leading-7 text-ink/85 md:text-base md:leading-8">
+              The same blanket can be positioned over different areas of the horse’s body, depending on where the work is needed. The coil layout follows the area being treated, and the control unit stays accessible on top.
+            </p>
+            <div className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
+              {placements.map((placement) => (
+                <figure key={placement.title} className="min-w-0">
+                  <img
+                    src={placement.img.url}
+                    alt={placement.alt}
+                    className="aspect-[4/3] w-full object-cover grayscale-[18%]"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-4 border-t-2 border-magenta pt-3">
+                    <span className="font-body text-sm font-bold uppercase leading-6 tracking-[0.1em] text-ink md:text-base">
+                      {placement.title}
+                    </span>
+                    <span className="mt-2 block text-sm leading-7 text-ink/85 md:text-base md:leading-8">
+                      {placement.text}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+
 
           <div className="mt-12 grid gap-10 md:mt-16 lg:grid-cols-2 lg:gap-16">
             <section aria-labelledby="applications-heading">
