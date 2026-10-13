@@ -63,10 +63,10 @@ function ContactPage() {
               Phone
             </p>
             <a
-              href="tel:12345678"
+              href="tel:+4520138876"
               className="mt-3 inline-block text-lg font-semibold text-ink transition-colors hover:text-magenta md:text-xl"
             >
-              12345678
+              (0045) 20 13 88 76
             </a>
 
             <p className="mt-12 text-[13px] uppercase tracking-[0.3em] text-magenta">Email</p>

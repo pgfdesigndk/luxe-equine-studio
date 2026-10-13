@@ -339,8 +339,11 @@ function Index() {
                   trine@broholm-consult.dk
                 </a>
                 <br />
-                <a className="font-bold text-magenta hover:text-magenta-deep" href="tel:12345678">
-                  12345678
+                <a
+                  className="font-bold text-magenta hover:text-magenta-deep"
+                  href="tel:+4520138876"
+                >
+                  (0045) 20 13 88 76
                 </a>
                 <br />
                 Company registration no. 30607376
