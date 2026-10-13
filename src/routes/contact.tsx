@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with XALI. Broholm, Østre Havnevej 12, 5400 Bogense, Denmark. Email: trine@broholm-consult.dk.",
+          "Get in touch with XALI. Broholm, Østre Havnevej 12, 5400 Bogense, Denmark. Email: trine@broholm-consult.dk. Resellers in Denmark, Norway, Sweden, Finland, Iceland, Estonia and Latvia.",
       },
       { property: "og:title", content: "Contact — XALI" },
       {
@@ -24,6 +24,36 @@ export const Route = createFileRoute("/contact")({
   }),
   component: ContactPage,
 });
+
+type Reseller = {
+  territory: string;
+  name: string;
+  website?: { label: string; href: string };
+  email: string;
+  mobile: { display: string; href: string };
+};
+
+const resellers: Reseller[] = [
+  {
+    territory: "Denmark – Norway – Sweden – Finland – Iceland",
+    name: "Broholm Trading Aps",
+    website: { label: "www.broholm.biz", href: "https://www.broholm.biz" },
+    email: "trine@broholm-consult.dk",
+    mobile: { display: "(0045) 20 13 88 76", href: "tel:+4520138876" },
+  },
+  {
+    territory: "Estonia",
+    name: "Terje Tilts",
+    email: "Tiitsterje@gmail.com",
+    mobile: { display: "+37 25163919", href: "tel:+3725163919" },
+  },
+  {
+    territory: "Latvia",
+    name: "Zane Cerednicenko",
+    email: "Cerednicenkozane@gmail.com",
+    mobile: { display: "+37 128617564", href: "tel:+37128617564" },
+  },
+];
 
 function ContactPage() {
   return (
@@ -38,7 +68,7 @@ function ContactPage() {
           </div>
         </section>
 
-        <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-40">
+        <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-32">
           <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
             <figure className="mb-14 flex justify-center">
               <img
@@ -84,6 +114,56 @@ function ContactPage() {
             <XaliButton asChild className="mt-12">
               <a href="mailto:trine@broholm-consult.dk">Send us an email</a>
             </XaliButton>
+          </div>
+        </section>
+
+        <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-32">
+          <div className="mx-auto max-w-5xl border-t border-ink/15 pt-16 md:pt-20">
+            <h2 className="text-center font-display text-3xl font-black leading-tight text-ink md:text-5xl">
+              Resellers
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
+              XALI is available through selected resellers in the Nordics and the Baltic states.
+            </p>
+
+            <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-3 md:gap-10">
+              {resellers.map((reseller) => (
+                <div key={reseller.name} className="border-t border-ink/15 pt-8">
+                  <p className="text-[13px] font-bold uppercase leading-6 tracking-[0.16em] text-magenta">
+                    {reseller.territory}
+                  </p>
+                  <p className="mt-5 font-display text-2xl font-black leading-tight text-ink md:text-3xl">
+                    {reseller.name}
+                  </p>
+                  {reseller.website ? (
+                    <a
+                      href={reseller.website.href}
+                      className="mt-4 inline-block text-base font-semibold text-ink underline decoration-magenta/60 underline-offset-8 transition-colors hover:text-magenta md:text-lg"
+                    >
+                      {reseller.website.label}
+                    </a>
+                  ) : null}
+                  <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em] text-ink/60">
+                    Email
+                  </p>
+                  <a
+                    href={`mailto:${reseller.email}`}
+                    className="mt-2 block break-words text-base font-semibold text-ink transition-colors hover:text-magenta md:text-lg"
+                  >
+                    {reseller.email}
+                  </a>
+                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-ink/60">
+                    Mobile
+                  </p>
+                  <a
+                    href={reseller.mobile.href}
+                    className="mt-2 block text-base font-semibold text-ink transition-colors hover:text-magenta md:text-lg"
+                  >
+                    {reseller.mobile.display}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>
