@@ -75,20 +75,24 @@ const placements = [
     title: "Neck and shoulder",
     alt: "Horse standing in an indoor arena wearing the XALI blanket positioned over the neck, shoulder and chest",
     text: "Coils placed along the neck, shoulder and chest — commonly used when these areas are stiff or sensitive after work.",
+    fit: "object-[50%_0%]",
   },
   {
     img: deviceImg,
     title: "Back and loin",
     alt: "Close-up of the XALI blanket fitted over the horse’s back and loin with the control unit resting on top",
     text: "The most common placement, covering the back and loin from the withers towards the croup.",
+    fit: "object-center brightness-[1.18] contrast-[1.04]",
   },
   {
     img: hindImg,
     title: "Hindquarters and croup",
     alt: "Horse in profile wearing the XALI blanket over the hindquarters, croup and loin",
     text: "Coverage across the croup and pelvic region, often used during rehabilitation of the hindquarters.",
+    fit: "object-[50%_45%]",
   },
 ];
+
 
 
 const references = [
@@ -192,9 +196,10 @@ function TechnologyPage() {
                   <img
                     src={placement.img.url}
                     alt={placement.alt}
-                    className="aspect-[4/3] w-full object-cover grayscale-[18%]"
+                    className={`aspect-[4/3] w-full object-cover grayscale-[18%] ${placement.fit}`}
                     loading="lazy"
                   />
+
                   <figcaption className="mt-4 border-t-2 border-magenta pt-3">
                     <span className="font-body text-sm font-bold uppercase leading-6 tracking-[0.1em] text-ink md:text-base">
                       {placement.title}
