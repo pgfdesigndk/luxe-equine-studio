@@ -16,4 +16,5 @@
 - [x] Show the three blanket placements on Technology with the supplied horse photos.
 - [x] Set the real phone number (0045) 20 13 88 76 everywhere it appears.
 - [x] Add a Resellers section to Contact with the Nordic and Baltic partner contacts.
+- [x] Add a Team section to About with the three supplied portraits and a Lorem Ipsum text section.
 
