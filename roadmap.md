@@ -14,4 +14,5 @@
 - [x] Remove dots from Technology content and improve footer readability.
 - [x] Verify all content pages on desktop and mobile.
 - [x] Show the three blanket placements on Technology with the supplied horse photos.
+- [x] Set the real phone number (0045) 20 13 88 76 everywhere it appears.
 
