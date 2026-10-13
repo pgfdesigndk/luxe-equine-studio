@@ -13,3 +13,5 @@
 - [x] Add complete company details and phone number beside the contact form.
 - [x] Remove dots from Technology content and improve footer readability.
 - [x] Verify all content pages on desktop and mobile.
+- [x] Show the three blanket placements on Technology with the supplied horse photos.
+
