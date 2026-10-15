@@ -18,3 +18,5 @@
 - [x] Add a Resellers section to Contact with the Nordic and Baltic partner contacts.
 - [x] Add a Team section to About with the three supplied portraits and Lorem Ipsum under each image.
 
+- [ ] Send contact-form messages from the site once the customer confirms the mail domain, the recipient and whether a receipt should be sent.
+- [x] Replace the Team role titles and Lorem Ipsum bios on About with a single "Info coming soon" line per person.
