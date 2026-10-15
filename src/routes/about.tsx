@@ -42,21 +42,15 @@ const principles = [
 const team = [
   {
     name: "Trine",
-    role: "Idea, horses and customer insight",
     photo: teamTrineImg,
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Dennis",
-    role: "Electronics, coils and programmes",
     photo: teamDennisImg,
-    bio: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.",
   },
   {
     name: "Gitte",
-    role: "Horse health, training and competition",
     photo: teamGitteImg,
-    bio: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.",
   },
 ];
 
@@ -191,11 +185,8 @@ function AboutPage() {
                       {member.name}
                     </span>
                     <span className="mt-2 block text-[13px] font-normal uppercase leading-6 tracking-[0.14em] text-magenta">
-                      {member.role}
+                      Info coming soon
                     </span>
-                    <p className="mt-4 text-sm font-light leading-7 text-ink/70 md:text-base md:leading-8">
-                      {member.bio}
-                    </p>
                   </figcaption>
                 </figure>
               ))}
