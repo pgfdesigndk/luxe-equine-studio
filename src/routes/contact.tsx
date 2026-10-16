@@ -117,8 +117,11 @@ function ContactPage() {
           </div>
         </section>
 
-        <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-32">
-          <div className="mx-auto max-w-5xl border-t border-ink/15 pt-16 md:pt-20">
+        <section
+          id="resellers"
+          className="relative scroll-mt-24 bg-cream px-5 pb-24 md:px-12 md:pb-32"
+        >
+          <div className="mx-auto max-w-6xl border-t border-ink/15 pt-16 md:pt-20">
             <h2 className="text-center font-display text-3xl font-black leading-tight text-ink md:text-5xl">
               Resellers
             </h2>
@@ -126,44 +129,64 @@ function ContactPage() {
               XALI is available through selected resellers in the Nordics and the Baltic states.
             </p>
 
-            <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-3 md:gap-10">
+            <ul className="mt-14 grid gap-5 sm:grid-cols-2 md:mt-16 lg:grid-cols-3">
               {resellers.map((reseller) => (
-                <div key={reseller.name} className="border-t border-ink/15 pt-8">
-                  <p className="text-[13px] font-bold uppercase leading-6 tracking-[0.16em] text-magenta">
+                <li
+                  key={reseller.name}
+                  className="flex flex-col border border-ink/10 border-t-4 border-t-magenta bg-background/60 p-7 shadow-sm transition-shadow hover:shadow-md"
+                >
+                  <p className="text-[13px] font-bold uppercase leading-6 tracking-[0.14em] text-magenta">
                     {reseller.territory}
                   </p>
-                  <p className="mt-5 font-display text-2xl font-black leading-tight text-ink md:text-3xl">
+                  <p className="mt-3 font-display text-2xl font-black leading-tight text-ink">
                     {reseller.name}
                   </p>
-                  {reseller.website ? (
-                    <a
-                      href={reseller.website.href}
-                      className="mt-4 inline-block text-base font-semibold text-ink underline decoration-magenta/60 underline-offset-8 transition-colors hover:text-magenta md:text-lg"
-                    >
-                      {reseller.website.label}
-                    </a>
-                  ) : null}
-                  <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em] text-ink/60">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${reseller.email}`}
-                    className="mt-2 block break-words text-base font-semibold text-ink transition-colors hover:text-magenta md:text-lg"
-                  >
-                    {reseller.email}
-                  </a>
-                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-ink/60">
-                    Mobile
-                  </p>
-                  <a
-                    href={reseller.mobile.href}
-                    className="mt-2 block text-base font-semibold text-ink transition-colors hover:text-magenta md:text-lg"
-                  >
-                    {reseller.mobile.display}
-                  </a>
-                </div>
+                  <dl className="mt-6 space-y-3 border-t border-ink/10 pt-5 text-[15px]">
+                    {reseller.website ? (
+                      <div className="grid grid-cols-[72px_1fr] gap-3">
+                        <dt className="pt-0.5 text-xs font-bold uppercase tracking-[0.14em] text-ink/55">
+                          Web
+                        </dt>
+                        <dd>
+                          <a
+                            href={reseller.website.href}
+                            className="font-semibold text-ink transition-colors hover:text-magenta"
+                          >
+                            {reseller.website.label}
+                          </a>
+                        </dd>
+                      </div>
+                    ) : null}
+                    <div className="grid grid-cols-[72px_1fr] gap-3">
+                      <dt className="pt-0.5 text-xs font-bold uppercase tracking-[0.14em] text-ink/55">
+                        Email
+                      </dt>
+                      <dd className="min-w-0">
+                        <a
+                          href={`mailto:${reseller.email}`}
+                          className="break-words font-semibold text-ink transition-colors hover:text-magenta"
+                        >
+                          {reseller.email}
+                        </a>
+                      </dd>
+                    </div>
+                    <div className="grid grid-cols-[72px_1fr] gap-3">
+                      <dt className="pt-0.5 text-xs font-bold uppercase tracking-[0.14em] text-ink/55">
+                        Mobile
+                      </dt>
+                      <dd>
+                        <a
+                          href={reseller.mobile.href}
+                          className="font-semibold text-ink transition-colors hover:text-magenta"
+                        >
+                          {reseller.mobile.display}
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
       </main>
