@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { XaliButton } from "../components/xali-button";
 import { ResellerMap, type Reseller } from "../components/reseller-map";
-import stableImg from "../assets/xali-horse-5.jpeg.asset.json";
+import contactImg from "../assets/xali-contact.jpg.asset.json";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
