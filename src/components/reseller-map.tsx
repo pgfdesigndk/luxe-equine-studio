@@ -25,7 +25,7 @@ export function ResellerMap({ resellers }: { resellers: Reseller[] }) {
 
   return (
     <div className="mt-14 grid items-start gap-8 md:mt-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-      <div className="overflow-hidden border border-ink/10 bg-cream p-3 md:p-5">
+      <div className="overflow-hidden border border-ink/10 bg-cream">
         <svg viewBox={EUROPE_VIEWBOX} className="h-auto w-full" role="img" aria-label="Map of Europe">
           {europeCountries.map((c) => {
             const has = byCountry.has(c.code);
