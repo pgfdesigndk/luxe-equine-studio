@@ -68,7 +68,7 @@ export function ResellerMap({ resellers }: { resellers: Reseller[] }) {
 
         <div className="mt-6 min-h-[260px] border border-ink/10 border-t-4 border-t-magenta bg-background/60 p-7">
           {active && selected ? (
-            <div key={selected} className="animate-fade-in">
+            <div key={selected}>
               <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-magenta">
                 {countryNames[selected]}
               </p>
