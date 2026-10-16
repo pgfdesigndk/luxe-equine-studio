@@ -20,3 +20,4 @@
 
 - [ ] Send contact-form messages from the site once the customer confirms the mail domain, the recipient and whether a receipt should be sent.
 - [x] Replace the Team role titles and Lorem Ipsum bios on About with a single "Info coming soon" line per person.
+- [x] Replace the Contact photo with the supplied handler-and-horse portrait, shown in a white mat.
