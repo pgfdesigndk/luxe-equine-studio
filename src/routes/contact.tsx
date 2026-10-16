@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "../components/site-chrome";
 import { XaliButton } from "../components/xali-button";
 import { ResellerMap, type Reseller } from "../components/reseller-map";
-import stableImg from "../assets/xali-horse-5.jpeg.asset.json";
+import contactImg from "../assets/xali-contact.jpg.asset.json";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -63,10 +63,10 @@ function ContactPage() {
 
         <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-32">
           <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
-            <figure className="mb-14 flex justify-center">
+            <figure className="mx-auto mb-14 w-max border border-ink/12 bg-white p-3 md:p-4">
               <img
-                src={stableImg.url}
-                alt="Horse wearing the XALI therapy blanket in the stable"
+                src={contactImg.url}
+                alt="Horse wearing the XALI therapy blanket standing beside a handler"
                 className="h-72 w-auto object-cover md:h-96"
                 loading="lazy"
               />
