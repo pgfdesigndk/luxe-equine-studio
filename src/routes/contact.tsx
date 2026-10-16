@@ -118,9 +118,6 @@ function ContactPage() {
             <h2 className="text-center font-display text-3xl font-black leading-tight text-ink md:text-5xl">
               Resellers
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-center text-base font-normal leading-8 text-ink/80 md:text-lg md:leading-9">
-              XALI is available through selected resellers in the Nordics and the Baltic states.
-            </p>
 
             <ResellerMap resellers={resellers} />
           </div>
