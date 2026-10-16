@@ -63,7 +63,7 @@ function ContactPage() {
 
         <section className="relative bg-cream px-5 pb-24 md:px-12 md:pb-32">
           <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
-            <figure className="mb-14 flex justify-center">
+            <figure className="mx-auto mb-14 w-max border border-ink/12 bg-white p-3 md:p-4">
               <img
                 src={contactImg.url}
                 alt="Horse wearing the XALI therapy blanket standing beside a handler"
