@@ -65,8 +65,8 @@ function ContactPage() {
           <div className="mx-auto max-w-4xl border-t border-ink/15 pt-16 text-center md:pt-20">
             <figure className="mb-14 flex justify-center">
               <img
-                src={stableImg.url}
-                alt="Horse wearing the XALI therapy blanket in the stable"
+                src={contactImg.url}
+                alt="Horse wearing the XALI therapy blanket standing beside a handler"
                 className="h-72 w-auto object-cover md:h-96"
                 loading="lazy"
               />
