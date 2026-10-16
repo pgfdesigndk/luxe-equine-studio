@@ -25,7 +25,7 @@ export function ResellerMap({ resellers }: { resellers: Reseller[] }) {
 
   return (
     <div className="mt-14 grid items-start gap-8 md:mt-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-      <div className="border border-ink/10 bg-background/60 p-3 md:p-5">
+      <div className="border border-ink/10 bg-cream p-3 md:p-5">
         <svg viewBox={EUROPE_VIEWBOX} className="h-auto w-full" role="img" aria-label="Map of Europe">
           {europeCountries.map((c) => {
             const has = byCountry.has(c.code);
@@ -38,7 +38,7 @@ export function ResellerMap({ resellers }: { resellers: Reseller[] }) {
                 className={`stroke-cream transition-colors duration-200 [stroke-width:0.8] ${
                   has
                     ? `cursor-pointer ${isSel ? "fill-magenta-deep" : "fill-magenta/55 hover:fill-magenta"}`
-                    : "fill-ink/10"
+                    : "fill-ink/15"
                 }`}
               >
                 <title>{c.name}</title>
@@ -66,7 +66,7 @@ export function ResellerMap({ resellers }: { resellers: Reseller[] }) {
           ))}
         </div>
 
-        <div className="mt-6 min-h-[260px] border border-ink/10 border-t-4 border-t-magenta bg-background/60 p-7">
+        <div className="mt-6 min-h-[260px] border border-ink/10 border-t-4 border-t-magenta bg-cream p-7">
           {active && selected ? (
             <div key={selected}>
               <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-magenta">
